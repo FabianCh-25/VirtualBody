@@ -4,5 +4,5 @@ export class Docente{
   apellidoDocente:string=""
   correoDocente:string=""
   claveDocente:string=""
-  telefonoDocente:string=""
+  telefonoDocente:number=0
 }
