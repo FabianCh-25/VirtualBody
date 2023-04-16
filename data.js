@@ -3,7 +3,7 @@ module.exports = function () {
   var data = {
     actividades: [
       {
-        CodigoActividad:1,
+        id:10,
         Titulo: "Tobby",
         Descripcion: "Gaaaaaaa",
         FechaPublicacion:"2022-09-10",

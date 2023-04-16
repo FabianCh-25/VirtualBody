@@ -1,5 +1,5 @@
 export class Actividad {
-  CodigoActividad:number=0
+  id:number=0
   Titulo:string= ""
   Descripcion: string =""
   FechaPublicacion: Date = new Date(Date.now())

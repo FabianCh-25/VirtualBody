@@ -21,7 +21,7 @@ export class ActividadInsertarComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      CodigoActividad: new FormControl(),
+      id: new FormControl(),
       Titulo: new FormControl(),
       Descripcion: new FormControl(),
       FechaPublicacion: new FormControl(),
@@ -29,7 +29,7 @@ export class ActividadInsertarComponent implements OnInit {
     });
   }
   aceptar(): void {
-    this.actividad.CodigoActividad = this.form.value['CodigoActividad'];
+    this.actividad.id = this.form.value['id'];
     this.actividad.Titulo = this.form.value['Titulo'];
     this.actividad.Descripcion = this.form.value['Descripcion'];
     this.actividad.FechaPublicacion = this.form.value['FechaPublicacion'];
