@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { MatTableModule } from '@angular/material/table';
+import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 @NgModule({
   declarations: [
     AppComponent,
     ActividadListarComponent,
-    ActividadComponent
+    ActividadComponent,
+    ActividadInsertarComponent
   ],
   imports: [
     BrowserModule,
