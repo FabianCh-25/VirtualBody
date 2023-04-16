@@ -1,0 +1,19 @@
+<div>
+  <h2>Listado de cursos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Código del curso</th>
+        <th>Nombre del curso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curso of cursos">
+        <td>{{ curso.CodigoCurso }}</td>
+        <td>{{ curso.NombreCurso }}</td>
+        <td>{{ curso.Descripcion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

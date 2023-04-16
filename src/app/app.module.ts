@@ -7,11 +7,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { MatTableModule } from '@angular/material/table';
+import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
+import { FormsModule } from '@angular/forms';
+import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     ActividadListarComponent,
-    ActividadComponent
+    ActividadComponent,
+    CrearCursosComponent,
+    ListarCursosComponent,
+    NavbarComponent
+
   ],
   imports: [
     BrowserModule,
@@ -19,6 +34,14 @@ import { MatTableModule } from '@angular/material/table';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
+    FormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
