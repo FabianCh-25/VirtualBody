@@ -8,6 +8,12 @@ import { ActividadListarComponent } from './component/actividad/actividad-listar
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { MatTableModule } from '@angular/material/table';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +27,13 @@ import { ActividadInsertarComponent } from './component/actividad/actividad-inse
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
