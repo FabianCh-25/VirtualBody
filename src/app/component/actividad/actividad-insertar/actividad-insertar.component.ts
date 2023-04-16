@@ -15,7 +15,8 @@ export class ActividadInsertarComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   actividad: Actividad = new Actividad();
   mensaje: string = 'Gaaa';
-  maxFecha: Date = moment().add(-1, 'days').toDate();
+  minFecha: Date = moment().toDate();
+  maxFecha: Date = moment().add(5, 'months').toDate();
   constructor(private aS: ActividadService, private router: Router) { }
 
 
@@ -35,7 +36,7 @@ export class ActividadInsertarComponent implements OnInit {
     this.actividad.FechaPublicacion = this.form.value['FechaPublicacion'];
     this.actividad.FechaEntrega = this.form.value['FechaEntrega'];
     // validamos q' campo titulo no este vacío
-    if (this.form.value['Titulo'].length > 0) {
+    if (this.form.value['Titulo'].length > 0 ) {
       this.aS.insert(this.actividad).subscribe((data) => {
         this.aS.list().subscribe((data) => {
           this.aS.setList(data);

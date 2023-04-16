@@ -7,6 +7,10 @@
   <title>Document</title>
 </head>
 <body>
+  <div class="container">
+    <div style="text-align: center;">
+      <h1>Registro de Actividades</h1>
+    </div>
   <form [formGroup]="form" (submit)="aceptar()">
 
     <mat-form-field class="example-full-width">
@@ -34,6 +38,7 @@
         [matDatepicker]="picker"
         placeholder="Choose a date"
         formControlName="FechaPublicacion"
+        [min]="minFecha"
         [max]="maxFecha"
       />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -48,6 +53,7 @@
         [matDatepicker]="picker2"
         placeholder="Choose a date"
         formControlName="FechaEntrega"
+        [min]="minFecha"
         [max]="maxFecha"
       />
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
@@ -55,11 +61,17 @@
     </mat-form-field>
     <br>
 
-    <button mat-button color="primary">Aceptar</button>
-    <button mat-button color="warn" routerLink="/actividades">Cancelar</button>
+    <div style="text-align: center;">
+      <button mat-raised-button color="primary" style="margin-right: 10px;">Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/actividades">Cancelar</button>
+    </div>
+
+
     <br> <p>{{ mensaje }}</p>
 
 
   </form>
+</div>
+
 </body>
 </html>

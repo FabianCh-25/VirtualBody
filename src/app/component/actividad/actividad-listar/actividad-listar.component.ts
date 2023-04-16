@@ -20,5 +20,9 @@ export class ActividadListarComponent implements OnInit{
       this.dataSource = new MatTableDataSource(data);
   });
 
+  this.aS.getActividad().subscribe(data =>{
+    this.dataSource=new MatTableDataSource(data);
+  })
+
 }
 }
