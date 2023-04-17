@@ -26,10 +26,17 @@ import { ActividadInsertarComponent } from './component/actividad/actividad-inse
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
+import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.component';
+import { AulaComponent } from './component/aula/aula.component';
+import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ActividadListarComponent,
+    AulaListarComponent,
+    AulaComponent,
+    AulaInsertarComponent,
     CrearCursosComponent,
     ListarCursosComponent,
     NavbarComponent,
