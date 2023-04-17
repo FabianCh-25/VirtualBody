@@ -1,3 +1,32 @@
 .spacer {
   flex: 1 1 auto;
 }
+/* component.css */
+.mat-toolbar {
+  transition: background-color 0.3s ease;
+}
+
+.mat-toolbar:hover {
+  background-color: rgba(63, 81, 181, 0.9); /* Ajusta el color de fondo al pasar el cursor sobre la barra de navegación */
+}
+
+button.mat-button {
+  transition: color 0.2s ease;
+}
+
+button.mat-button:hover {
+  color: rgba(255, 255, 255, 0.7); /* Ajusta el color del texto del botón al pasar el cursor sobre él */
+}
+
+/* Estilos del menú */
+.mat-menu-content {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra más sutil al menú */
+}
+
+.mat-menu-item {
+  transition: background-color 0.2s ease;
+}
+
+.mat-menu-item:hover {
+  background-color: rgba(63, 81, 181, 0.05); /* Ajusta el color de fondo del elemento del menú al pasar el cursor sobre él */
+}

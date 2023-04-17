@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Curso } from '../curso.model'; // Importa el modelo de curso
-import { CursosService } from '../cursos.service'; // Importa el servicio
+import { Curso } from '../../../curso.model'; // Importa el modelo de curso
+import { CursosService } from '../../../cursos.service'; // Importa el servicio
 
 @Component({
   selector: 'app-crear-cursos',

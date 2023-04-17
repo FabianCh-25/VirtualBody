@@ -11,7 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
 import { FormsModule } from '@angular/forms';
-import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +20,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
@@ -65,7 +66,8 @@ import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-inser
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
 
   ],
   providers: [],

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
-import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
+import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
