@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Curso } from '../../../curso.model';
-import { CursosService } from '../../../cursos.service';
+import { CursosService } from '../../../service/cursos.service';
 import { Subscription } from 'rxjs'; // Importa Subscription desde rxjs
 
 @Component({

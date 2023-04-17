@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Curso } from './curso.model';
+import { Curso } from '../curso.model';
 import { Subject } from 'rxjs'; // Importa Subject desde rxjs
 
 @Injectable({
