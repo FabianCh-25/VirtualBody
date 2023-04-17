@@ -1,7 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,7 +9,6 @@ import { DocenteListarComponent } from './component/docente/docente-listar/docen
 import { DocenteInsertarComponent } from './component/docente/docente-insertar/docente-insertar.component';
 import { MatTableModule } from '@angular/material/table';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
-
 import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
