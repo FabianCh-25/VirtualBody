@@ -1,6 +1,6 @@
 /* component.css */
 .mat-toolbar {
-  background-color: rgb(73, 202, 123); /* Color de fondo blanco para la barra de navegación */
+  background-color: #3f51b5; /* Color de fondo blanco para la barra de navegación */
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la barra de navegación */
 }
 
