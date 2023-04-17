@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container {
+      background-color: #85d6e8;
+      /* Cambia el valor a tu color deseado */
+    }
+  </style>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Registro de Estudiante</h1>
+  </div>
+  <div class="container ">
+
+    <form [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="Ingrese su Código" formControlName="id" />
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ingrese su Nombre" formControlName="NombreEstudiante" />
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="Ingrese su Apellido" formControlName="ApellidoEstudiante" />
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="Ingrese su Correo" formControlName="CorreoEstudiante" />
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Telefono</mat-label>
+        <input matInput placeholder="Ingrese su Telefono" formControlName="TelefonoEstudiante" />
+      </mat-form-field>
+
+      <br>
+
+      <div style="text-align: center; display: flex; justify-content: center;">
+        <button mat-raised-button color="primary">Aceptar</button>
+        <span style="margin: 0 10px;"></span>
+        <!-- Este span se utiliza para agregar espacio horizontal entre los botones -->
+        <button mat-raised-button color="warn" routerLink="/estudiante">Cancelar</button>
+      </div>
+      <p>{{ mensaje }}</p>
+    </form>
+
+  </div>
+</body>
+
+</html>
