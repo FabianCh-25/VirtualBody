@@ -11,7 +11,7 @@ import { ActividadService } from 'src/app/service/actividad.service';
 export class ActividadListarComponent implements OnInit{
   dataSource: MatTableDataSource<Actividad> = new MatTableDataSource();
   lista: Actividad[]=[];
-  displayedColumns: string[] =['CodigoActividad','Titulo','Descripcion','FechaPublicacion','FechaEntrega'];
+  displayedColumns: string[] =['id','Titulo','Descripcion','FechaPublicacion','FechaEntrega'];
 
   constructor(private aS: ActividadService){}
   //aS = Actividad Service
@@ -19,6 +19,10 @@ export class ActividadListarComponent implements OnInit{
     this.aS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
   });
+
+  this.aS.getActividad().subscribe(data =>{
+    this.dataSource=new MatTableDataSource(data);
+  })
 
 }
 }

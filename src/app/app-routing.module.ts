@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
+import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
+import { ActividadComponent } from './component/actividad/actividad.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
