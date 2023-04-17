@@ -19,6 +19,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ActividadComponent,
     CrearCursosComponent,
     ListarCursosComponent,
-    NavbarComponent
+    NavbarComponent,
+    LandingPageComponent
 
   ],
   imports: [

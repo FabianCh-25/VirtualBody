@@ -1,7 +1,6 @@
 <mat-toolbar color="primary">
-  <span>VirtualBody</span>
+  <span class="title" (click)="toggleAnimation()" [@titleAnimation]="isAnimated ? 'active' : 'inactive'">VirtualBody</span>
   <span class="spacer"></span>
-
   <!-- Menú 1 -->
   <button mat-button [matMenuTriggerFor]="menu1">Menú 1</button>
   <mat-menu #menu1="matMenu">
