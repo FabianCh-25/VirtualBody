@@ -28,6 +28,7 @@ import { EstudianteInsertarComponent } from './component/estudiante/estudiante-i
 import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.component';
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-inser
     DocenteInsertarComponent,
     EstudianteComponent,
     EstudianteListarComponent,
-    EstudianteInsertarComponent
+    EstudianteInsertarComponent,
+    LandingPageComponent
 
   ],
   imports: [
