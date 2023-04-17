@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DocenteComponent } from './component/docente/docente.component';
+import { DocenteListarComponent } from './component/docente/docente-listar/docente-listar.component';
+import { DocenteInsertarComponent } from './component/docente/docente-insertar/docente-insertar.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadComponent } from './component/actividad/actividad.component';
@@ -28,7 +33,10 @@ import { ActividadInsertarComponent } from './component/actividad/actividad-inse
     CrearCursosComponent,
     ListarCursosComponent,
     NavbarComponent,
-    ActividadInsertarComponent
+    ActividadInsertarComponent,
+    DocenteComponent,
+    DocenteListarComponent,
+    DocenteInsertarComponent
 
 
   ],
