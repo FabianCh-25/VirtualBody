@@ -9,7 +9,7 @@ import { DocenteListarComponent } from './component/docente/docente-listar/docen
 import { DocenteInsertarComponent } from './component/docente/docente-insertar/docente-insertar.component';
 import { MatTableModule } from '@angular/material/table';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
-import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
+import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
