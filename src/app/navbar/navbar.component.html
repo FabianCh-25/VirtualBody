@@ -1,7 +1,58 @@
-<mat-toolbar color= "primary" >
+<mat-toolbar color="primary">
   <span>VirtualBody</span>
   <span class="spacer"></span>
-  <button mat-button routerLink="/crear-cursos">Crear Cursos</button>
-  <button mat-button routerLink="/listar-cursos">Listar Cursos</button>
-  <button mat-button routerLink="/actividad-listar">Listar Actividad</button>
+
+  <!-- Menú 1 -->
+  <button mat-button [matMenuTriggerFor]="menu1">Menú 1</button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item routerLink="/crear-cursos">Crear Cursos</button>
+    <button mat-menu-item routerLink="/listar-cursos">Listar Cursos</button>
+  </mat-menu>
+
+  <!-- Menú 2 -->
+  <button mat-button [matMenuTriggerFor]="menu2">Menú 2</button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item routerLink="/actividad-listar">Listar Actividad</button>
+    <button mat-menu-item routerLink="/ruta4">Opción 4</button>
+  </mat-menu>
+
+  <!-- Menú 3 -->
+  <button mat-button [matMenuTriggerFor]="menu3">Menú 3</button>
+  <mat-menu #menu3="matMenu">
+    <button mat-menu-item routerLink="/ruta5">Opción 5</button>
+    <button mat-menu-item routerLink="/ruta6">Opción 6</button>
+  </mat-menu>
+
+  <!-- Menú 4 -->
+  <button mat-button [matMenuTriggerFor]="menu4">Menú 4</button>
+  <mat-menu #menu4="matMenu">
+    <button mat-menu-item routerLink="/ruta7">Opción 7</button>
+    <button mat-menu-item routerLink="/ruta8">Opción 8</button>
+  </mat-menu>
+
+  <!-- Menú 5 -->
+  <button mat-button [matMenuTriggerFor]="menu5">Menú 5</button>
+  <mat-menu #menu5="matMenu">
+    <button mat-menu-item routerLink="/ruta9">Opción 9</button>
+    <button mat-menu-item routerLink="/ruta10">Opción 10</button>
+  </mat-menu>
 </mat-toolbar>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
