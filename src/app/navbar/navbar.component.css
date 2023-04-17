@@ -1,32 +1,36 @@
-.spacer {
-  flex: 1 1 auto;
-}
 /* component.css */
 .mat-toolbar {
-  transition: background-color 0.3s ease;
+  background-color: rgb(73, 202, 123); /* Color de fondo blanco para la barra de navegación */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la barra de navegación */
 }
 
-.mat-toolbar:hover {
-  background-color: rgba(63, 81, 181, 0.9); /* Ajusta el color de fondo al pasar el cursor sobre la barra de navegación */
+.mat-toolbar span {
+  color: #222; /* Color de texto oscuro para el título de la aplicación */
+  font-weight: 500; /* Ajusta el peso de la fuente para el título de la aplicación */
+}
+
+.spacer {
+  flex: 1 1 auto; /* Asegura que los botones se alineen a la derecha de la barra de navegación */
 }
 
 button.mat-button {
-  transition: color 0.2s ease;
+  color: #222; /* Color de texto oscuro para los botones de la barra de navegación */
 }
 
 button.mat-button:hover {
-  color: rgba(255, 255, 255, 0.7); /* Ajusta el color del texto del botón al pasar el cursor sobre él */
+  color: rgba(34, 34, 34, 0.8); /* Ajusta el color del texto al pasar el cursor sobre el botón */
+  background-color: rgba(0, 0, 0, 0.05); /* Añade un efecto de realce sutil al pasar el cursor sobre el botón */
 }
 
 /* Estilos del menú */
 .mat-menu-content {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra más sutil al menú */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil al menú */
 }
 
 .mat-menu-item {
-  transition: background-color 0.2s ease;
+  font-weight: 500; /* Ajusta el peso de la fuente para los elementos del menú */
 }
 
 .mat-menu-item:hover {
-  background-color: rgba(63, 81, 181, 0.05); /* Ajusta el color de fondo del elemento del menú al pasar el cursor sobre él */
+  background-color: rgba(34, 34, 34, 0.05); /* Ajusta el color de fondo del elemento del menú al pasar el cursor sobre él */
 }
