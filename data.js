@@ -40,7 +40,15 @@ module.exports = function () {
         FechaPublicacion:"2021-09-10",
         FechaEntrega:"2012-09-10",
       }
-    ]
+    ],
+    estudiantes:[
+      {
+        id: 11,
+        NombreEstudiante: "Carlos",
+        ApellidoEstudiante: "Aguirre Juarez",
+        CorreoEstudiante: "carlos@gmail.com",
+        TelefonoEstudiante: "963214785",
+      }]
   }
   return data
 }
