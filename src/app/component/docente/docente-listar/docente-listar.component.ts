@@ -11,7 +11,7 @@ import { DocenteService } from 'src/app/service/docente.service';
 export class DocenteListarComponent implements OnInit {
   dataSource: MatTableDataSource<Docente> = new MatTableDataSource();
   lista: Docente[] = []
-  displayedColumns: string[] = ['numero', 'nombre', 'apellido', 'correo', 'clave', 'telefono']
+  displayedColumns: string[] = ['numero', 'nombre', 'apellido', 'correo', 'clave', 'telefono', 'ceditar']
   constructor(private dS: DocenteService) { }
   ngOnInit(): void {
     this.dS.list().subscribe(data => {
@@ -21,5 +21,9 @@ export class DocenteListarComponent implements OnInit {
     this.dS.getList().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
     })
+  }
+
+  filtrar(e: any) {
+    this.dataSource.filter = e.target.value.trim();
   }
 }

@@ -15,6 +15,7 @@ export class DocenteService {
   list() {
     return this.http.get<Docente[]>(this.url)
   }
+
   insert(docente: Docente) {
     return this.http.post(this.url, docente); // Insertar
   }
@@ -22,7 +23,16 @@ export class DocenteService {
   getList() {
     return this.listaCambio.asObservable();
   }
+
   setList(listaNueva: Docente[]) {
     this.listaCambio.next(listaNueva); //
+  }
+
+  listId(id: number) {
+    return this.http.get<Docente>(`${this.url}/${id}`);
+  }
+
+  update(d: Docente) {
+    return this.http.put(this.url + '/' + d.id, d);
   }
 }
