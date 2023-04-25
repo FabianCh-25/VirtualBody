@@ -35,7 +35,6 @@ export class AulaService {
     return this.http.get<Aula>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
-
     return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
