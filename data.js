@@ -1,14 +1,26 @@
 module.exports = function () {
 
   var data = {
-    actividades: [
+    aula: [
       {
-        CodigoActividad:1,
-        Titulo: "Tobby",
-        Descripcion: "Gaaaaaaa",
-        FechaPublicacion:"2022-09-10",
-        FechaEntrega:"2022-09-10",
-
+        id:01,
+        seccionAula: "GR18",
+        vacanteAula: 30,
+      },
+      {
+        id:02,
+        seccionAula: "SX47",
+        vacanteAula: 15,
+      },
+      {
+        id:03,
+        seccionAula: "BD64",
+        vacanteAula: 4,  
+      },
+      {
+        id:04,
+        seccionAula: "CI30",
+        vacanteAula: 22,  
       }
     ]
   }

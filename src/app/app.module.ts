@@ -13,9 +13,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.component';
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
+import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
+import { AulaDialogoComponent } from './component/aula/aula-listar/aula-dialogo/aula-dialogo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,21 +29,26 @@ import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-inser
     ActividadComponent,
     AulaListarComponent,
     AulaComponent,
-    AulaInsertarComponent
+    AulaInsertarComponent,
+    AulaEliminarComponent,
+    AulaDialogoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    ReactiveFormsModule,
-    FormsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
     MatInputModule,
+    FormsModule,
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
