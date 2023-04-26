@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CrearCursosComponent,
     ListarCursosComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    EditarCursosComponent
 
   ],
   imports: [
