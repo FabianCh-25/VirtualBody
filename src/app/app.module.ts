@@ -11,10 +11,14 @@ import { MatTableModule } from '@angular/material/table'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
 
 
 @NgModule({
@@ -22,7 +26,8 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
     DocenteComponent,
     DocenteListarComponent,
-    DocenteInsertarComponent
+    DocenteInsertarComponent,
+    DocenteDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

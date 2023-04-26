@@ -74,6 +74,7 @@ export class DocenteInsertarComponent implements OnInit {
           claveDocente: new FormControl(data.claveDocente),
           telefonoDocente: new FormControl(data.telefonoDocente)
         });
+        console.log(data);
       });
     }
   }
