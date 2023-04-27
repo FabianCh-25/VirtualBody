@@ -11,6 +11,7 @@ import { DocenteListarComponent } from './component/docente/docente-listar/docen
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'docente-listar', component: DocenteListarComponent },
   { path: 'estudiante-insertar', component: EstudianteInsertarComponent },
   { path: 'estudiante-listar', component: EstudianteListarComponent },
+  { path: 'editar-cursos/:codigoCurso', component: EditarCursosComponent },
   { path: '', component: LandingPageComponent }, // Ruta para la landing page
 ];
 

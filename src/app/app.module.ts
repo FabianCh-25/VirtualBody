@@ -29,6 +29,7 @@ import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.co
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     EstudianteComponent,
     EstudianteListarComponent,
     EstudianteInsertarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    EditarCursosComponent
 
   ],
   imports: [

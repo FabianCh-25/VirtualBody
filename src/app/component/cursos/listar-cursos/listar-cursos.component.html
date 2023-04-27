@@ -1,19 +1,26 @@
 <div>
   <h2>Listado de cursos</h2>
+  <input type="text" [(ngModel)]="terminoBusqueda" (input)="buscarCurso()" placeholder="Buscar curso">
   <table>
     <thead>
       <tr>
         <th>Código del curso</th>
         <th>Nombre del curso</th>
         <th>Descripción</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let curso of cursos">
+      <tr *ngFor="let curso of cursosFiltrados">
         <td>{{ curso.CodigoCurso }}</td>
         <td>{{ curso.NombreCurso }}</td>
         <td>{{ curso.Descripcion }}</td>
+        <td>
+          <button (click)="eliminarCurso(curso.CodigoCurso)">Eliminar</button>
+          <button (click)="editarCurso(curso)">Editar</button>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
+

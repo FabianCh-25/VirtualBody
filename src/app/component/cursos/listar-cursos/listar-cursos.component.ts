@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Curso } from '../../../curso.model';
 import { CursosService } from '../../../service/cursos.service';
 import { Subscription } from 'rxjs'; // Importa Subscription desde rxjs
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-listar-cursos',
   templateUrl: './listar-cursos.component.html',
@@ -10,19 +10,37 @@ import { Subscription } from 'rxjs'; // Importa Subscription desde rxjs
 })
 export class ListarCursosComponent implements OnInit, OnDestroy {
   cursos: Curso[] = [];
-  private cursosSub!: Subscription; // Crea una variable para la suscripción
+  cursosFiltrados: Curso[] = [];
+  terminoBusqueda = '';
+  private cursosSub!: Subscription;
 
-  constructor(private cursosService: CursosService) { }
+  constructor(private cursosService: CursosService, private router: Router) { }
 
   ngOnInit(): void {
     this.cursos = this.cursosService.obtenerCursos();
+    this.cursosFiltrados = this.cursos;
     this.cursosSub = this.cursosService.obtenerCursosActualizadosListener().subscribe((cursos: Curso[]) => {
       this.cursos = cursos;
-    }); // Suscríbete al observable y actualiza el array de cursos cuando se emita un evento
+      this.buscarCurso();
+    });
+  }
+
+  buscarCurso(): void {
+    this.cursosFiltrados = this.cursos.filter(curso => {
+      return curso.NombreCurso.toLowerCase().includes(this.terminoBusqueda.toLowerCase());
+    });
+  }
+
+  eliminarCurso(codigoCurso: number): void {
+    this.cursosService.eliminarCurso(codigoCurso);
+  }
+
+  editarCurso(curso: Curso): void {
+    this.router.navigate(['/editar-cursos', curso.CodigoCurso]);
   }
 
   ngOnDestroy(): void {
-    this.cursosSub.unsubscribe(); // Desuscríbete del observable al destruir el componente
+    this.cursosSub.unsubscribe();
   }
 }
 
