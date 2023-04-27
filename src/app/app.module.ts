@@ -14,12 +14,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
     ActividadListarComponent,
     ActividadComponent,
-    ActividadInsertarComponent
+    ActividadInsertarComponent,
+    ActividadDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

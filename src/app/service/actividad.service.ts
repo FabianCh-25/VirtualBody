@@ -11,6 +11,8 @@ const base_url=environment.base
 export class ActividadService {
   private url=`${base_url}/actividades`
   private listaCambio= new Subject<Actividad[]>();
+  private confirmaEliminacion = new Subject<Boolean>()
+
 
   constructor(private http:HttpClient) { }
   list(){
@@ -33,5 +35,15 @@ export class ActividadService {
   }
   update(a:Actividad){
     return this.http.put(this.url+'/'+a.id,a)
+  }
+  eliminar(id: number) {
+
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }
