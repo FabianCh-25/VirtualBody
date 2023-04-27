@@ -10,6 +10,14 @@ module.exports = function () {
 	      telefonoDocente: 987456321,
       },
       {
+        id:3,
+        nombreDocente: "Monica",
+        apellidoDocente: "Huamani",
+        correoDocente:"ahgsahgs@hotmail.com",
+        claveDocente: "monica7H",
+        telefonoDocente: 951236478,
+      },
+      {
         id:2,
         nombreDocente: "Monica",
         apellidoDocente: "Huamani",
