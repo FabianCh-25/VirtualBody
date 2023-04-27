@@ -12,6 +12,8 @@ children:[
     path: 'actividadinsertar',
     component: ActividadInsertarComponent,
   },
+  {
+    path: 'edicion/:id', component:ActividadInsertarComponent}
 ],
 
 }

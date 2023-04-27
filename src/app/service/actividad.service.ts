@@ -11,6 +11,7 @@ const base_url=environment.base
 export class ActividadService {
   private url=`${base_url}/actividades`
   private listaCambio= new Subject<Actividad[]>();
+
   constructor(private http:HttpClient) { }
   list(){
     return this.http.get<Actividad[]>(this.url)
@@ -25,5 +26,12 @@ export class ActividadService {
   }
   setList(listaNueva: Actividad[]){
     this.listaCambio.next(listaNueva);
+  }
+
+  listId(id: number){
+    return this.http.get<Actividad>(`${this.url}/${id}`);
+  }
+  update(a:Actividad){
+    return this.http.put(this.url+'/'+a.id,a)
   }
 }
