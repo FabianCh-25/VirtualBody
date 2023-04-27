@@ -2,14 +2,18 @@ import { Injectable } from '@angular/core';
 import { Curso } from '../curso.model';
 import { Subject } from 'rxjs'; // Importa Subject desde rxjs
 
+import { environment } from 'src/environments/environment'
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CursosService {
   private cursos: Curso[] = [];
+  private url = `${environment.base}/cursos`
   private cursosActualizados = new Subject<Curso[]>(); // Crea un Subject para los cursos actualizados
 
-  constructor() { }
+  constructor (private http:HttpClient) {}
 
   agregarCurso(curso: Curso): void {
     this.cursos.push(curso);
