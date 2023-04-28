@@ -16,6 +16,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule  } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatIconModule
+
 
   ],
   providers: [],
