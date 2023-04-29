@@ -3,5 +3,6 @@ export class Estudiante {
   NombreEstudiante: string = ""
   ApellidoEstudiante: string = ""
   CorreoEstudiante: string = ""
+  ClaveEstudiante: string = ""
   TelefonoEstudiante: string = ""
 }
