@@ -23,6 +23,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +58,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ReactiveFormsModule,
     MatMenuModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    ConfirmDialogModule
 
   ],
   providers: [],

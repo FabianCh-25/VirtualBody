@@ -25,6 +25,7 @@ export class EditarCursosComponent implements OnInit {
   }
 
   guardarCambios(): void {
+
     this.cursosService.editarCurso(this.curso);
     this.router.navigate(['/listar-cursos']);
   }
