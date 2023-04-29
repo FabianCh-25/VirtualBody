@@ -1,10 +1,11 @@
 import { EstudianteService } from './../../../service/estudiante.service';
 import { Estudiante } from './../../../model/estudiante';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,ChangeDetectorRef  } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
 import { EstudianteDialogoComponent } from './estudiante-dialogo/estudiante-dialogo.component';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 
 
 
@@ -15,12 +16,17 @@ import { EstudianteDialogoComponent } from './estudiante-dialogo/estudiante-dial
 })
 
 export class EstudianteListarComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   dataSource: MatTableDataSource<Estudiante> = new MatTableDataSource();
   lista: Estudiante[] = [];
   displayedColumns: string[] = ['codigo', 'nombre', 'apellido', 'correo', 'telefono','clave','acciones'];
   private idMayor: number = 0;
 
-  constructor(private eS: EstudianteService, private dialog: MatDialog) { }
+  constructor(private eS: EstudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
+    this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
+
+  }
   //eS = EstudianteService
   ngOnInit(): void {
     this.eS.list().subscribe((data) => {
@@ -32,7 +38,9 @@ export class EstudianteListarComponent implements OnInit {
     this.eS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
-
+    if (this.paginator) {
+      this.dataSource.paginator = this.paginator;
+    }
   }
   confirmar(id: number) {
     this.idMayor = id;
