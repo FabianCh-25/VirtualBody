@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Curso } from '../../../curso.model'; // Importa el modelo de curso
-import { CursosService } from '../../../cursos.service'; // Importa el servicio
+import { CursosService } from 'src/app/service/cursos.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from 'src/app/componentes/confirm-dialog/confirm-dialog.component';
