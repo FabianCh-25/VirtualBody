@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Docente } from 'src/app/model/docentes';
-import * as moment from 'moment';
 import { DocenteService } from 'src/app/service/docente.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
@@ -17,7 +16,6 @@ export class DocenteInsertarComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   docente: Docente = new Docente();
   mensaje: string = '';
-  maxFecha: Date = moment().add(-1, 'days').toDate(); // un dia anterior , por eso el -1
   constructor(private dS: DocenteService, private router: Router, private route:ActivatedRoute) { }
   ngOnInit(): void {
 

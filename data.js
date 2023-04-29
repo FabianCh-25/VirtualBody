@@ -32,6 +32,14 @@ module.exports = function () {
         correoDocente:"estefanyLopez@hotmail.com",
 	      claveDocente: "tefa2000",
 	      telefonoDocente: 913245655,
+      },
+      {
+        id:5,
+        nombreDocente: "Daniela",
+        apellidoDocente: "Huamani",
+        correoDocente:"daniHuamani@hotmail.com",
+	      claveDocente: "daniHua20",
+	      telefonoDocente: 903005655,
       }
     ]
   }

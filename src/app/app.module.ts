@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
-
+import { MatPaginatorModule  } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { DocenteDialogoComponent } from './component/docente/docente-listar/doce
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
