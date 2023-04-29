@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,7 +24,6 @@ import { ActividadDialogoComponent } from './component/actividad/actividad-lista
 import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSelectModule } from '@angular/material/select';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
@@ -35,7 +35,8 @@ import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-inser
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
+import { MatPaginatorModule  } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -57,8 +58,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     EstudianteDialogoComponent,
     NavbarComponent,
     LandingPageComponent,
-    EditarCursosComponent
-
+    EditarCursosComponent,
+    DocenteDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -74,16 +75,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
+
     MatButtonModule,
     MatDialogModule,
     MatPaginatorModule,
     MatIconModule,
-    MatMenuModule
-
+    MatMenuModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
