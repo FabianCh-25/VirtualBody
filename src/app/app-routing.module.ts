@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'listar-cursos', component: ListarCursosComponent },
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
   { path: 'actividad-listar', component: ActividadListarComponent },
+  {path: 'actividades/edicion/:id', component:ActividadInsertarComponent},
   { path: 'aula-insertar', component: AulaInsertarComponent },
   { path: 'aula-listar', component: AulaListarComponent },
   { path: 'docente-insertar', component: DocenteInsertarComponent },

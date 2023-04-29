@@ -10,18 +10,24 @@ import { DocenteInsertarComponent } from './component/docente/docente-insertar/d
 import { MatTableModule } from '@angular/material/table';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
-import { FormsModule } from '@angular/forms';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule  } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
+
+
+
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
@@ -35,13 +41,14 @@ import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-c
   declarations: [
     AppComponent,
     ActividadListarComponent,
+    ActividadInsertarComponent,
+    ActividadDialogoComponent,
     AulaListarComponent,
     AulaComponent,
     AulaInsertarComponent,
     CrearCursosComponent,
     ListarCursosComponent,
     NavbarComponent,
-    ActividadInsertarComponent,
     DocenteComponent,
     DocenteListarComponent,
     DocenteInsertarComponent,
@@ -70,6 +77,11 @@ import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-c
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    MatIconModule,
+
     MatButtonModule,
     MatMenuModule,
 
