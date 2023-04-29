@@ -21,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,8 @@ import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-c
     MatInputModule,
     ReactiveFormsModule,
     MatMenuModule,
+    MatIconModule,
+    MatPaginatorModule
 
   ],
   providers: [],

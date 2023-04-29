@@ -22,5 +22,7 @@
       </tr>
     </tbody>
   </table>
+  <mat-paginator [length]="totalCursos" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="cambiarPagina($event)">
+  </mat-paginator>
 </div>
 
