@@ -64,6 +64,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     DocenteDialogoComponent,
     AulaEliminarComponent,
     AulaDialogoComponent,
+
+
   ],
   imports: [
     BrowserModule,
