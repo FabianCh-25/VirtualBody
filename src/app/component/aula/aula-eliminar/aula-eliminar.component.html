@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+          <h1>Aulas</h1>
+          <form [formGroup]="form" (submit)="aceptar()">
+    
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="id">
+          </mat-form-field>
+    
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Seccion</mat-label>
+            <input matInput required placeholder="seccionAula" formControlName="seccionAula">
+          </mat-form-field>
+          
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Vacante</mat-label>
+            <input matInput required placeholder="vacanteAula" formControlName="vacanteAula">
+          </mat-form-field>
+          
+          <br>
+            <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    
+            <button mat-raised-button color="warn" routerLink="/pets">Cancelar</button>
+          <p>{{mensaje}}</p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

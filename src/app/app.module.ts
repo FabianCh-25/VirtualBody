@@ -26,6 +26,8 @@ import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-curs
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 
+import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
+import { AulaDialogoComponent } from './component/aula/aula-listar/aula-dialogo/aula-dialogo.component';
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
@@ -59,12 +61,13 @@ import { MatPaginatorModule  } from '@angular/material/paginator';
     NavbarComponent,
     LandingPageComponent,
     EditarCursosComponent,
-    DocenteDialogoComponent
+    DocenteDialogoComponent,
+    AulaEliminarComponent,
+    AulaDialogoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
     FormsModule,

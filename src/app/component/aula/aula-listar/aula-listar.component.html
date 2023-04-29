@@ -14,6 +14,9 @@
         <div>
           <button mat-raised-button color="warn" routerLink="/aula/aulainsertar">Nuevo</button>
         </div>
+        <mat-form-field>
+          <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+        </mat-form-field>
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     
           <ng-container matColumnDef="Codigo">
@@ -30,7 +33,15 @@
             <th mat-header-cell *matHeaderCellDef> Vacante </th>
             <td mat-cell *matCellDef="let element"> {{element.vacanteAula}} </td>
           </ng-container>
-    
+          
+          <ng-container matColumnDef="Acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+                [routerLink]="['edicion', element.id]">Actualizar</button>
+              <button mat-raised-button color="accent" (click)="confirmar(element.id)">Eliminar</button>
+            </td>
+          </ng-container>
+          
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
