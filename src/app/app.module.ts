@@ -1,3 +1,5 @@
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,6 +35,7 @@ import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-inser
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     EstudianteInsertarComponent,
     EstudianteDialogoComponent,
     NavbarComponent,
+    LandingPageComponent,
+    EditarCursosComponent
+
   ],
   imports: [
     BrowserModule,
@@ -73,7 +79,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatMenuModule
 
   ],
   providers: [],
