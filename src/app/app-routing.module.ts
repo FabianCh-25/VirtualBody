@@ -11,6 +11,7 @@ import { DocenteListarComponent } from './component/docente/docente-listar/docen
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
+import { DocenteComponent } from './component/docente/docente.component';
 
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'aula-insertar', component: AulaInsertarComponent },
   { path: 'aula-listar', component: AulaListarComponent },
   { path: 'docente-insertar', component: DocenteInsertarComponent },
+  { path: 'edicion/:id',component:DocenteInsertarComponent},
   { path: 'docente-listar', component: DocenteListarComponent },
   { path: 'estudiante-insertar', component: EstudianteInsertarComponent },
   { path: 'estudiante-listar', component: EstudianteListarComponent },
@@ -37,6 +39,7 @@ const routes: Routes = [
     ]
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
