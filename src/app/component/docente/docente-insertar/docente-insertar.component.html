@@ -16,7 +16,7 @@
     <form [formGroup]="form" (submit)="aceptar()">
         <mat-form-field class="example-full-width">
             <mat-label>Código</mat-label>
-            <input matInput placeholder="Código" formControlName="id">
+            <input matInput placeholder="Código" formControlName="id" required>
         </mat-form-field>
 <br>
         <mat-form-field class="example-full-width">
@@ -26,22 +26,22 @@
 <br>
         <mat-form-field class="example-full-width">
             <mat-label mat-label>Apellido</mat-label>
-            <input matInput placeholder="Apellido" formControlName="apellidoDocente">
+            <input matInput placeholder="Apellido" formControlName="apellidoDocente" required>
         </mat-form-field>
 <br>
         <mat-form-field class="example-full-width">
             <mat-label>Correo</mat-label>
-            <input matInput placeholder="Correo" formControlName="correoDocente" type="email">
+            <input matInput placeholder="Correo" formControlName="correoDocente" type="email" required>
         </mat-form-field>
 <br>
         <mat-form-field class="example-full-width">
           <mat-label>Clave</mat-label>
-          <input matInput placeholder="Clave" formControlName="claveDocente" type="password">
+          <input matInput placeholder="Clave" formControlName="claveDocente" type="password" required>
         </mat-form-field>
 <br>
         <mat-form-field class="example-full-width">
           <mat-label>Teléfono</mat-label>
-          <input matInput placeholder="Teléfono" formControlName="telefonoDocente" type="number">
+          <input matInput placeholder="Teléfono" formControlName="telefonoDocente" type="number" required>
         </mat-form-field>
 <br>
       <div style="text-align: center;">
