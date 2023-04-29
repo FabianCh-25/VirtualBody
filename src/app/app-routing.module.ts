@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'estudiante-insertar', component: EstudianteInsertarComponent },
   { path: 'estudiante-listar', component: EstudianteListarComponent },
   { path: 'editar-cursos/:codigoCurso', component: EditarCursosComponent },
-  { path: '', component: LandingPageComponent }, // Ruta para la landing page
+  { path: '', component: LandingPageComponent }, // Ruta para la landing pag
 ];
 
 @NgModule({
