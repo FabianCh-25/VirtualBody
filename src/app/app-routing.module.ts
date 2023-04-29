@@ -37,6 +37,12 @@ const routes: Routes = [
       { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
       { path: 'edicion/:id', component: EstudianteInsertarComponent }
     ]
+  },
+  {
+    path: 'docentes', component: DocenteComponent, children: [
+      { path: 'docentesinsertar', component: DocenteInsertarComponent },
+      { path: 'edicion/:id', component: DocenteInsertarComponent }
+    ]
   }
 ];
 

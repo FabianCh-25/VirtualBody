@@ -1,18 +1,19 @@
 <mat-toolbar color="primary">
-  <span class="title" (click)="toggleAnimation()" [@titleAnimation]="isAnimated ? 'active' : 'inactive'">VirtualBody</span>
+  <span class="title" (click)="toggleAnimation()"
+    [@titleAnimation]="isAnimated ? 'active' : 'inactive'">VirtualBody</span>
   <span class="spacer"></span>
   <!-- Menú 1 -->
   <button mat-button [matMenuTriggerFor]="menu1">Estudiante</button>
   <mat-menu #menu1="matMenu">
     <button mat-button routerLink="/estudiante-insertar">Insertar Estudiante</button>
-<button mat-button routerLink="/estudiante-listar">Listar Estudiante</button>
+    <button mat-button routerLink="/estudiante-listar">Listar Estudiante</button>
   </mat-menu>
 
   <!-- Menú 2 -->
   <button mat-button [matMenuTriggerFor]="menu2">Docente</button>
   <mat-menu #menu2="matMenu">
-    <button mat-button routerLink="/docente-insertar">Insertar Docente</button>
-    <button mat-button routerLink="/docente-listar">Listar Docente</button>
+    <button mat-button routerLink="/docentes/docentesinsertar">Insertar Docente</button>
+    <button mat-button routerLink="/docentes">Listar Docente</button>
   </mat-menu>
 
   <!-- Menú 3 -->
@@ -36,22 +37,3 @@
     <button mat-button routerLink="/actividad-listar">Listar Actividad</button>
   </mat-menu>
 </mat-toolbar>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

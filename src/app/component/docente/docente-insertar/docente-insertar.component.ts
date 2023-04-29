@@ -55,7 +55,7 @@ export class DocenteInsertarComponent implements OnInit {
           });
         });
       }
-      this.router.navigate(['docente-listar']); // aqui cambia
+      this.router.navigate(['docentes']); // aqui cambia
     }
     else {
       this.mensaje = 'Claro pe Mascota!!';
