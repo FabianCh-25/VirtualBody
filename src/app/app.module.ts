@@ -22,7 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
 import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
-
+import { ActividadComponent } from './component/actividad/actividad.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 
@@ -68,6 +68,7 @@ import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
     DocenteDialogoComponent,
     AulaEliminarComponent,
     AulaDialogoComponent,
+    ActividadComponent
 
 
   ],

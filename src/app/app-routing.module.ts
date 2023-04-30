@@ -18,6 +18,7 @@ import { EstudianteListarComponent } from './component/estudiante/estudiante-lis
 
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
+import { ActividadComponent } from './component/actividad/actividad.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
@@ -51,6 +52,11 @@ const routes: Routes = [
     path: 'aula', component: AulaComponent, children: [
       { path: 'aulainsertar', component: AulaInsertarComponent },
       { path: 'edicion/:id', component: AulaEliminarComponent }]
+  },
+  {
+    path: 'actividades', component: ActividadComponent, children: [
+      { path: 'actividad-insertar', component: ActividadInsertarComponent },
+      { path: 'edicion/:id', component: ActividadInsertarComponent }]
   }
 
 ];
