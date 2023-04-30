@@ -16,6 +16,9 @@ import { DocenteComponent } from './component/docente/docente.component';
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteListarComponent } from './component/estudiante/estudiante-listar/estudiante-listar.component';
 
+import { AulaComponent } from './component/aula/aula.component';
+import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
+
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
   { path: 'listar-cursos', component: ListarCursosComponent },
@@ -43,17 +46,14 @@ const routes: Routes = [
       { path: 'docentesinsertar', component: DocenteInsertarComponent },
       { path: 'edicion/:id', component: DocenteInsertarComponent }
     ]
+  },
+  {
+    path: 'aula', component: AulaComponent, children: [
+      { path: 'aulainsertar', component: AulaInsertarComponent },
+      { path: 'edicion/:id', component: AulaEliminarComponent }]
   }
-];
-import { AulaComponent } from './component/aula/aula.component';
-import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
-import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
 
-const routes: Routes = [{
-  path: 'aula', component: AulaComponent, children: [
-    { path: 'aulainsertar', component: AulaInsertarComponent },
-    { path: 'edicion/:id', component: AulaEliminarComponent }]
-}];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

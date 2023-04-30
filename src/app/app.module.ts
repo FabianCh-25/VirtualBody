@@ -38,7 +38,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
-import { MatPaginatorModule  } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -64,6 +64,8 @@ import { MatPaginatorModule  } from '@angular/material/paginator';
     DocenteDialogoComponent,
     AulaEliminarComponent,
     AulaDialogoComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,7 @@ import { MatPaginatorModule  } from '@angular/material/paginator';
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
-
+    HttpClientModule,
     MatButtonModule,
     MatDialogModule,
     MatPaginatorModule,

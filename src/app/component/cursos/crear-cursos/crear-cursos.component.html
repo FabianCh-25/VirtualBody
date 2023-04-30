@@ -2,21 +2,26 @@
   <h2>Crear curso</h2>
   <form (submit)="agregarCurso()">
     <div>
-      <label for="codigoCurso">Código del curso:</label>
-      <input type="number" [(ngModel)]="CodigoCurso" name="codigoCurso" id="codigoCurso" required>
+      <mat-form-field appearance="outline">
+        <mat-label>Código del curso</mat-label>
+        <input matInput type="number" [(ngModel)]="CodigoCurso" name="codigoCurso" id="codigoCurso" required>
+      </mat-form-field>
     </div>
     <div>
-      <label for="nombreCurso">Nombre del curso:</label>
-      <input type="text" [(ngModel)]="NombreCurso" name="nombreCurso" id="nombreCurso" required>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre del curso</mat-label>
+        <input matInput type="text" [(ngModel)]="NombreCurso" name="nombreCurso" id="nombreCurso" required>
+      </mat-form-field>
     </div>
     <div>
-      <label for="descripcion">Descripción:</label>
-      <textarea [(ngModel)]="Descripcion" name="descripcion" id="descripcion" required></textarea>
+      <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput [(ngModel)]="Descripcion" name="descripcion" id="descripcion" required></textarea>
+      </mat-form-field>
     </div>
-    <button type="submit">Crear curso</button>
+    <button mat-raised-button color="primary" type="submit">Crear curso</button>
   </form>
 </div>
-
 
 
 
