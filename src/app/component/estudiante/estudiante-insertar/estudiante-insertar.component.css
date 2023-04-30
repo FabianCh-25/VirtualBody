@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: ;
   padding: 0;
 }
 
@@ -47,4 +47,10 @@ th {
 .example-full-width {
   max-width: 400px;
   width: 100%;
+}
+
+button {
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
