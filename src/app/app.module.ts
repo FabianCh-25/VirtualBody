@@ -42,6 +42,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
     DocenteDialogoComponent,
     AulaEliminarComponent,
     AulaDialogoComponent,
-    ActividadComponent
+    ActividadComponent,
+    FooterComponent
 
 
   ],
