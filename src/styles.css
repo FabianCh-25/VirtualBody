@@ -17,11 +17,6 @@ body {
   width: 100%;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
-}
 .form-title {
   text-align: center;
   margin-bottom: 24px;
@@ -33,4 +28,22 @@ body {
 
 .form-button {
   margin-top: 24px;
+}
+.form-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.example-full-width + .example-full-width {
+  margin-top: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+button {
+  margin-top: 16px;
 }
