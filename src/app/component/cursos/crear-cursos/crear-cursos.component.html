@@ -1,28 +1,39 @@
-<div class="container">
-  <h2>Crear curso</h2>
-  <form (submit)="agregarCurso()">
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Código del curso</mat-label>
-        <input matInput type="number" [(ngModel)]="CodigoCurso" name="codigoCurso" id="codigoCurso" required>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Nombre del curso</mat-label>
-        <input matInput type="text" [(ngModel)]="NombreCurso" name="nombreCurso" id="nombreCurso" required>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Descripción</mat-label>
-        <textarea matInput [(ngModel)]="Descripcion" name="descripcion" id="descripcion" required></textarea>
-      </mat-form-field>
-    </div>
-    <button mat-raised-button color="primary" type="submit">Crear curso</button>
-  </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="form-title">Crear curso</h1>
+    <form [formGroup]="form" (submit)="agregarCurso()">
 
+      <mat-form-field class="example-full-width">
+        <mat-label>Código del curso</mat-label>
+        <input matInput type="number" formControlName="codigoCurso" required>
+      </mat-form-field>
+<br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre del curso</mat-label>
+        <input matInput type="text" formControlName="nombreCurso" required>
+      </mat-form-field>
+<br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="descripcion" required></textarea>
+      </mat-form-field>
+<br>
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Crear curso</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
 
 
 

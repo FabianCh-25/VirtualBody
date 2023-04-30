@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Curso } from '../../../curso.model'; // Importa el modelo de curso
+import { Curso } from '../../../curso.model';
 import { CursosService } from 'src/app/service/cursos.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from 'src/app/componentes/confirm-dialog/confirm-dialog.component';
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-cursos',
@@ -12,41 +12,37 @@ import { ConfirmDialogComponent } from 'src/app/componentes/confirm-dialog/confi
   styleUrls: ['./crear-cursos.component.css']
 })
 export class CrearCursosComponent implements OnInit {
-  CodigoCurso: number;
-  NombreCurso: string;
-  Descripcion: string;
+  form!: FormGroup;
 
-  constructor(private cursosService: CursosService, private snackBar: MatSnackBar, private dialog: MatDialog)  { // Inyecta el servicio
-    this.CodigoCurso = 0;
-    this.NombreCurso = '';
-    this.Descripcion = '';
-  }
+  constructor(private cursosService: CursosService, private snackBar: MatSnackBar, private dialog: MatDialog, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.form = this.fb.group({
+      codigoCurso: ['', Validators.required],
+      nombreCurso: ['', Validators.required],
+      descripcion: ['', Validators.required]
+    });
   }
 
-  // Método para agregar un curso utilizando el servicio
   agregarCurso(): void {
-
-    if (this.CodigoCurso <= 0 || !this.NombreCurso.trim() || !this.Descripcion.trim()) {
+    if (this.form.invalid) {
       this.snackBar.open('Por favor, complete todos los campos correctamente y asegúrese de que el código del curso sea mayor a cero.', 'Cerrar', {
         duration: 5000,
       });
       return;
     }
 
+    const { codigoCurso, nombreCurso, descripcion } = this.form.value;
+
     // Confirmación antes de guardar
     const dialogRef = this.dialog.open(ConfirmDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        const nuevoCurso = new Curso(this.CodigoCurso, this.NombreCurso, this.Descripcion);
+        const nuevoCurso = new Curso(codigoCurso, nombreCurso, descripcion);
         this.cursosService.agregarCurso(nuevoCurso);
-        this.CodigoCurso = 0;
-        this.NombreCurso = '';
-        this.Descripcion = '';
+        this.form.reset();
       }
     });
-}
-
+  }
 }
