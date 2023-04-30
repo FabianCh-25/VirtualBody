@@ -1,11 +1,11 @@
 /* component.css */
 .mat-toolbar {
-  background-color: #3f51b5; /* Color de fondo blanco para la barra de navegación */
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil a la barra de navegación */
+  background-color: #ba42df; /* Color de fondo blanco para la barra de navegación */
+  box-shadow: 0 1px 6px rgba(17, 16, 16, 0.1); /* Añade una sombra sutil a la barra de navegación */
 }
 
 .mat-toolbar span {
-  color: #222; /* Color de texto oscuro para el título de la aplicación */
+  color: #f1f7ff; /* Color de texto oscuro para el título de la aplicación */
   font-weight: 500; /* Ajusta el peso de la fuente para el título de la aplicación */
 }
 
@@ -32,5 +32,5 @@ button.mat-button:hover {
 }
 
 .mat-menu-item:hover {
-  background-color: rgba(34, 34, 34, 0.05); /* Ajusta el color de fondo del elemento del menú al pasar el cursor sobre él */
+  background-color: rgba(163, 13, 13, 0.05); /* Ajusta el color de fondo del elemento del menú al pasar el cursor sobre él */
 }
