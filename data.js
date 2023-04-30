@@ -151,6 +151,13 @@ module.exports = function () {
         seccionAula: "CI30",
         vacanteAula: 22,
       }
+    ],
+
+    cursos: [ {CodigoCurso : "001", NombreCurso : "Programacion Web", Descripcion : "Curso de programacion web"},
+    {CodigoCurso : "002", NombreCurso : "Base de Datos", Descripcion : "Curso de base de datos"},
+    {CodigoCurso : "003", NombreCurso : "Sistemas Operativos", Descripcion : "Curso de sistemas operativos"},
+    {CodigoCurso : "004", NombreCurso : "Inteligencia Artificial", Descripcion : "Curso de inteligencia artificial"},
+
     ]
   }
   return data
