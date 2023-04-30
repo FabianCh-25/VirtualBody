@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-
 <body>
   <div class="container">
     <div style="text-align: center;">
@@ -35,9 +33,13 @@
 
       <ng-container matColumnDef="Acciones">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
-        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-            [routerLink]="['edicion', element.id]">Actualizar</button>
-      <button mat-raised-button color="accent" (click)="confirmar(element.id)">Eliminar</button>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" [routerLink]="['edicion', element.id]">
+            <mat-icon aria-label="Actualizar">edit</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" (click)="confirmar(element.id)">
+            <mat-icon aria-label="Eliminar">delete</mat-icon>
+          </button>
         </td>
       </ng-container>
 
@@ -49,5 +51,4 @@
     </mat-paginator>
   </div>
 </body>
-
 </html>

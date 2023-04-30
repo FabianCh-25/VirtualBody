@@ -12,27 +12,25 @@
           <h1>Registro de Aulas</h1>
         </div>
         <form [formGroup]="form" (submit)="aceptar()">
-          <mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Código</mat-label>
             <input matInput placeholder="Código" formControlName="id" required=""/>
           </mat-form-field>
-          <mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Seccion</mat-label>
             <input matInput placeholder="Seccion" formControlName="seccionAula" required=""/>
           </mat-form-field>
-          <mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Vacante</mat-label>
             <input matInput placeholder="Vacante" formControlName="vacanteAula" required=""/>
           </mat-form-field>
-
-          <ng-container matColumnDef="acciones">
-            <td>
-              <button mat-icon-button color="primary" type="submit">
-                <mat-icon aria-label="Aceptar">check_circle</mat-icon>
-              </button>
-              <button mat-icon-button color="warn" routerLink="/aula" type="button">
-                <mat-icon aria-label="Cancelar">cancel</mat-icon>
-              </button>
-            </td>
-          </ng-container>
-
+          <div style="text-align: center;">
+          <button mat-raised-button color="primary">Aceptar</button>
+          <button mat-raised-button color="warn" routerLink="/aula">Cancelar</button>
+          <br>
+        </div>
           <p>{{ mensaje }}</p>
         </form>
       </div>
