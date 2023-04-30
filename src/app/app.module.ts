@@ -40,6 +40,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,7 +90,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatPaginatorModule,
     MatIconModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSnackBarModule,
+    ConfirmDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
