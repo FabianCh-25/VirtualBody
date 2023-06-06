@@ -20,14 +20,21 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
 import { MatPaginatorModule  } from '@angular/material/paginator';
-
+import { DetalleMatriculaComponent } from './component/detalle-matricula/detalle-matricula.component';
+import { DetalleMatriculaListarComponent } from './component/detalle-matricula/detalle-matricula-listar/detalle-matricula-listar.component';
+import { DetalleMatriculaInsertarComponent } from './component/detalle-matricula/detalle-matricula-insertar/detalle-matricula-insertar.component';
+import { DetalleMatriculaDialogoComponent } from './component/detalle-matricula/detalle-matricula-listar/detalle-matricula-dialogo/detalle-matricula-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
     DocenteComponent,
     DocenteListarComponent,
     DocenteInsertarComponent,
-    DocenteDialogoComponent
+    DocenteDialogoComponent,
+    DetalleMatriculaComponent,
+    DetalleMatriculaListarComponent,
+    DetalleMatriculaInsertarComponent,
+    DetalleMatriculaDialogoComponent
   ],
   imports: [
     BrowserModule,
