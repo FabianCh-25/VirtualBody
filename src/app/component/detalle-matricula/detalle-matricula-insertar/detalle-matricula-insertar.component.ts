@@ -16,7 +16,7 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
   form: FormGroup = new FormGroup({});
   detalleMatricula: DetalleMatricula = new DetalleMatricula()
   mensaje: string = ""
-  maxFecha: Date = moment().add(-1, 'days').toDate();
+  //maxFecha: Date = moment().add(-1, 'days').toDate();
   lista: Docente[] = [];
   idDocenteSeleccionado: number = 0;
   id: number = 0;
@@ -46,6 +46,8 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
     this.detalleMatricula.idDetalleMatricula = this.form.value['idDetalleMatricula'];
     this.detalleMatricula.fechaInscripcion = this.form.value['fechaInscripcion'];
     this.detalleMatricula.docente.nombre=this.form.value['docente.nombre'];
+
+
     if (this.idDocenteSeleccionado>0) {
       let d = new Docente();
       d.idDocente = this.idDocenteSeleccionado;
@@ -59,8 +61,8 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
     }
     else if(this.edicion){
       this.mS.update(this.detalleMatricula).subscribe(()=>{
-        this.dS.list().subscribe((data)=>{
-          this.dS.setList(data);
+        this.mS.list().subscribe((data)=>{
+          this.mS.setList(data);
         });
       });
     }
@@ -68,11 +70,11 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
 
   init() {
     if (this.edicion) {
-      this.mS.listId(this.id).subscribe((data) => {
+      this.mS.listId(this.id).subscribe((data:any) => {
         this.form = new FormGroup({
           idDetalleMatricula: new FormControl(data.idDetalleMatricula),
           fechaInscripcion: new FormControl(data.fechaInscripcion),
-          docente: new FormControl(data.docente.nombre)
+          //docente: new FormControl(data.docente.nombre) //Docente
         });
         console.log(data);
       });

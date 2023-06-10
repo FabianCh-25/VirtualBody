@@ -30,8 +30,9 @@ export class DetalleMatriculaService {
     return this.http.get<DetalleMatricula>(`${this.url}/${id}`);
   }
 
-  update(d: DetalleMatricula) {
-    return this.http.put(this.url + '/' + d.idDetalleMatricula, d);
+  update(dm: DetalleMatricula) {
+    return this.http.put(this.url + '/' + dm.idDetalleMatricula, dm);
+    //return this.http.put(this.url, d)
   }
 
   eliminar(id: number) {

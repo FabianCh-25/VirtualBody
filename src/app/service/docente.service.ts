@@ -35,6 +35,7 @@ export class DocenteService {
 
   update(d: Docente) {
     return this.http.put(this.url + '/' + d.idDocente, d);
+    //return this.http.put(this.url, d);
   }
 
   eliminar(id: number) {
