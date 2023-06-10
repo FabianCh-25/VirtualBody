@@ -1,6 +1,6 @@
 export class Docente{
-  id:number=0
-  nombreDocente:string=""
+  idDocente:number=0
+  nombre:string=""
   apellidoDocente:string=""
   correoDocente:string=""
   claveDocente:string=""

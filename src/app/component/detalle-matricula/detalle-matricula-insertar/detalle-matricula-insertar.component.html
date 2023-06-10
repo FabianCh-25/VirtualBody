@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container" style="text-align: center">
+      <h1>Detalle Matricula</h1>
+      <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input
+            matInput
+            placeholder="Id"
+            formControlName="idDetalleMatricula"
+            readonly
+          />
+        </mat-form-field>
+
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="fechaInscripcion"
+
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Docente</mat-label>
+          <mat-select
+            formControlName="docente"
+            [(value)]="idDocenteSeleccionado"
+            required
+          >
+            <mat-option *ngFor="let m of lista" [value]="m.idDocente">
+              {{ m.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <br />
+        <button mat-raised-button color="primary" (click)="aceptar()">
+          Aceptar
+        </button>
+        <button mat-raised-button color="warn" routerLink="/detalleMatricula">
+          Cancelar
+        </button>
+        <p>{{ mensaje }}</p>
+      </form>
+    </div>
+  </body>
+</html>

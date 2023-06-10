@@ -8,7 +8,7 @@ const base_url=environment.base
   providedIn: 'root'
 })
 export class DocenteService {
-  private url = `${base_url}/docentes`
+  private url = `${base_url}/Docentes`
   private listaCambio = new Subject<Docente[]>
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
@@ -34,7 +34,8 @@ export class DocenteService {
   }
 
   update(d: Docente) {
-    return this.http.put(this.url + '/' + d.id, d);
+    return this.http.put(this.url + '/' + d.idDocente, d);
+    //return this.http.put(this.url, d);
   }
 
   eliminar(id: number) {
