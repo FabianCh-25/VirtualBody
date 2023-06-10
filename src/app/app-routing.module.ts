@@ -59,8 +59,7 @@ const routes: Routes = [
     path: 'actividades', component: ActividadComponent, children: [
       { path: 'actividad-insertar', component: ActividadInsertarComponent },
       { path: 'edicion/:id', component: ActividadInsertarComponent }]
-  }
-
+  },
   {
     path: 'detalleMatricula',
     component: DetalleMatriculaComponent,

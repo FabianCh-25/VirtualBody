@@ -73,7 +73,7 @@ import { FooterComponent } from './component/footer/footer.component';
     AulaEliminarComponent,
     AulaDialogoComponent,
     ActividadComponent,
-    FooterComponent
+    FooterComponent,
 
 
     DocenteDialogoComponent,
