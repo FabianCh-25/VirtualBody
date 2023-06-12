@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" style="text-align: center">
+    <h1>estudiante-xactividad</h1>
+
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input
+          matInput
+          placeholder="Id"
+          formControlName="idEXA"
+          readonly
+        />
+      </mat-form-field>
+
+      <br />
+      <mat-form-field appearance="fill">
+        <mat-label>calificacion</mat-label>
+        <input
+          matInput
+          placeholder="calificación"
+          formControlName="calificacion"
+          readonly
+        />
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field appearance="fill">
+        <mat-label>Actividad</mat-label>
+        <mat-select
+          formControlName="actividadnombre"
+          [(value)]="idActividadSelecionado"
+          required
+        >
+          <mat-option *ngFor="let m of lista" [value]="m.idActividad">
+            {{ m.titulo }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Estudiante</mat-label>
+        <mat-select
+          formControlName="docente"
+          [(value)]="idEstudianteSelecionado"
+          required
+        >
+          <mat-option *ngFor="let e of listae" [value]="">
+            {{ e.NombreEstudiante }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br />
+      <button mat-raised-button color="primary" (click)="aceptar()">
+        Aceptar
+      </button>
+      <button mat-raised-button color="warn" routerLink="/estudiantesXActividads">
+        Cancelar
+      </button>
+      <p>{{ mensaje }}</p>
+    </form>
+  </div>
+</body>
+</html>

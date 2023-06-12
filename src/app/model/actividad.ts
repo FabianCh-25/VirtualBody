@@ -1,7 +1,7 @@
 export class Actividad {
-  id:number=0
-  Titulo:string= ""
-  Descripcion: string =""
-  FechaPublicacion: Date = new Date(Date.now())
-  FechaEntrega: Date = new Date(Date.now())
+  idActividad:number=0
+  titulo:string= ""
+  descripcion: string =""
+  fechaPublicacion: Date = new Date(Date.now())
+  fechaEntrega: Date = new Date(Date.now())
 }

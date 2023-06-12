@@ -25,7 +25,6 @@ import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-curs
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
-
 import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
 import { AulaDialogoComponent } from './component/aula/aula-listar/aula-dialogo/aula-dialogo.component';
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
@@ -46,6 +45,10 @@ import { DetalleMatriculaDialogoComponent } from './component/detalle-matricula/
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
 import { FooterComponent } from './component/footer/footer.component';
+import { EstudianteXActividadComponent } from './component/estudiante-xactividad/estudiante-xactividad.component';
+import { EXAListarComponent } from './component/estudiante-xactividad/exalistar/exalistar.component';
+import { ExaInsertarComponent } from './component/estudiante-xactividad/exa-insertar/exa-insertar.component';
+import { ExaDialogoComponent } from './component/estudiante-xactividad/exalistar/exa-dialogo/exa-dialogo.component';
 
 
 @NgModule({
@@ -80,7 +83,11 @@ import { FooterComponent } from './component/footer/footer.component';
     DetalleMatriculaComponent,
     DetalleMatriculaListarComponent,
     DetalleMatriculaInsertarComponent,
-    DetalleMatriculaDialogoComponent
+    DetalleMatriculaDialogoComponent,
+    EstudianteXActividadComponent,
+    EXAListarComponent,
+    ExaInsertarComponent,
+    ExaDialogoComponent
   ],
   imports: [
     BrowserModule,
