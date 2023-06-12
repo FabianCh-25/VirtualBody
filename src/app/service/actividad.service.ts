@@ -34,7 +34,7 @@ export class ActividadService {
     return this.http.get<Actividad>(`${this.url}/${id}`);
   }
   update(a:Actividad){
-    return this.http.put(this.url+'/'+a.id,a)
+    return this.http.put(this.url+'/'+a.idActividad,a)
   }
   eliminar(id: number) {
 

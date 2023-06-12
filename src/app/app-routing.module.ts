@@ -21,6 +21,8 @@ import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-elimi
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { DetalleMatriculaComponent } from './component/detalle-matricula/detalle-matricula.component';
 import { DetalleMatriculaInsertarComponent } from './component/detalle-matricula/detalle-matricula-insertar/detalle-matricula-insertar.component';
+import { EstudianteXActividadComponent } from './component/estudiante-xactividad/estudiante-xactividad.component';
+import { ExaInsertarComponent } from './component/estudiante-xactividad/exa-insertar/exa-insertar.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
@@ -66,6 +68,14 @@ const routes: Routes = [
     children: [
       { path: 'nuevo', component:DetalleMatriculaInsertarComponent},
       { path: 'edicionMatricula/:id', component:DetalleMatriculaInsertarComponent}
+    ]
+  },
+  {
+    path: 'estudiantesXActividads',
+    component: EstudianteXActividadComponent,
+    children: [
+      { path: 'nuevo', component:ExaInsertarComponent},
+      { path: 'edicion/:id', component:DetalleMatriculaInsertarComponent}
     ]
   }
 ];
