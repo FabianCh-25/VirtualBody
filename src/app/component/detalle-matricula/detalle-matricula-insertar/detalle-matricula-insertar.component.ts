@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms'
 import { DetalleMatricula } from 'src/app/model/detalleMatricula';
-import * as moment from 'moment';
 import { Docente } from 'src/app/model/docentes';
 import { DetalleMatriculaService } from 'src/app/service/detalle-matricula.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DocenteService } from 'src/app/service/docente.service';
+import { Aula } from 'src/app/model/aula';
+import { Curso } from 'src/app/curso.model';
 
 @Component({
   selector: 'app-detalle-matricula-insertar',
@@ -18,7 +19,11 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
   mensaje: string = ""
   //maxFecha: Date = moment().add(-1, 'days').toDate();
   lista: Docente[] = [];
+  listaAula: Aula[] = [];
+  listaCurso: Curso[] = [];
   idDocenteSeleccionado: number = 0;
+  idAulaSeleccionado: number = 0;
+  idCursoSeleccionado: number = 0;
   id: number = 0;
   edicion: boolean = false;
 
@@ -38,7 +43,9 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
     this.form = new FormGroup({
       idDetalleMatricula: new FormControl(),
       fechaInscripcion: new FormControl(),
-      docente :new FormControl()
+      docente :new FormControl(),
+      aula : new FormControl(),
+      curso: new FormControl()
     });
 
   }
@@ -46,12 +53,22 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
     this.detalleMatricula.idDetalleMatricula = this.form.value['idDetalleMatricula'];
     this.detalleMatricula.fechaInscripcion = this.form.value['fechaInscripcion'];
     this.detalleMatricula.docente.nombre=this.form.value['docente.nombre'];
+    this.detalleMatricula.aula.seccionAula=this.form.value['aula.seccionAula'];
+    //this.detalleMatricula.curso.codeCurso=this.form.value['curso.codeCurso']
 
 
     if (this.idDocenteSeleccionado>0) {
       let d = new Docente();
       d.idDocente = this.idDocenteSeleccionado;
       this.detalleMatricula.docente=d;
+
+      let a = new Aula();
+      a.id = this.idAulaSeleccionado;
+      this.detalleMatricula.aula = a;
+
+      /*let c = new Curso();
+      c.idCurso = this.idCursoSeleccionado;
+      this.detalleMatricula.curso = c;*/
       this.mS.insert(this.detalleMatricula).subscribe(() => {
       this.mS.list().subscribe(data => {
             this.mS.setList(data);
@@ -74,8 +91,12 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
         this.form = new FormGroup({
           idDetalleMatricula: new FormControl(data.idDetalleMatricula),
           fechaInscripcion: new FormControl(data.fechaInscripcion),
-          //docente: new FormControl(data.docente.nombre) //Docente
+          docente: new FormControl(data.docente.nombre), //Docente
+          aula: new FormControl(data.aula.seccionAula),
+          curso: new FormControl(data.curso.codeCurso)
         });
+        this.idDocenteSeleccionado=data.docente.idDocente;
+        this
         console.log(data);
       });
     }

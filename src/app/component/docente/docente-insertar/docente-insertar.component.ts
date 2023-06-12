@@ -27,7 +27,7 @@ export class DocenteInsertarComponent implements OnInit {
 
     this.form = new FormGroup({
       id: new FormControl(),
-      nombreDocente: new FormControl(),
+      nombre: new FormControl(),
       apellidoDocente: new FormControl(),
       correoDocente: new FormControl(),
       claveDocente: new FormControl(),
