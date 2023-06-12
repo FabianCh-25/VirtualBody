@@ -45,8 +45,8 @@
             [(value)]="idDocenteSeleccionado"
             required
           >
-            <mat-option *ngFor="let m of lista" [value]="m.idDocente">
-              {{ m.nombre }}
+            <mat-option *ngFor="let d of lista" [value]="d.idDocente">
+              {{ d.nombre }}
             </mat-option>
           </mat-select>
         </mat-form-field>
