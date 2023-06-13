@@ -2,6 +2,7 @@
 import { LoginComponent } from './component/login/login.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+<<<<<<< HEAD
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
@@ -177,6 +178,33 @@ const routes: Routes = [
 
 
 
+=======
+import { EstudianteComponent } from './component/estudiante/estudiante.component';
+import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
+import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
+import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
+import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
+import { GrupoComponent } from './component/grupo/grupo.component';
+
+const routes: Routes = [
+  {
+    path: 'estudiante', component: EstudianteComponent, children: [
+      { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
+      { path: 'edicion/:id', component: EstudianteInsertarComponent }
+    ]
+  },
+  {
+    path: 'grupo', component: GrupoComponent, children: [
+      { path: 'grupoinsertar', component: GrupoInsertarComponent },
+      { path: 'edicion/:idGrupo', component: GrupoInsertarComponent }
+    ]
+  },
+  {
+    path: 'grupoxestudiante', component: GrupoxestudianteComponent, children: [
+    { path: 'grupoxestudianteinsertar', component: GrupoxestudianteInsertarComponent },
+    ]
+  }
+>>>>>>> b5c7d8e (ultimos cambios)
 ];
 
 @NgModule({

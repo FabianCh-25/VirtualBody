@@ -20,3 +20,7 @@ export class GrupoDialogoComponent {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b5c7d8e (ultimos cambios)

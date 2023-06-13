@@ -8,12 +8,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class GrupoxestudianteComponent implements OnInit{
+<<<<<<< HEAD
+=======
+  constructor (public route:ActivatedRoute){
+
+  }
+>>>>>>> b5c7d8e (ultimos cambios)
   ngOnInit():void{
 
   }
 
+<<<<<<< HEAD
   constructor (public route:ActivatedRoute){
 
   }
 
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
 }

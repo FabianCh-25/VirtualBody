@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> b5c7d8e (ultimos cambios)
 import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
 import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
+<<<<<<< HEAD
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 import { LoginService } from 'src/app/service/login.service';
+=======
+import { GrupoService } from 'src/app/service/grupo.service';
+import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
+>>>>>>> b5c7d8e (ultimos cambios)
 
 @Component({
   selector: 'app-grupoxestudiante-listar',
@@ -15,6 +24,7 @@ import { LoginService } from 'src/app/service/login.service';
 })
 
 export class GrupoxestudianteListarComponent implements OnInit {
+<<<<<<< HEAD
   @ViewChild(MatPaginator) paginator: MatPaginator;
   role:string="";
 
@@ -64,6 +74,23 @@ export class GrupoxestudianteListarComponent implements OnInit {
         this.gS.setList(data);/* se ejecuta la línea 27 */
       });
     });
+=======
+  lista: GrupoxEstudiante[] = [];
+  dataSource: MatTableDataSource<GrupoxEstudiante> = new MatTableDataSource();
+  displayedColumns: string[] = ['id', 'group', 'student', 'fecha']
+
+
+  constructor(private gS: GrupoxestudianteService, private dialog: MatDialog) {
+  }
+  ngOnInit(): void {
+    this.gS.list().subscribe(data => {
+      this.dataSource=new MatTableDataSource(data);
+    })
+    this.gS.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+
+>>>>>>> b5c7d8e (ultimos cambios)
   }
   filtrar(e: any) {
     this.dataSource.filter = e.target.value.trim();

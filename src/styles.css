@@ -1,5 +1,6 @@
 /* styles.css */
 
+<<<<<<< HEAD
 body {
   background-color: #e9e3f1; /* Fondo morado */
   font-family: 'Roboto', sans-serif;
@@ -47,3 +48,10 @@ body {
 button {
   margin-top: 16px;
 }
+=======
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+>>>>>>> b5c7d8e (ultimos cambios)

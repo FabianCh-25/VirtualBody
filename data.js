@@ -152,6 +152,7 @@ module.exports = function () {
         vacanteAula: 22,
       }
     ],
+<<<<<<< HEAD
 
     cursos: [ {CodigoCurso : "001", NombreCurso : "Programacion Web", Descripcion : "Curso de programacion web"},
     {CodigoCurso : "002", NombreCurso : "Base de Datos", Descripcion : "Curso de base de datos"},
@@ -159,6 +160,44 @@ module.exports = function () {
     {CodigoCurso : "004", NombreCurso : "Inteligencia Artificial", Descripcion : "Curso de inteligencia artificial"},
 
     ]
+=======
+    estudiantejs: [
+      {
+        id:1,
+        NombreEstudiante: "Tobby",
+        ApellidoEstudiante: "Gaaaaaaa",
+        CorreoEstudiante:"carl@gmail.com",
+        ClaveEstudiante:"321",
+        TelefonoEstudiante:"963258741",
+
+      }
+    ],
+    grupojs: [
+      {
+        idGrupo:1,
+        nombreGrupo: "Loselocuentes",
+        descripcionGrupo: "botatuga",
+      }
+    ],
+    grupoxestudiantejs: [
+      {
+
+        idGrupoxEstudiante:1,
+        grupo:{
+          nombreGrupo: "Loselocuentes",
+          descripcionGrupo: "botatuga",
+        },
+        estudiante:{
+          NombreEstudiante: "Tobby",
+          ApellidoEstudiante: "Gaaaaaaa",
+          CorreoEstudiante:"carl@gmail.com",
+          ClaveEstudiante:"321",
+          TelefonoEstudiante:"963258741",
+        },
+        fechaacceso:"2022-03-03"
+      }
+    ],
+>>>>>>> b5c7d8e (ultimos cambios)
   }
   return data
 }

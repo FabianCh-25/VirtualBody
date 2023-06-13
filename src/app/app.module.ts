@@ -19,6 +19,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { EstudianteDialogoComponent } from './component/estudiante/estudiante-listar/estudiante-dialogo/estudiante-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+<<<<<<< HEAD
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
 import { ActividadComponent } from './component/actividad/actividad.component';
@@ -82,6 +83,7 @@ import { MatListModule } from '@angular/material/list';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
+<<<<<<< HEAD
 import { LogindocenteComponent } from './component/login/logindocente/logindocente.component';
 import { LoginestudianteComponent } from './component/login/loginestudiante/loginestudiante.component';
 import { RegistroComponent } from './component/registro/registro.component';
@@ -90,6 +92,19 @@ import { RegistroestudianteComponent } from './component/registro/registroestudi
 import { Reporte05fComponent } from './component/reportes/reporte05f/reporte05f.component';
 import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.component';
 
+=======
+=======
+import { GrupoComponent } from './component/grupo/grupo.component';
+import { RouterOutlet } from '@angular/router';
+import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
+import { GrupoListarComponent } from './component/grupo/grupo-listar/grupo-listar.component';
+import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
+import { GrupoxestudianteListarComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-listar.component';
+import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
+import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+>>>>>>> b5c7d8e (ultimos cambios)
+>>>>>>> 2fbcd79 (ultimos cambios)
 
 
 @NgModule({
@@ -108,6 +123,7 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
     EstudianteListarComponent,
     EstudianteInsertarComponent,
     EstudianteDialogoComponent,
+<<<<<<< HEAD
     NavbarComponent,
     DocenteDialogoComponent,
     AulaEliminarComponent,
@@ -168,6 +184,15 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
 
 
 
+=======
+    GrupoComponent,
+    GrupoxestudianteComponent,
+    GrupoListarComponent,
+    GrupoInsertarComponent,
+    GrupoxestudianteListarComponent,
+    GrupoxestudianteInsertarComponent,
+    GrupoDialogoComponent
+>>>>>>> b5c7d8e (ultimos cambios)
   ],
   imports: [
     BrowserModule,
@@ -177,6 +202,7 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
     FormsModule,
     MatToolbarModule,
     MatButtonModule,
+<<<<<<< HEAD
     MatNativeDateModule,
     MatDatepickerModule,
     MatSelectModule,
@@ -197,6 +223,13 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
     MatTooltipModule,
     LayoutModule,
     MatListModule //ACUERDATE DE ESTA LINEA ANIMAL!!
+=======
+    MatDialogModule,
+    RouterOutlet,
+    MatFormFieldModule,
+    BrowserModule
+
+>>>>>>> b5c7d8e (ultimos cambios)
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
