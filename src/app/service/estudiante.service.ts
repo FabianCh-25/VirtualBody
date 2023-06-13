@@ -47,10 +47,8 @@ export class EstudianteService {
   setList(listaNueva: Estudiante[]) {
     this.listaCambio.next(listaNueva);
   }
-  getLista() {
-    return this.listaCambio.asObservable();
-  }
   modificar(estudiante: Estudiante) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,6 +71,10 @@ export class EstudianteService {
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
     return this.http.put(this.url, estudiante);
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+    //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    return this.http.put(this.url, estudiante);
+>>>>>>> b5c7d8e (ultimos cambios)
 
   }
   listarId(id: number) {

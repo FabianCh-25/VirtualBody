@@ -4,6 +4,7 @@ export class Estudiante {
   idEstudiante: number = 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1909452 (corregi estudiante)
   nombreEstudiante: string = ""
@@ -18,6 +19,8 @@ export class Estudiante {
 =======
 >>>>>>> 6347826 (corregi estudiante)
 =======
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
   NombreEstudiante: string = ""
   ApellidoEstudiante: string = ""
   CorreoEstudiante: string = ""

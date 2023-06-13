@@ -2,7 +2,11 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+=======
+import { HttpClient } from '@angular/common/http';
+>>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { HttpClient } from '@angular/common/http';
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -14,6 +18,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class GrupoxestudianteService {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +52,11 @@ export class GrupoxestudianteService {
 >>>>>>> 1d22189 (algunos errores en mi rama)
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
+=======
+  private url = `${base_url}/grupoxestudiantejs`
+  private listaCambio = new Subject<GrupoxEstudiante[]>()
+
+>>>>>>> b5c7d8e (ultimos cambios)
 
   constructor(private http: HttpClient) { }
   list() {
@@ -54,6 +64,9 @@ export class GrupoxestudianteService {
   }
   insert(grupoxestudiante: GrupoxEstudiante) {
     return this.http.post(this.url, grupoxestudiante);
+<<<<<<< HEAD
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
 >>>>>>> b5c7d8e (ultimos cambios)
   }
   setList(listaNueva: GrupoxEstudiante[]) {
@@ -62,6 +75,7 @@ export class GrupoxestudianteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   listId(id: number){
@@ -116,4 +130,6 @@ export class GrupoxestudianteService {
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
 }

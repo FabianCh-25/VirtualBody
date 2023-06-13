@@ -9,12 +9,15 @@ import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.servic
 import { EstudianteService } from 'src/app/service/estudiante.service';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GrupoService } from 'src/app/service/grupo.service';
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { GrupoService } from 'src/app/service/grupo.service';
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
 @Component({
   selector: 'app-grupoxestudiante-insertar',
   templateUrl: './grupoxestudiante-insertar.component.html',
@@ -23,6 +26,7 @@ import { GrupoService } from 'src/app/service/grupo.service';
 
 export class GrupoxestudianteInsertarComponent implements OnInit {
   form: FormGroup = new FormGroup({});
+<<<<<<< HEAD
   grupoxEstudiante: GrupoxEstudiante = new GrupoxEstudiante()
   mensaje: string = ""
   maxFecha: Date = moment().add(-1, 'days').toDate();
@@ -47,10 +51,18 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
   id: number = 0;
   edicion: boolean = false;
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+  grupoxestudiante: GrupoxEstudiante = new GrupoxEstudiante()
+  mensaje: string = ""
+  maxFecha: Date = moment().add(-1, 'days').toDate();
+  lista: Estudiante[] = [];
+  idEstudianteSeleccionado: number = 0;
+>>>>>>> b5c7d8e (ultimos cambios)
 
 
   constructor(private gxeS: GrupoxestudianteService,
     private router: Router,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private route: ActivatedRoute, private eS:EstudianteService, private gS: GrupoService) {
@@ -95,11 +107,24 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       grupo: new FormControl(),
       estudiante: new FormControl()
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+    private route: ActivatedRoute, private eS:EstudianteService) {
+  }
+  ngOnInit(): void {
+    this.eS.list().subscribe(data => { this.lista = data });
+
+    this.form = new FormGroup({
+      idGrupoxEstudiante: new FormControl(),
+      grupo: new FormControl(),
+      estudiante: new FormControl(),
+      fechaacceso: new FormControl(),
+>>>>>>> b5c7d8e (ultimos cambios)
     });
 
   }
 
   aceptar(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.grupoxestudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
 <<<<<<< HEAD
@@ -111,10 +136,17 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     this.grupoxestudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
     this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    this.grupoxestudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
+    this.grupoxestudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
+    this.grupoxestudiante.estudiante.NombreEstudiante = this.form.value['estudiante.NombreEstudiante'];
+    this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
+>>>>>>> b5c7d8e (ultimos cambios)
     if (this.idEstudianteSeleccionado>0) {
       let e = new Estudiante();
       e.idEstudiante = this.idEstudianteSeleccionado;
       this.grupoxestudiante.estudiante=e;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       let g = new Grupo();
@@ -140,11 +172,15 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 
       this.gxeS.insert(this.grupoxEstudiante).subscribe(() => {
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+      this.gxeS.insert(this.grupoxestudiante).subscribe(() => {
+>>>>>>> b5c7d8e (ultimos cambios)
       this.gxeS.list().subscribe(data => {
             this.gxeS.setList(data);
           })
         })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       this.router.navigate(['/inicio/gruposxEstudiantes']);
@@ -207,3 +243,10 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+      this.router.navigate(['grupoxestudiante']);
+
+  }
+}
+}
+>>>>>>> b5c7d8e (ultimos cambios)

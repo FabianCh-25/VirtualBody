@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { Component, OnInit } from '@angular/core';
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -10,8 +14,11 @@ import { Grupo } from 'src/app/model/grupo';
 import { GrupoService } from 'src/app/service/grupo.service';
 import { GrupoDialogoComponent } from './grupo-dialogo/grupo-dialogo.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { LoginService } from 'src/app/service/login.service';
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 
@@ -24,6 +31,7 @@ import { LoginService } from 'src/app/service/login.service';
 
 
 export class GrupoListarComponent implements OnInit {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -61,6 +69,10 @@ export class GrupoListarComponent implements OnInit {
 >>>>>>> c86e85a (estudiante y grupo solucionado)
   lista: Grupo[] = [];
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
+=======
+  dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
+  lista: Grupo[] = [];
+>>>>>>> b5c7d8e (ultimos cambios)
   displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   private idMayor: number = 0;
 
@@ -70,7 +82,12 @@ export class GrupoListarComponent implements OnInit {
     this.gS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
+<<<<<<< HEAD
     this.gS.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
+    this.gS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
 >>>>>>> b5c7d8e (ultimos cambios)
     });
@@ -79,10 +96,13 @@ export class GrupoListarComponent implements OnInit {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
     }
 
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
   }

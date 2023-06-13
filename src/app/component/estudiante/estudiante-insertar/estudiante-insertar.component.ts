@@ -57,6 +57,7 @@ export class EstudianteInsertarComponent implements OnInit {
     this.estudiante.idEstudiante = this.form.value['id'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1909452 (corregi estudiante)
     this.estudiante.nombreEstudiante = this.form.value['nombreEstudiante'];
@@ -66,6 +67,8 @@ export class EstudianteInsertarComponent implements OnInit {
     this.estudiante.claveEstudiante = this.form.value['claveEstudiante'];
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
     this.estudiante.NombreEstudiante = this.form.value['NombreEstudiante'];
     this.estudiante.ApellidoEstudiante = this.form.value['ApellidoEstudiante'];
     this.estudiante.CorreoEstudiante = this.form.value['CorreoEstudiante'];
@@ -104,6 +107,7 @@ export class EstudianteInsertarComponent implements OnInit {
         this.form = new FormGroup({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           id: new FormControl(data.idEstudiante),
 <<<<<<< HEAD
 =======
@@ -119,6 +123,9 @@ export class EstudianteInsertarComponent implements OnInit {
           claveEstudiante: new FormControl(data.claveEstudiante),
 <<<<<<< HEAD
 =======
+=======
+          id: new FormControl(data.idEstudiante),
+>>>>>>> b5c7d8e (ultimos cambios)
           NombreEstudiante: new FormControl(data.NombreEstudiante),
           ApellidoEstudiante: new FormControl(data.ApellidoEstudiante),
           CorreoEstudiante: new FormControl(data.CorreoEstudiante),

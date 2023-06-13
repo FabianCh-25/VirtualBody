@@ -172,6 +172,20 @@ module.exports = function () {
 
       }
     ],
+<<<<<<< HEAD
+=======
+    estudiantejs: [
+      {
+        id:1,
+        NombreEstudiante: "Tobby",
+        ApellidoEstudiante: "Gaaaaaaa",
+        CorreoEstudiante:"carl@gmail.com",
+        ClaveEstudiante:"321",
+        TelefonoEstudiante:"963258741",
+
+      }
+    ],
+>>>>>>> b5c7d8e (ultimos cambios)
     grupojs: [
       {
         idGrupo:1,
@@ -197,6 +211,9 @@ module.exports = function () {
         fechaacceso:"2022-03-03"
       }
     ],
+<<<<<<< HEAD
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
 >>>>>>> b5c7d8e (ultimos cambios)
   }
   return data

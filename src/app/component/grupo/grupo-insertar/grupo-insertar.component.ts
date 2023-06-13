@@ -22,7 +22,11 @@ export class GrupoInsertarComponent implements OnInit {
 
   constructor(
 <<<<<<< HEAD
+<<<<<<< HEAD
     private gS:GrupoService,
+=======
+    private gS: GrupoService,
+>>>>>>> b5c7d8e (ultimos cambios)
 =======
     private gS: GrupoService,
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -69,7 +73,11 @@ export class GrupoInsertarComponent implements OnInit {
         })
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.router.navigate(['/inicio/grupo']);
+=======
+      this.router.navigate(['grupo']);
+>>>>>>> b5c7d8e (ultimos cambios)
 =======
       this.router.navigate(['grupo']);
 >>>>>>> b5c7d8e (ultimos cambios)
