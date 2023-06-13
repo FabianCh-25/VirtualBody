@@ -5,6 +5,9 @@ export class Estudiante {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1909452 (corregi estudiante)
 =======
 >>>>>>> 1909452 (corregi estudiante)
   nombreEstudiante: string = ""
@@ -12,6 +15,7 @@ export class Estudiante {
   correoEstudiante: string = ""
   claveEstudiante: string = ""
   telefonoEstudiante: string = ""
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   users: Users=new Users();
@@ -33,4 +37,6 @@ export class Estudiante {
 =======
 >>>>>>> 1909452 (corregi estudiante)
 >>>>>>> 6347826 (corregi estudiante)
+=======
+>>>>>>> 1909452 (corregi estudiante)
 }

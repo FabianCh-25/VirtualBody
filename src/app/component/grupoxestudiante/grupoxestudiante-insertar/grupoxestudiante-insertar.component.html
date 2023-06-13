@@ -129,7 +129,7 @@
         <mat-label>Número de est</mat-label>
         <mat-select formControlName="estudiante" [(value)]="idEstudianteSeleccionado" required>
           <mat-option *ngFor="let exg of lista" [value]="exg.idEstudiante">
-            {{exg.NombreEstudiante}}
+            {{exg.nombreEstudiante}}
         </mat-option>
         </mat-select>
       </mat-form-field>

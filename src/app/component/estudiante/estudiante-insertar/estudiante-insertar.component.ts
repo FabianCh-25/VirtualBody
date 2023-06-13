@@ -36,6 +36,7 @@ export class EstudianteInsertarComponent implements OnInit {
     this.form = new FormGroup({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: new FormControl(),
 =======
       idEstudiante: new FormControl(),
@@ -43,6 +44,9 @@ export class EstudianteInsertarComponent implements OnInit {
 =======
       id: new FormControl(),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+      idEstudiante: new FormControl(),
+>>>>>>> 1909452 (corregi estudiante)
       nombreEstudiante: new FormControl(),
       apellidoEstudiante: new FormControl(),
       correoEstudiante: new FormControl(),
@@ -58,6 +62,9 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1909452 (corregi estudiante)
 =======
 >>>>>>> 1909452 (corregi estudiante)
     this.estudiante.nombreEstudiante = this.form.value['nombreEstudiante'];
@@ -65,6 +72,7 @@ export class EstudianteInsertarComponent implements OnInit {
     this.estudiante.correoEstudiante = this.form.value['correoEstudiante'];
     this.estudiante.telefonoEstudiante = this.form.value['telefonoEstudiante'];
     this.estudiante.claveEstudiante = this.form.value['claveEstudiante'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -75,6 +83,8 @@ export class EstudianteInsertarComponent implements OnInit {
     this.estudiante.TelefonoEstudiante = this.form.value['TelefonoEstudiante'];
     this.estudiante.ClaveEstudiante = this.form.value['ClaveEstudiante'];
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1909452 (corregi estudiante)
 =======
 >>>>>>> 1909452 (corregi estudiante)
 
@@ -108,6 +118,7 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           id: new FormControl(data.idEstudiante),
 <<<<<<< HEAD
 =======
@@ -116,11 +127,15 @@ export class EstudianteInsertarComponent implements OnInit {
 =======
           id: new FormControl(data.idEstudiante),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+          idEstudiante: new FormControl(data.idEstudiante),
+>>>>>>> 1909452 (corregi estudiante)
           nombreEstudiante: new FormControl(data.nombreEstudiante),
           apellidoEstudiante: new FormControl(data.apellidoEstudiante),
           correoEstudiante: new FormControl(data.correoEstudiante),
           telefonoEstudiante: new FormControl(data.telefonoEstudiante),
           claveEstudiante: new FormControl(data.claveEstudiante),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -132,6 +147,8 @@ export class EstudianteInsertarComponent implements OnInit {
           TelefonoEstudiante: new FormControl(data.TelefonoEstudiante),
           ClaveEstudiante: new FormControl(data.ClaveEstudiante),
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1909452 (corregi estudiante)
 =======
 >>>>>>> 1909452 (corregi estudiante)
         });

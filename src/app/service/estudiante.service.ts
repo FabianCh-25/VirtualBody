@@ -10,6 +10,7 @@ const base_url = environment.base
 export class EstudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private url = `${base_url}/estudiante`;
 =======
   private url = `${base_url}/estudiantes`;
@@ -17,6 +18,9 @@ export class EstudianteService {
 =======
   private url = `${base_url}/estudiante`;
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+  private url = `${base_url}/estudiantes`;
+>>>>>>> 1909452 (corregi estudiante)
   private listaCambio = new Subject<Estudiante[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -52,6 +56,7 @@ export class EstudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     let token = sessionStorage.getItem("token");
 
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
@@ -75,6 +80,10 @@ export class EstudianteService {
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
     return this.http.put(this.url, estudiante);
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    //return this.http.put(this.url, estudiante);
+>>>>>>> 1909452 (corregi estudiante)
 
   }
   listarId(id: number) {
