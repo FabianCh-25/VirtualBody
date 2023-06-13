@@ -9,10 +9,14 @@ const base_url = environment.base
 })
 export class EstudianteService {
 <<<<<<< HEAD
+<<<<<<< HEAD
   private url = `${base_url}/estudiante`;
 =======
   private url = `${base_url}/estudiantes`;
 >>>>>>> 1909452 (corregi estudiante)
+=======
+  private url = `${base_url}/estudiante`;
+>>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
   private listaCambio = new Subject<Estudiante[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -30,16 +34,24 @@ export class EstudianteService {
     return this.http.post(this.url, estudiante);
   }
   insert(estudiante: Estudiante) {
+<<<<<<< HEAD
     let token = sessionStorage.getItem("token");
 
     return this.http.post(this.url, estudiante, {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
+=======
+    return this.http.post(this.url, estudiante);
+>>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
   }
   setList(listaNueva: Estudiante[]) {
     this.listaCambio.next(listaNueva);
   }
+  getLista() {
+    return this.listaCambio.asObservable();
+  }
   modificar(estudiante: Estudiante) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     let token = sessionStorage.getItem("token");
@@ -57,6 +69,10 @@ export class EstudianteService {
     return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
     //return this.http.put(this.url, estudiante);
 >>>>>>> 1909452 (corregi estudiante)
+=======
+    //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    return this.http.put(this.url, estudiante);
+>>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
 
   }
   listarId(id: number) {
