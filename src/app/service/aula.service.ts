@@ -29,7 +29,7 @@ export class AulaService {
     this.listaCambio.next(listaNueva);
   }
   modificar(aula: Aula) {
-    return this.http.put(this.url + "/" + aula.id, aula);
+    return this.http.put(this.url + "/" + aula.idAula, aula);
   }
   listarId(id: number) {
     return this.http.get<Aula>(`${this.url}/${id}`);

@@ -18,7 +18,7 @@
 
       <ng-container matColumnDef="Codigo">
         <th mat-header-cell *matHeaderCellDef> Codigo </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.idAula}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Seccion">
@@ -34,10 +34,10 @@
       <ng-container matColumnDef="Acciones">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-icon-button color="primary" [routerLink]="['edicion', element.id]">
+          <button mat-icon-button color="primary" [routerLink]="['edicion', element.idAula]">
             <mat-icon aria-label="Actualizar">edit</mat-icon>
           </button>
-          <button mat-icon-button color="accent" (click)="confirmar(element.id)">
+          <button mat-icon-button color="accent" (click)="confirmar(element.idAula)">
             <mat-icon aria-label="Eliminar">delete</mat-icon>
           </button>
         </td>

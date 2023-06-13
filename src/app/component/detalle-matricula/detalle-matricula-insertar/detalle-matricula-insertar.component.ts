@@ -63,7 +63,7 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
       this.detalleMatricula.docente=d;
 
       let a = new Aula();
-      a.id = this.idAulaSeleccionado;
+      a.idAula = this.idAulaSeleccionado;
       this.detalleMatricula.aula = a;
 
       /*let c = new Curso();
