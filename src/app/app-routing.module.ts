@@ -207,6 +207,7 @@ const routes: Routes = [
     path: 'grupo', component: GrupoComponent, children: [
       { path: 'grupoinsertar', component: GrupoInsertarComponent },
 <<<<<<< HEAD
+<<<<<<< HEAD
       { path: 'edicion/:id', component: GrupoInsertarComponent }
     ]
   },
@@ -219,6 +220,9 @@ const routes: Routes = [
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
       { path: 'edicion/:idGrupo', component: GrupoInsertarComponent }
+=======
+      { path: 'edicion/:id', component: GrupoInsertarComponent }
+>>>>>>> c86e85a (estudiante y grupo solucionado)
     ]
   },
   {

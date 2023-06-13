@@ -34,6 +34,7 @@ export class GrupoListarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   @ViewChild(MatPaginator) paginator: MatPaginator;
   role:string="";
 
@@ -73,6 +74,10 @@ export class GrupoListarComponent implements OnInit {
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
   lista: Grupo[] = [];
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+  lista: Grupo[] = [];
+  dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
+>>>>>>> c86e85a (estudiante y grupo solucionado)
   displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   private idMayor: number = 0;
 
@@ -83,11 +88,15 @@ export class GrupoListarComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.gS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
     this.gS.getList().subscribe(data => {
+=======
+    this.gS.getLista().subscribe(data => {
+>>>>>>> c86e85a (estudiante y grupo solucionado)
       this.dataSource = new MatTableDataSource(data);
 >>>>>>> b5c7d8e (ultimos cambios)
     });

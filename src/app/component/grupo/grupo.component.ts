@@ -11,6 +11,7 @@ export class GrupoComponent implements OnInit{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ngOnInit():void{
 
   }
@@ -33,12 +34,20 @@ export class GrupoComponent implements OnInit{
   ngOnInit():void{
 
   }
+=======
+  ngOnInit():void{
+
+  }
+>>>>>>> c86e85a (estudiante y grupo solucionado)
   constructor (public route:ActivatedRoute){
 
   }
 
+<<<<<<< HEAD
 >>>>>>> c86e85a (estudiante y grupo solucionado)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> c86e85a (estudiante y grupo solucionado)
 
 }
