@@ -10,7 +10,7 @@ const base_url = environment.base;
   providedIn: 'root',
 })
 export class AulaService {
-  private url = `${base_url}/aula`;
+  private url = `${base_url}/Aulas`;
   private listaCambio = new Subject<Aula[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -29,7 +29,7 @@ export class AulaService {
     this.listaCambio.next(listaNueva);
   }
   modificar(aula: Aula) {
-    return this.http.put(this.url + "/" + aula.id, aula);
+    return this.http.put(this.url + "/" + aula.idAula, aula);
   }
   listarId(id: number) {
     return this.http.get<Aula>(`${this.url}/${id}`);

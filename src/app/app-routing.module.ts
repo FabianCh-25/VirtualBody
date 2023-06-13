@@ -19,6 +19,10 @@ import { EstudianteListarComponent } from './component/estudiante/estudiante-lis
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
 import { ActividadComponent } from './component/actividad/actividad.component';
+import { DetalleMatriculaComponent } from './component/detalle-matricula/detalle-matricula.component';
+import { DetalleMatriculaInsertarComponent } from './component/detalle-matricula/detalle-matricula-insertar/detalle-matricula-insertar.component';
+import { EstudianteXActividadComponent } from './component/estudiante-xactividad/estudiante-xactividad.component';
+import { ExaInsertarComponent } from './component/estudiante-xactividad/exa-insertar/exa-insertar.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
@@ -57,8 +61,23 @@ const routes: Routes = [
     path: 'actividades', component: ActividadComponent, children: [
       { path: 'actividad-insertar', component: ActividadInsertarComponent },
       { path: 'edicion/:id', component: ActividadInsertarComponent }]
+  },
+  {
+    path: 'detalleMatricula',
+    component: DetalleMatriculaComponent,
+    children: [
+      { path: 'nuevo', component:DetalleMatriculaInsertarComponent},
+      { path: 'edicionMatricula/:id', component:DetalleMatriculaInsertarComponent}
+    ]
+  },
+  {
+    path: 'ExAs',
+    component: EstudianteXActividadComponent,
+    children: [
+      { path: 'nuevo', component:ExaInsertarComponent},
+      { path: 'edicion/:id', component:DetalleMatriculaInsertarComponent}
+    ]
   }
-
 ];
 
 @NgModule({

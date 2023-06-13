@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AulaService } from 'src/app/service/aula.service';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -7,7 +7,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   templateUrl: './aula-dialogo.component.html',
   styleUrls: ['./aula-dialogo.component.css']
 })
-export class AulaDialogoComponent {
+export class AulaDialogoComponent implements OnInit{
   constructor(private aS: AulaService,
   private dialogRef: MatDialogRef<AulaDialogoComponent>){  }
   ngOnInit(): void { }

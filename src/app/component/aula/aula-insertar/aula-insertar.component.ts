@@ -23,7 +23,7 @@ export class AulaInsertarComponent implements OnInit{
       })
   }
   aceptar(): void {
-    this.aula.id = this.form.value['id'];
+    this.aula.idAula = this.form.value['idAula'];
     this.aula.seccionAula = this.form.value['seccionAula'];
     this.aula.vacanteAula = this.form.value['vacanteAula'];
     if (this.form.value['seccionAula'].length > 0) {

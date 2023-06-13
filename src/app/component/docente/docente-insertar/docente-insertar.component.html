@@ -16,12 +16,12 @@
     <form [formGroup]="form" (submit)="aceptar()">
         <mat-form-field class="example-full-width">
             <mat-label>Código</mat-label>
-            <input matInput placeholder="Código" formControlName="id" required>
+            <input matInput placeholder="Código" formControlName="idDocente" readonly>
         </mat-form-field>
 <br>
         <mat-form-field class="example-full-width">
             <mat-label>Nombre</mat-label>
-            <input matInput placeholder="Nombre" formControlName="nombreDocente" required>
+            <input matInput placeholder="Nombre" formControlName="nombre">
         </mat-form-field>
 <br>
         <mat-form-field class="example-full-width">
@@ -45,7 +45,7 @@
         </mat-form-field>
 <br>
       <div style="text-align: center;">
-        <button mat-raised-button color="primary">Aceptar</button>
+        <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
         <button mat-raised-button color="warn" routerLink="/docentes">Cancelar</button>
       </div>
 

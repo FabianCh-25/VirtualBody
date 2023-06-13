@@ -42,11 +42,11 @@ export class ActividadInsertarComponent implements OnInit {
   }
 
   aceptar(): void {
-    this.actividad.id = this.form.value['id'];
-    this.actividad.Titulo = this.form.value['Titulo'];
-    this.actividad.Descripcion = this.form.value['Descripcion'];
-    this.actividad.FechaPublicacion = this.form.value['FechaPublicacion'];
-    this.actividad.FechaEntrega = this.form.value['FechaEntrega'];
+    this.actividad.idActividad = this.form.value['id'];
+    this.actividad.titulo = this.form.value['Titulo'];
+    this.actividad.descripcion = this.form.value['Descripcion'];
+    this.actividad.fechaPublicacion = this.form.value['FechaPublicacion'];
+    this.actividad.fechaEntrega = this.form.value['FechaEntrega'];
     // validamos q' campo titulo no este vacío
     if (this.form.value['Titulo'].length > 0 ) {
       if(this.edicion){
@@ -59,7 +59,7 @@ export class ActividadInsertarComponent implements OnInit {
       }
       else{
         this.aS.list().subscribe((data)=>{
-          const repeatedObject=data.find(item =>item.id ==this.actividad.id);
+          const repeatedObject=data.find(item =>item.idActividad ==this.actividad.idActividad);
           if(repeatedObject){
             // El ID ya existe, muestra un mensaje de error o realiza alguna acción apropiada
             console.log('El ID ya existe, por favor ingrese otro ID.');
@@ -92,11 +92,11 @@ export class ActividadInsertarComponent implements OnInit {
     if(this.edicion){
       this.aS.listId(this.id).subscribe((data)=>{
         this.form = new FormGroup({
-          id: new FormControl(data.id),
-          Titulo: new FormControl(data.Titulo),
-          Descripcion: new FormControl(data.Descripcion),
-          FechaPublicacion: new FormControl(data.FechaPublicacion),
-          FechaEntrega: new FormControl(data.FechaEntrega)
+          id: new FormControl(data.idActividad),
+          Titulo: new FormControl(data.titulo),
+          Descripcion: new FormControl(data.descripcion),
+          FechaPublicacion: new FormControl(data.fechaPublicacion),
+          FechaEntrega: new FormControl(data.fechaEntrega)
         })
       })   }
   }

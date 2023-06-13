@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './aula.component.html',
   styleUrls: ['./aula.component.css']
 })
-export class AulaComponent {
+export class AulaComponent implements OnInit{
   constructor(public route:ActivatedRoute) {
 }
   ngOnInit():void{
