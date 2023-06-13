@@ -18,6 +18,15 @@ import { EstudianteListarComponent } from './component/estudiante/estudiante-lis
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
 import { EstudianteDialogoComponent } from './component/estudiante/estudiante-listar/estudiante-dialogo/estudiante-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { GrupoComponent } from './component/grupo/grupo.component';
+import { RouterOutlet } from '@angular/router';
+import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
+import { GrupoListarComponent } from './component/grupo/grupo-listar/grupo-listar.component';
+import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
+import { GrupoxestudianteListarComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-listar.component';
+import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
+import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -28,7 +37,14 @@ import { MatDialogModule } from '@angular/material/dialog';
     EstudianteComponent,
     EstudianteListarComponent,
     EstudianteInsertarComponent,
-    EstudianteDialogoComponent
+    EstudianteDialogoComponent,
+    GrupoComponent,
+    GrupoxestudianteComponent,
+    GrupoListarComponent,
+    GrupoInsertarComponent,
+    GrupoxestudianteListarComponent,
+    GrupoxestudianteInsertarComponent,
+    GrupoDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +59,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterOutlet,
+    MatFormFieldModule,
+    BrowserModule
 
   ],
   providers: [],

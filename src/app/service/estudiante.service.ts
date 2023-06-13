@@ -27,11 +27,10 @@ export class EstudianteService {
   setList(listaNueva: Estudiante[]) {
     this.listaCambio.next(listaNueva);
   }
-  getLista() {
-    return this.listaCambio.asObservable();
-  }
   modificar(estudiante: Estudiante) {
-    return this.http.put(this.url + "/" + estudiante.id, estudiante);
+    //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    return this.http.put(this.url, estudiante);
+
   }
   listarId(id: number) {
     return this.http.get<Estudiante>(`${this.url}/${id}`);

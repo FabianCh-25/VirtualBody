@@ -46,7 +46,7 @@ export class EstudianteInsertarComponent implements OnInit {
 
 
   aceptar(): void {
-    this.estudiante.id = this.form.value['id'];
+    this.estudiante.idEstudiante = this.form.value['id'];
     this.estudiante.NombreEstudiante = this.form.value['NombreEstudiante'];
     this.estudiante.ApellidoEstudiante = this.form.value['ApellidoEstudiante'];
     this.estudiante.CorreoEstudiante = this.form.value['CorreoEstudiante'];
@@ -80,7 +80,7 @@ export class EstudianteInsertarComponent implements OnInit {
         //this.propietario = data
 
         this.form = new FormGroup({
-          id: new FormControl(data.id),
+          id: new FormControl(data.idEstudiante),
           NombreEstudiante: new FormControl(data.NombreEstudiante),
           ApellidoEstudiante: new FormControl(data.ApellidoEstudiante),
           CorreoEstudiante: new FormControl(data.CorreoEstudiante),

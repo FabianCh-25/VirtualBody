@@ -8,11 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./estudiante.component.css']
 })
 export class EstudianteComponent implements OnInit{
-  constructor (public route:ActivatedRoute){
-
-  }
   ngOnInit():void{
 
   }
+  constructor (public route:ActivatedRoute){
+
+  }
+
 
 }

@@ -15,9 +15,9 @@ import { EstudianteDialogoComponent } from './estudiante-dialogo/estudiante-dial
 })
 
 export class EstudianteListarComponent implements OnInit {
-  dataSource: MatTableDataSource<Estudiante> = new MatTableDataSource();
   lista: Estudiante[] = [];
-  displayedColumns: string[] = ['codigo', 'nombre', 'apellido', 'correo', 'telefono','clave','acciones'];
+  dataSource: MatTableDataSource<Estudiante> = new MatTableDataSource();
+  displayedColumns: string[] = ['id', 'nombre', 'apellido', 'correo', 'telefono','clave','acciones'];
   private idMayor: number = 0;
 
   constructor(private eS: EstudianteService, private dialog: MatDialog) { }
