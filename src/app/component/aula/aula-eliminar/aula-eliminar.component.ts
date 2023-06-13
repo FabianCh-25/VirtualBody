@@ -39,7 +39,7 @@ export class AulaEliminarComponent implements OnInit {
 
   }
   aceptar(): void {
-    this.aula.idAula = this.form.value['id'];
+    this.aula.idAula = this.form.value['idAula'];
     this.aula.seccionAula = this.form.value['seccionAula'];
     this.aula.vacanteAula = this.form.value['vacanteAula'];
 
@@ -68,7 +68,7 @@ export class AulaEliminarComponent implements OnInit {
         //this.propietario = data
 
         this.form = new FormGroup({
-          id: new FormControl(data.idAula),
+          idAula: new FormControl(data.idAula),
           seccionAula: new FormControl(data.seccionAula),
           vacanteAula: new FormControl(data.vacanteAula)
         });

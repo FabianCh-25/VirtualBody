@@ -6,7 +6,9 @@ import { DetalleMatriculaService } from 'src/app/service/detalle-matricula.servi
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { DocenteService } from 'src/app/service/docente.service';
 import { Aula } from 'src/app/model/aula';
-import { Curso } from 'src/app/curso.model';
+import { Curso } from 'src/app/model/curso';
+import { AulaService } from 'src/app/service/aula.service';
+import { CursosService } from 'src/app/service/cursos.service';
 
 @Component({
   selector: 'app-detalle-matricula-insertar',
@@ -29,10 +31,11 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
 
   constructor(private mS: DetalleMatriculaService,
     private router: Router,
-    private route: ActivatedRoute, private dS:DocenteService) {
+    private route: ActivatedRoute, private dS:DocenteService, private aS:AulaService, private cS:CursosService) {
   }
   ngOnInit(): void {
     this.dS.list().subscribe(data => { this.lista = data });
+    this.aS.list().subscribe(dataAula => { this.listaAula = dataAula});
 
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
@@ -54,7 +57,7 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
     this.detalleMatricula.fechaInscripcion = this.form.value['fechaInscripcion'];
     this.detalleMatricula.docente.nombre=this.form.value['docente.nombre'];
     this.detalleMatricula.aula.seccionAula=this.form.value['aula.seccionAula'];
-    //this.detalleMatricula.curso.codeCurso=this.form.value['curso.codeCurso']
+    this.detalleMatricula.curso.codeCurso=this.form.value['curso.codeCurso']
 
 
     if (this.idDocenteSeleccionado>0) {
@@ -66,9 +69,9 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
       a.idAula = this.idAulaSeleccionado;
       this.detalleMatricula.aula = a;
 
-      /*let c = new Curso();
+      let c = new Curso();
       c.idCurso = this.idCursoSeleccionado;
-      this.detalleMatricula.curso = c;*/
+      this.detalleMatricula.curso = c;
       this.mS.insert(this.detalleMatricula).subscribe(() => {
       this.mS.list().subscribe(data => {
             this.mS.setList(data);
@@ -96,7 +99,8 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
           curso: new FormControl(data.curso.codeCurso)
         });
         this.idDocenteSeleccionado=data.docente.idDocente;
-        this
+        this.idAulaSeleccionado=data.aula.idAula;
+        this.idCursoSeleccionado=data.curso.idCurso;
         console.log(data);
       });
     }

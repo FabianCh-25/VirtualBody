@@ -10,7 +10,7 @@ const base_url = environment.base;
   providedIn: 'root',
 })
 export class AulaService {
-  private url = `${base_url}/aula`;
+  private url = `${base_url}/Aulas`;
   private listaCambio = new Subject<Aula[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 

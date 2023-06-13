@@ -52,6 +52,34 @@
         </mat-form-field>
 
         <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Aula</mat-label>
+          <mat-select
+            formControlName="aula"
+            [(value)]="idAulaSeleccionado"
+            required
+          >
+            <mat-option *ngFor="let a of listaAula" [value]="a.idAula">
+              {{ a.seccionAula }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Curso</mat-label>
+          <mat-select
+            formControlName="curso"
+            [(value)]="idCursoSeleccionado"
+            required
+          >
+            <mat-option *ngFor="let c of listaCurso" [value]="c.idCurso">
+              {{ c.codeCurso }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <br />
         <button mat-raised-button color="primary" (click)="aceptar()">
           Aceptar
         </button>
