@@ -10,7 +10,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class EstudianteService {
-  private url = `${base_url}/estudiantejs`;
+  private url = `${base_url}/estudiantes`;
   private listaCambio = new Subject<Estudiante[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -28,8 +28,8 @@ export class EstudianteService {
     this.listaCambio.next(listaNueva);
   }
   modificar(estudiante: Estudiante) {
-    //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
-    return this.http.put(this.url, estudiante);
+    return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    //return this.http.put(this.url, estudiante);
 
   }
   listarId(id: number) {
