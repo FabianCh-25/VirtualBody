@@ -47,11 +47,19 @@ export class EstudianteInsertarComponent implements OnInit {
 
   aceptar(): void {
     this.estudiante.idEstudiante = this.form.value['id'];
+<<<<<<< HEAD
     this.estudiante.nombreEstudiante = this.form.value['nombreEstudiante'];
     this.estudiante.apellidoEstudiante = this.form.value['apellidoEstudiante'];
     this.estudiante.correoEstudiante = this.form.value['correoEstudiante'];
     this.estudiante.telefonoEstudiante = this.form.value['telefonoEstudiante'];
     this.estudiante.claveEstudiante = this.form.value['claveEstudiante'];
+=======
+    this.estudiante.NombreEstudiante = this.form.value['NombreEstudiante'];
+    this.estudiante.ApellidoEstudiante = this.form.value['ApellidoEstudiante'];
+    this.estudiante.CorreoEstudiante = this.form.value['CorreoEstudiante'];
+    this.estudiante.TelefonoEstudiante = this.form.value['TelefonoEstudiante'];
+    this.estudiante.ClaveEstudiante = this.form.value['ClaveEstudiante'];
+>>>>>>> b5c7d8e (ultimos cambios)
 
 
     if (this.form.value['nombreEstudiante'].length > 0 && this.form.value['apellidoEstudiante'].length > 0) {
@@ -81,11 +89,19 @@ export class EstudianteInsertarComponent implements OnInit {
 
         this.form = new FormGroup({
           id: new FormControl(data.idEstudiante),
+<<<<<<< HEAD
           nombreEstudiante: new FormControl(data.nombreEstudiante),
           apellidoEstudiante: new FormControl(data.apellidoEstudiante),
           correoEstudiante: new FormControl(data.correoEstudiante),
           telefonoEstudiante: new FormControl(data.telefonoEstudiante),
           claveEstudiante: new FormControl(data.claveEstudiante),
+=======
+          NombreEstudiante: new FormControl(data.NombreEstudiante),
+          ApellidoEstudiante: new FormControl(data.ApellidoEstudiante),
+          CorreoEstudiante: new FormControl(data.CorreoEstudiante),
+          TelefonoEstudiante: new FormControl(data.TelefonoEstudiante),
+          ClaveEstudiante: new FormControl(data.ClaveEstudiante),
+>>>>>>> b5c7d8e (ultimos cambios)
         });
         console.log(data);
       });

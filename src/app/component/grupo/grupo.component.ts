@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class GrupoComponent implements OnInit{
+<<<<<<< HEAD
   ngOnInit():void{
 
   }
@@ -15,5 +16,13 @@ export class GrupoComponent implements OnInit{
 
   }
 
+=======
+  constructor (public route:ActivatedRoute){
+
+  }
+  ngOnInit():void{
+
+  }
+>>>>>>> b5c7d8e (ultimos cambios)
 
 }

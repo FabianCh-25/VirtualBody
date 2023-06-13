@@ -11,14 +11,22 @@
 <body>
   <div>
     <div class="container">
+<<<<<<< HEAD
       <div style="text-align: center;">
         <h1>Estudiantes por grupo</h1>
       </div>
+=======
+      <h1>Estudiantes por grupo</h1>
+>>>>>>> b5c7d8e (ultimos cambios)
       <form [formGroup]="form" (submit)="aceptar()">
 
       <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
+<<<<<<< HEAD
         <input matInput placeholder="Id" formControlName="idGrupoxEstudiante" readonly="">
+=======
+        <input matInput placeholder="Id" formControlName="idGrupoxEstudiante">
+>>>>>>> b5c7d8e (ultimos cambios)
       </mat-form-field>
 
       <br>
@@ -31,6 +39,7 @@
 
       <br>
 
+<<<<<<< HEAD
       <mat-form-field appearance="fill">
         <mat-label>Grupo</mat-label>
         <mat-select formControlName="grupo" [(value)]="idGrupoSeleccionado" required>
@@ -56,6 +65,26 @@
 
         <button mat-raised-button color="warn" routerLink="/inicio/gruposxEstudiantes">Cancelar</button>
       </div>
+=======
+
+      <mat-form-field appearance="fill">
+        <mat-label>Número de est</mat-label>
+        <mat-select formControlName="estudiante" [(value)]="idEstudianteSeleccionado" required>
+          <mat-option *ngFor="let exg of lista" [value]="exg.idEstudiante">
+            {{exg.NombreEstudiante}}
+        </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+
+
+
+      <br>
+        <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+
+        <button mat-raised-button color="warn" routerLink="/pets">Cancelar</button>
+>>>>>>> b5c7d8e (ultimos cambios)
       <p>{{mensaje}}</p>
       </form>
     </div>

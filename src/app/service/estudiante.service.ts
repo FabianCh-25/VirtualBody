@@ -31,10 +31,8 @@ export class EstudianteService {
   setList(listaNueva: Estudiante[]) {
     this.listaCambio.next(listaNueva);
   }
-  getLista() {
-    return this.listaCambio.asObservable();
-  }
   modificar(estudiante: Estudiante) {
+<<<<<<< HEAD
     let token = sessionStorage.getItem("token");
 
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
@@ -42,6 +40,10 @@ export class EstudianteService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
 
     });
+=======
+    //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    return this.http.put(this.url, estudiante);
+>>>>>>> b5c7d8e (ultimos cambios)
 
   }
   listarId(id: number) {

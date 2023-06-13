@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
+<<<<<<< HEAD
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+=======
+import { HttpClient } from '@angular/common/http';
+>>>>>>> b5c7d8e (ultimos cambios)
 import { GrupoxEstudiante } from '../model/grupoxestudiante';
 
 const base_url = environment.base
@@ -10,6 +14,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class GrupoxestudianteService {
+<<<<<<< HEAD
   private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
@@ -30,6 +35,18 @@ export class GrupoxestudianteService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
 
     });
+=======
+  private url = `${base_url}/grupoxestudiantejs`
+  private listaCambio = new Subject<GrupoxEstudiante[]>()
+
+
+  constructor(private http: HttpClient) { }
+  list() {
+    return this.http.get<GrupoxEstudiante[]>(this.url);
+  }
+  insert(grupoxestudiante: GrupoxEstudiante) {
+    return this.http.post(this.url, grupoxestudiante);
+>>>>>>> b5c7d8e (ultimos cambios)
   }
   setList(listaNueva: GrupoxEstudiante[]) {
     this.listaCambio.next(listaNueva);
@@ -37,6 +54,7 @@ export class GrupoxestudianteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+<<<<<<< HEAD
   listId(id: number){
     let token = sessionStorage.getItem("token");
 
@@ -74,4 +92,6 @@ export class GrupoxestudianteService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+=======
+>>>>>>> b5c7d8e (ultimos cambios)
 }
