@@ -1,10 +1,10 @@
-/* landing-page.component.css */
+/* landing-page.component.css
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3f51b5; /* Color de fondo del encabezado */
+  background-color: #3f51b5; /* Color de fondo del encabezado
   color: white;
   font-size: 2em;
 }
@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   padding: 4em 0;
-  background-color: #f5f5f5; /* Color de fondo de la sección de características */
+  background-color: #f5f5f5; /* Color de fondo de la sección de características
 }
 
 .feature {
@@ -28,4 +28,327 @@
 
 .feature h2 {
   margin-bottom: 0.5em;
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Inter:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%;
+    height: 7vh;
+
+    background: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(src/app/img/fondoHome.png) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding-top: 20px;
+    width: 70px;
+    margin-left: 20px;
+
+}
+
+.bar-btn{
+    padding-top: 20px;
+    font-size:25px;
+    color:#fff;
+    cursor:pointer;
+    margin-right: 20px;
+}
+
+.nav-menu{
+    position: fixed;
+    width:100%;
+    height:0vh;
+    top: 7vh;
+    background:rga(60,60,60,0.95);
+    background-color: rgba(56, 56, 56, 0.95);
+    text-align: center;
+    transition:all 0.5s;
+}
+
+.nav-menu li{
+    display: none;
+    line-height:30px;
+    margin:50px 0;
+    transition: all 0.5s;
+    font-family: 'Inter', sans-serif;
+    color:#fff;
+}
+
+.nav-menu li a {
+    color:#fff;
+    font-size: 16px;
+}
+
+.nav-menu li a:hover{
+    color:#9900ff;
+    transition: 0.3s;
+}
+#fas{
+    margin-right: 20px;
+}
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height:100vh;
+    position: fixed;
+}
+
+#check:checked ~ .nav-menu li{
+    display:block;
+}
+#home{
+    height: 100vh;
+    padding-top: 30vh;
+    background: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(src/app/img/fondoHome.png) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+.banner-text h1{
+    font-family: 'Comfortaa', cursive;
+    color:#fff;
+    font-size: 55px;
+}
+.banner-text p{
+    font-family: 'Comfortaa', cursive;
+    color:#fff;
+    font-size: 20px;
+    padding:30px;
+}
+
+.btn-a{
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
+    background-color: #9900ff;
+    margin-top: 30px;
+    padding:15px 30px;
+    color:#fff;
+    border-radius: 25px;
+}
+
+.btn-a:hover{
+    background-color: #6803ab;
+}
+
+#descargar{
+    height: 100vh;
+    padding-top: 10vh;
+    text-align: center;
+    align-items: center;
+}
+.datos_app h2{
+    font-family: 'Inter', sans-serif;
+    color:#9900ff;
+    font-size: 55px;
+}
+.datos_app p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+.datos_app h2,p{
+    margin-top: 20px;
+}
+.app_stores{
+    margin-top: 20px;
+}
+.mobiles{
+    margin-top: 20px;
+}
+.app_store1{
+    width: 200px;
+    max-width: 300px;
+}
+.app_store2{
+    width:200px;
+    max-width: 300px;
+}
+.mobile1{
+    width: 210px;
+    max-width: 350px;
+}
+.mobile2{
+    width: 210px;
+    max-width: 350px;
+}
+.nav.active{
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.nav.active .bar-btn{
+    color: #000;
+}
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 89%;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+    margin-left: 50px;
+}
+.pie-pagina .grupo-1 .box h3{
+    font-family: 'Inter', sans-serif;
+    color:#fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box a{
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 25px;
+    color:#fff;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .box a:hover{
+    color:#c36bfd;
+}
+.pie-pagina .grupo-2{
+    font-family: 'Inter', sans-serif;
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+@media (min-width:886px){
+    .logo{
+        padding-top:10px;
+        margin-left:40px;
+    }
+    header{
+        height:7vh;
+    }
+    .pie-pagina .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+    }
+    nav{
+        position: fixed;
+        height: 7vh;
+        /*height:35px;*/
+        margin: 0 auto;
+        transition:all 0.5s ease;
+    }
+    .bar-btn{
+        display:none;
+    }
+    .nav-menu{
+        /*position:relative;*/
+        margin-top: 20px;
+        height:0vh;
+        top:0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right:50px;
+
+    }
+    .nav-menu li{
+        display: inline-block;
+        font-size: 25px;
+        line-height:20px;
+        margin:0 20px;
+        transition:all 0.5s ease;
+    }
+    .nav-menu li:hover{
+        padding:8px 10px;
+        background: #9900ff;
+        color:#fff;
+        border-radius: 15px;
+    }
+    .nav-menu li a:hover{
+        color: #fff;
+    }
+    #home{
+        padding-top: 20vh;
+    }
+    .banner-text h1{
+
+        font-size: 100px;
+    }
+    .banner-text p{
+        font-size: 30px;
+    }
+    .btn-a{
+        font-size: 20px;
+    }
+    .nav.active{
+        background-color: #fff;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .nav.active li{
+        color:#000;
+    }
+    .nav.active a{
+        color:#000;
+    }
+    .nav.active li:hover{
+        color:#fff;
+    }
+    #descargar{
+        padding-top:20vh;
+    }
+    .datos_app{
+        margin-left: 50px;
+    }
+    .datos_app h2{
+        font-size: 70px;
+    }
+    .datos_app p{
+        font-size: 25px;
+    }
+    .app_container{
+        display: flex;
+    }
+    .app_stores{
+        margin-top: 100px;
+    }
+    .app_store1{
+        width: auto;
+    }
+    .app_store2{
+        width: auto;
+    }
+
+}
+@media (min-width:1716px){
+    .mobiles{
+        margin-left: 100px;
+    }
+    .mobile1{
+        width: auto;
+    }
+    .mobile2{
+        width: auto;
+    }
 }

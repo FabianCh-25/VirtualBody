@@ -71,7 +71,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'estudiantesXActividads',
+    path: 'ExAs',
     component: EstudianteXActividadComponent,
     children: [
       { path: 'nuevo', component:ExaInsertarComponent},

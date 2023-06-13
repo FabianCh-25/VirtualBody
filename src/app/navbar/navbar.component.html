@@ -36,4 +36,16 @@
     <button mat-button routerLink="/actividad-insertar">Insertar Actividad</button>
     <button mat-button routerLink="/actividad-listar">Listar Actividad</button>
   </mat-menu>
+  <!-- Menú 6 -->
+  <button mat-button [matMenuTriggerFor]="menu6">Detalle Matricula</button>
+  <mat-menu #menu6="matMenu">
+    <button mat-button routerLink="/detalleMatricula/nuevo">Insertar Detalle Matricula</button>
+    <button mat-button routerLink="/detalleMatricula">Listar Detalle Matricula</button>
+  </mat-menu>
+  <!-- Menú 7 -->
+  <button mat-button [matMenuTriggerFor]="menu7">ExA</button>
+  <mat-menu #menu7="matMenu">
+    <button mat-button routerLink="/ExAs/nuevo">Insertar ExA</button>
+    <button mat-button routerLink="/ExAs">Listar EXA</button>
+  </mat-menu>
 </mat-toolbar>

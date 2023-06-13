@@ -14,7 +14,7 @@ import { EstudiantexActividadService } from 'src/app/service/estudiantex-activid
 export class EXAListarComponent implements OnInit{
   lista: EstudianteXActividad[] = [];
   dataSource: MatTableDataSource<EstudianteXActividad> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'act', 'estudiante', 'calificacion']
+  displayedColumns: string[] = ['id', 'act', 'estudiante', 'calificacion', 'acciones']
   private idMayor: number = 0;
 
   constructor(private eS: EstudiantexActividadService, private dialog: MatDialog){}
