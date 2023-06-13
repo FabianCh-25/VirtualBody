@@ -35,10 +35,14 @@ export class EstudianteInsertarComponent implements OnInit {
 
     this.form = new FormGroup({
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: new FormControl(),
 =======
       idEstudiante: new FormControl(),
 >>>>>>> 1909452 (corregi estudiante)
+=======
+      id: new FormControl(),
+>>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
       nombreEstudiante: new FormControl(),
       apellidoEstudiante: new FormControl(),
       correoEstudiante: new FormControl(),
@@ -99,11 +103,15 @@ export class EstudianteInsertarComponent implements OnInit {
 
         this.form = new FormGroup({
 <<<<<<< HEAD
+<<<<<<< HEAD
           id: new FormControl(data.idEstudiante),
 <<<<<<< HEAD
 =======
           idEstudiante: new FormControl(data.idEstudiante),
 >>>>>>> 1909452 (corregi estudiante)
+=======
+          id: new FormControl(data.idEstudiante),
+>>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
           nombreEstudiante: new FormControl(data.nombreEstudiante),
           apellidoEstudiante: new FormControl(data.apellidoEstudiante),
           correoEstudiante: new FormControl(data.correoEstudiante),
