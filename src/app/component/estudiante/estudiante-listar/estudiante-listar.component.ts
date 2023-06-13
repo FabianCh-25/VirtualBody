@@ -26,7 +26,7 @@ export class EstudianteListarComponent implements OnInit {
     this.eS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
-    this.eS.getList().subscribe(data => {
+    this.eS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
     this.eS.getConfirmaEliminacion().subscribe(data => {

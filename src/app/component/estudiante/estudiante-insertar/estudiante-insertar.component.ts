@@ -34,7 +34,7 @@ export class EstudianteInsertarComponent implements OnInit {
     });
 
     this.form = new FormGroup({
-      idEstudiante: new FormControl(),
+      id: new FormControl(),
       nombreEstudiante: new FormControl(),
       apellidoEstudiante: new FormControl(),
       correoEstudiante: new FormControl(),
@@ -80,7 +80,7 @@ export class EstudianteInsertarComponent implements OnInit {
         //this.propietario = data
 
         this.form = new FormGroup({
-          idEstudiante: new FormControl(data.idEstudiante),
+          id: new FormControl(data.idEstudiante),
           nombreEstudiante: new FormControl(data.nombreEstudiante),
           apellidoEstudiante: new FormControl(data.apellidoEstudiante),
           correoEstudiante: new FormControl(data.correoEstudiante),
