@@ -79,7 +79,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     this.grupoxestudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
 =======
     this.grupoxestudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
-    this.grupoxestudiante.estudiante.NombreEstudiante = this.form.value['estudiante.NombreEstudiante'];
+    this.grupoxestudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
     this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
 >>>>>>> b5c7d8e (ultimos cambios)
     if (this.idEstudianteSeleccionado>0) {
