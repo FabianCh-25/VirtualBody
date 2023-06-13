@@ -3,15 +3,13 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { Grupo } from '../model/grupo';
-
 const base_url = environment.base
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class GrupoService {
-  private url = `${base_url}/grupojs`;
+  private url = `${base_url}/grupo`;
   private listaCambio = new Subject<Grupo[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -22,9 +20,6 @@ export class GrupoService {
   insert(grupo: Grupo) {
     return this.http.post(this.url, grupo);
   }
-  getList() {
-    return this.listaCambio.asObservable();
-  }
   setList(listaNueva: Grupo[]) {
     this.listaCambio.next(listaNueva);
   }
@@ -32,14 +27,15 @@ export class GrupoService {
     return this.listaCambio.asObservable();
   }
   modificar(grupo: Grupo) {
-    return this.http.put(this.url + "/" + grupo.idGrupo, grupo);
+    //return this.http.put(this.url + "/" + grupo.idGrupo, grupo);
+    return this.http.put(this.url, grupo);
   }
-  listarId(idGrupo: number) {
-    return this.http.get<Grupo>(`${this.url}/${idGrupo}`);
+  listarId(id: number) {
+    return this.http.get<Grupo>(`${this.url}/${id}`);
   }
-  eliminar(idGrupo: number) {
+  eliminar(id: number) {
 
-    return this.http.delete(`${this.url}/${idGrupo}`);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'grupo', component: GrupoComponent, children: [
       { path: 'grupoinsertar', component: GrupoInsertarComponent },
-      { path: 'edicion/:idGrupo', component: GrupoInsertarComponent }
+      { path: 'edicion/:id', component: GrupoInsertarComponent }
     ]
   },
   {

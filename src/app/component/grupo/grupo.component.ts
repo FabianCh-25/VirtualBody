@@ -8,11 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class GrupoComponent implements OnInit{
-  constructor (public route:ActivatedRoute){
-
-  }
   ngOnInit():void{
 
   }
+  constructor (public route:ActivatedRoute){
+
+  }
+
 
 }

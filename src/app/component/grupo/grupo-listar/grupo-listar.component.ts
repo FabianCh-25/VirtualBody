@@ -15,8 +15,8 @@ import { GrupoDialogoComponent } from './grupo-dialogo/grupo-dialogo.component';
 
 
 export class GrupoListarComponent implements OnInit {
-  dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
   lista: Grupo[] = [];
+  dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   private idMayor: number = 0;
 
@@ -26,7 +26,7 @@ export class GrupoListarComponent implements OnInit {
     this.gS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
-    this.gS.getList().subscribe(data => {
+    this.gS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
     this.gS.getConfirmaEliminacion().subscribe(data => {
