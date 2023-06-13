@@ -8,7 +8,11 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class EstudianteService {
+<<<<<<< HEAD
   private url = `${base_url}/estudiante`;
+=======
+  private url = `${base_url}/estudiantes`;
+>>>>>>> 1909452 (corregi estudiante)
   private listaCambio = new Subject<Estudiante[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -33,6 +37,7 @@ export class EstudianteService {
   }
   modificar(estudiante: Estudiante) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     let token = sessionStorage.getItem("token");
 
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
@@ -44,6 +49,10 @@ export class EstudianteService {
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
     return this.http.put(this.url, estudiante);
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
+    //return this.http.put(this.url, estudiante);
+>>>>>>> 1909452 (corregi estudiante)
 
   }
   listarId(id: number) {
