@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div style=" text-align: center;">
+      <h1>Lista de las Matriculas</h1>
+    </div>
+    <div style="text-align: right;" class="example-button-row">
+      <button mat-raised-button color="primary" routerLink="/matricula/nuevo">Nuevo</button>
+    </div>
+
+    <mat-form-field>
+      <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.idMatricula}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="estudiante">
+        <th mat-header-cell *matHeaderCellDef> Estudiante </th>
+        <td mat-cell *matCellDef="let element"> {{element.estudiante.nombreEstudiante}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="fechaPagoMatricula">
+        <th mat-header-cell *matHeaderCellDef> Fecha de pago </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaPagoMatricula|date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="costoMatricula">
+        <th mat-header-cell *matHeaderCellDef> Costo de Matricula </th>
+        <td mat-cell *matCellDef="let element"> {{element.costoMatricula}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+            [routerLink]="['edicion', element.idMatricula]">Actualizar</button>
+          <button mat-raised-button color="accent" (click)="confirmar(element.idMatricula)">Eliminar</button>
+        </td>
+      </ng-container>
+      <!-- Weight Column -->
+     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator #paginator [length]="100" [pageSizeOptions]="[3,5,10]" aria-label="Select page" showFirstLastButtons>
+
+    </mat-paginator>
+
+  </div>
+</body>
+
+</html>

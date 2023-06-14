@@ -39,6 +39,20 @@
 
         <br />
         <mat-form-field appearance="fill">
+          <mat-label>Matricula</mat-label>
+          <mat-select
+            formControlName="matricula"
+            [(value)]="idMatriculaSeleccionado"
+            required
+          >
+            <mat-option *ngFor="let m of listaMatricula" [value]="m.idMatricula">
+              {{ m.idMatricula }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <br />
+        <mat-form-field appearance="fill">
           <mat-label>Docente</mat-label>
           <mat-select
             formControlName="docente"

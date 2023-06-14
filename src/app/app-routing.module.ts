@@ -27,6 +27,8 @@ import { GrupoComponent } from './component/grupo/grupo.component';
 import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
 import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
 import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
+import { MatriculaComponent } from './component/matricula/matricula.component';
+import { MatriculaInsertarComponent } from './component/matricula/matricula-insertar/matricula-insertar.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
@@ -67,6 +69,14 @@ const routes: Routes = [
     children: [
       { path: 'nuevo', component:DetalleMatriculaInsertarComponent},
       { path: 'edicionMatricula/:id', component:DetalleMatriculaInsertarComponent}
+    ]
+  },
+  {
+    path: 'matricula',
+    component: MatriculaComponent,
+    children: [
+      {path: 'nuevo', component:MatriculaInsertarComponent},
+      {path: 'edicion/:id', component:MatriculaInsertarComponent}
     ]
   },
   {

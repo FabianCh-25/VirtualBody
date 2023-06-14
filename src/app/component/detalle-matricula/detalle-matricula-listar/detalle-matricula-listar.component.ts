@@ -14,7 +14,7 @@ import { DetalleMatriculaDialogoComponent } from './detalle-matricula-dialogo/de
 export class DetalleMatriculaListarComponent implements OnInit{
   lista: DetalleMatricula[] = [];
   dataSource: MatTableDataSource<DetalleMatricula> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'fechaInscripcion', 'docente', 'aula', 'curso', 'acciones']
+  displayedColumns: string[] = ['id', 'fechaInscripcion', 'matricula','docente', 'aula', 'curso', 'acciones']
   private idMayor: number = 0;
 
   constructor(private mS: DetalleMatriculaService, private dialog: MatDialog){}

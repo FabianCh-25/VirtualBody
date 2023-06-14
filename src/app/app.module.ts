@@ -57,6 +57,10 @@ import { GrupoxestudianteListarComponent } from './component/grupoxestudiante/gr
 import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
 import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
 import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
+import { MatriculaComponent } from './component/matricula/matricula.component';
+import { MatriculaListarComponent } from './component/matricula/matricula-listar/matricula-listar.component';
+import { MatriculaInsertarComponent } from './component/matricula/matricula-insertar/matricula-insertar.component';
+import { MatriculaDialogoComponent } from './component/matricula/matricula-listar/matricula-dialogo/matricula-dialogo.component';
 
 
 @NgModule({
@@ -104,6 +108,10 @@ import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-i
     GrupoxestudianteListarComponent,
     GrupoxestudianteInsertarComponent,
     GrupoDialogoComponent,
+    MatriculaComponent,
+    MatriculaListarComponent,
+    MatriculaInsertarComponent,
+    MatriculaDialogoComponent,
 
 
 
