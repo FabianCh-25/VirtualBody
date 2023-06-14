@@ -11,6 +11,7 @@ export class GrupoxestudianteComponent implements OnInit{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   constructor (public route:ActivatedRoute){
 
@@ -23,6 +24,8 @@ export class GrupoxestudianteComponent implements OnInit{
 
   }
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> a227011 (falta aun grupoxest)
   ngOnInit():void{
 
   }
@@ -30,6 +33,9 @@ export class GrupoxestudianteComponent implements OnInit{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a227011 (falta aun grupoxest)
 =======
 >>>>>>> a227011 (falta aun grupoxest)
   constructor (public route:ActivatedRoute){
@@ -37,10 +43,13 @@ export class GrupoxestudianteComponent implements OnInit{
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> a227011 (falta aun grupoxest)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> a227011 (falta aun grupoxest)
 }

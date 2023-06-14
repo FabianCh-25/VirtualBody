@@ -18,6 +18,7 @@ import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
@@ -33,6 +34,8 @@ import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.servic
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
 import { GrupoService } from 'src/app/service/grupo.service';
+=======
+>>>>>>> a227011 (falta aun grupoxest)
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 >>>>>>> b5c7d8e (ultimos cambios)
 
