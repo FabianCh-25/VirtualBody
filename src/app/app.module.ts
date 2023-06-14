@@ -87,7 +87,11 @@ import { ExaDialogoComponent } from './component/estudiante-xactividad/exalistar
     EstudianteXActividadComponent,
     EXAListarComponent,
     ExaInsertarComponent,
-    ExaDialogoComponent
+    ExaDialogoComponent,
+
+
+
+
   ],
   imports: [
     BrowserModule,

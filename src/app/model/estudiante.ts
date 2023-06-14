@@ -1,8 +1,8 @@
 export class Estudiante {
-  id: number = 0
-  NombreEstudiante: string = ""
-  ApellidoEstudiante: string = ""
-  CorreoEstudiante: string = ""
-  ClaveEstudiante: string = ""
-  TelefonoEstudiante: string = ""
+  idEstudiante: number = 0
+  nombreEstudiante: string = ""
+  apellidoEstudiante: string = ""
+  correoEstudiante: string = ""
+  claveEstudiante: string = ""
+  telefonoEstudiante: string = ""
 }

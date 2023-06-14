@@ -40,12 +40,7 @@ const routes: Routes = [
   { path: 'estudiante/edicion/:id', component: EstudianteInsertarComponent },
   { path: 'editar-cursos/:codigoCurso', component: EditarCursosComponent },
   { path: '', component: LandingPageComponent }, // Ruta para la landing pag
-  {
-    path: 'estudiante', component: EstudianteComponent, children: [
-      { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
-      { path: 'edicion/:id', component: EstudianteInsertarComponent }
-    ]
-  },
+
   {
     path: 'docentes', component: DocenteComponent, children: [
       { path: 'docentesinsertar', component: DocenteInsertarComponent },
@@ -77,7 +72,18 @@ const routes: Routes = [
       { path: 'nuevo', component:ExaInsertarComponent},
       { path: 'edicion/:id', component:DetalleMatriculaInsertarComponent}
     ]
-  }
+  },
+
+
+  {
+    path: 'estudiante', component: EstudianteComponent, children: [
+      { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
+      { path: 'edicion/:id', component: EstudianteInsertarComponent }
+    ]
+  },
+
+
+
 ];
 
 @NgModule({

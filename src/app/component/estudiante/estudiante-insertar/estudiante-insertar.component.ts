@@ -35,26 +35,26 @@ export class EstudianteInsertarComponent implements OnInit {
 
     this.form = new FormGroup({
       id: new FormControl(),
-      NombreEstudiante: new FormControl(),
-      ApellidoEstudiante: new FormControl(),
-      CorreoEstudiante: new FormControl(),
-      TelefonoEstudiante: new FormControl(),
-      ClaveEstudiante: new FormControl(),
+      nombreEstudiante: new FormControl(),
+      apellidoEstudiante: new FormControl(),
+      correoEstudiante: new FormControl(),
+      telefonoEstudiante: new FormControl(),
+      claveEstudiante: new FormControl(),
     });
   }
 
 
 
   aceptar(): void {
-    this.estudiante.id = this.form.value['id'];
-    this.estudiante.NombreEstudiante = this.form.value['NombreEstudiante'];
-    this.estudiante.ApellidoEstudiante = this.form.value['ApellidoEstudiante'];
-    this.estudiante.CorreoEstudiante = this.form.value['CorreoEstudiante'];
-    this.estudiante.TelefonoEstudiante = this.form.value['TelefonoEstudiante'];
-    this.estudiante.ClaveEstudiante = this.form.value['ClaveEstudiante'];
+    this.estudiante.idEstudiante = this.form.value['id'];
+    this.estudiante.nombreEstudiante = this.form.value['nombreEstudiante'];
+    this.estudiante.apellidoEstudiante = this.form.value['apellidoEstudiante'];
+    this.estudiante.correoEstudiante = this.form.value['correoEstudiante'];
+    this.estudiante.telefonoEstudiante = this.form.value['telefonoEstudiante'];
+    this.estudiante.claveEstudiante = this.form.value['claveEstudiante'];
 
 
-    if (this.form.value['NombreEstudiante'].length > 0 && this.form.value['ApellidoEstudiante'].length > 0) {
+    if (this.form.value['nombreEstudiante'].length > 0 && this.form.value['apellidoEstudiante'].length > 0) {
       if (this.edicion) {
         this.eS.modificar(this.estudiante).subscribe(() => {
           this.eS.list().subscribe(data => {
@@ -80,16 +80,15 @@ export class EstudianteInsertarComponent implements OnInit {
         //this.propietario = data
 
         this.form = new FormGroup({
-          id: new FormControl(data.id),
-          NombreEstudiante: new FormControl(data.NombreEstudiante),
-          ApellidoEstudiante: new FormControl(data.ApellidoEstudiante),
-          CorreoEstudiante: new FormControl(data.CorreoEstudiante),
-          TelefonoEstudiante: new FormControl(data.TelefonoEstudiante),
-          ClaveEstudiante: new FormControl(data.ClaveEstudiante),
+          id: new FormControl(data.idEstudiante),
+          nombreEstudiante: new FormControl(data.nombreEstudiante),
+          apellidoEstudiante: new FormControl(data.apellidoEstudiante),
+          correoEstudiante: new FormControl(data.correoEstudiante),
+          telefonoEstudiante: new FormControl(data.telefonoEstudiante),
+          claveEstudiante: new FormControl(data.claveEstudiante),
         });
         console.log(data);
       });
     }
   }
 }
-

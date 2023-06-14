@@ -53,14 +53,14 @@ export class ExaInsertarComponent implements OnInit {
   aceptar(): void {
     this.estudianteXActividad.idExA = this.form.value['idEXA'];
     this.estudianteXActividad.calificacion= this.form.value['calificacion'];
-    this.estudianteXActividad.estudiante.NombreEstudiante=this.form.value['estudiantenombre'];
+    this.estudianteXActividad.estudiante.nombreEstudiante=this.form.value['estudiantenombre'];
     this.estudianteXActividad.act.titulo=this.form.value['actividadnombre'];
 
 
 
     if (this.idEstudianteSelecionado>0) {
       let es = new Estudiante();
-      es.id = this.idEstudianteSelecionado;
+      es.idEstudiante = this.idEstudianteSelecionado;
       this.estudianteXActividad.estudiante=es;
 
       let act= new Actividad();
