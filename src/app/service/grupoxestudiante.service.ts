@@ -15,6 +15,7 @@ const base_url = environment.base
 })
 export class GrupoxestudianteService {
 <<<<<<< HEAD
+<<<<<<< HEAD
   private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
@@ -37,6 +38,9 @@ export class GrupoxestudianteService {
     });
 =======
   private url = `${base_url}/grupoxestudiantejs`
+=======
+  private url = `${base_url}/grupoxestudiante`
+>>>>>>> a227011 (falta aun grupoxest)
   private listaCambio = new Subject<GrupoxEstudiante[]>()
 
 
