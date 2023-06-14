@@ -49,6 +49,14 @@ import { EstudianteXActividadComponent } from './component/estudiante-xactividad
 import { EXAListarComponent } from './component/estudiante-xactividad/exalistar/exalistar.component';
 import { ExaInsertarComponent } from './component/estudiante-xactividad/exa-insertar/exa-insertar.component';
 import { ExaDialogoComponent } from './component/estudiante-xactividad/exalistar/exa-dialogo/exa-dialogo.component';
+import { GrupoComponent } from './component/grupo/grupo.component';
+import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
+
+import { GrupoListarComponent } from './component/grupo/grupo-listar/grupo-listar.component';
+import { GrupoxestudianteListarComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-listar.component';
+import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
+import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
+import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
 
 
 @NgModule({
@@ -88,6 +96,14 @@ import { ExaDialogoComponent } from './component/estudiante-xactividad/exalistar
     EXAListarComponent,
     ExaInsertarComponent,
     ExaDialogoComponent,
+    GrupoComponent,
+    GrupoxestudianteComponent,
+
+    GrupoInsertarComponent,
+    GrupoListarComponent,
+    GrupoxestudianteListarComponent,
+    GrupoxestudianteInsertarComponent,
+    GrupoDialogoComponent,
 
 
 

@@ -23,6 +23,10 @@ import { DetalleMatriculaComponent } from './component/detalle-matricula/detalle
 import { DetalleMatriculaInsertarComponent } from './component/detalle-matricula/detalle-matricula-insertar/detalle-matricula-insertar.component';
 import { EstudianteXActividadComponent } from './component/estudiante-xactividad/estudiante-xactividad.component';
 import { ExaInsertarComponent } from './component/estudiante-xactividad/exa-insertar/exa-insertar.component';
+import { GrupoComponent } from './component/grupo/grupo.component';
+import { GrupoInsertarComponent } from './component/grupo/grupo-insertar/grupo-insertar.component';
+import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
+import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
 
 const routes: Routes = [
   { path: 'crear-cursos', component: CrearCursosComponent },
@@ -81,6 +85,17 @@ const routes: Routes = [
       { path: 'edicion/:id', component: EstudianteInsertarComponent }
     ]
   },
+  {
+    path: 'grupo', component: GrupoComponent, children: [
+      { path: 'grupoinsertar', component: GrupoInsertarComponent },
+      { path: 'edicion/:id', component: GrupoInsertarComponent }
+    ]
+  },
+  {
+    path: 'grupoxestudiante', component: GrupoxestudianteComponent, children: [
+    { path: 'grupoxestudianteinsertar', component: GrupoxestudianteInsertarComponent },
+    ]
+  }
 
 
 
