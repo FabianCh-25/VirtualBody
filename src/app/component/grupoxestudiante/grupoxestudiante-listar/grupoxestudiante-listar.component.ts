@@ -8,12 +8,15 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog'
 import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 import { LoginService } from 'src/app/service/login.service';
 =======
 import { GrupoService } from 'src/app/service/grupo.service';
+=======
+>>>>>>> a227011 (falta aun grupoxest)
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 >>>>>>> b5c7d8e (ultimos cambios)
 
