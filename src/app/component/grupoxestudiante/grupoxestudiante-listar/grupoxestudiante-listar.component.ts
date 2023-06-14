@@ -3,7 +3,6 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
 import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
-import { GrupoService } from 'src/app/service/grupo.service';
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 
 @Component({

@@ -8,10 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class GrupoxestudianteComponent implements OnInit{
-  constructor (public route:ActivatedRoute){
+  ngOnInit():void{
 
   }
-  ngOnInit():void{
+
+  constructor (public route:ActivatedRoute){
 
   }
 
