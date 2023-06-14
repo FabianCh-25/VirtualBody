@@ -58,7 +58,7 @@
           [(value)]="idEstudianteSelecionado"
           required
         >
-          <mat-option *ngFor="let e of listae" [value]="">
+          <mat-option *ngFor="let e of listae" [value]="e.idEstudiante">
             {{ e.nombreEstudiante }}
           </mat-option>
         </mat-select>
@@ -68,7 +68,7 @@
       <button mat-raised-button color="primary" (click)="aceptar()">
         Aceptar
       </button>
-      <button mat-raised-button color="warn" routerLink="/estudiantesXActividads">
+      <button mat-raised-button color="warn" routerLink="/ExAs">
         Cancelar
       </button>
       <p>{{ mensaje }}</p>

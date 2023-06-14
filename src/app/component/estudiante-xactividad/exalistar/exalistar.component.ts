@@ -1,3 +1,4 @@
+import { ExaDialogoComponent } from './exa-dialogo/exa-dialogo.component';
 import { Component, OnInit, ViewChild,ChangeDetectorRef  } from '@angular/core';
 import { EstudianteXActividad } from 'src/app/model/estudianteXActividad';
 import {  MatTableDataSource } from '@angular/material/table'
@@ -32,7 +33,7 @@ this.eS.getConfirmaEliminacion().subscribe(data => {
 }
 confirmar(id: number) {
 this.idMayor = id;
-//this.dialog.open(DetalleMatriculaDialogoComponent);
+this.dialog.open(ExaDialogoComponent);
 }
 eliminar(id: number) {
 this.eS.eliminar(id).subscribe(() => {
