@@ -84,7 +84,7 @@ const routes: Routes = [
     component: EstudianteXActividadComponent,
     children: [
       { path: 'nuevo', component:ExaInsertarComponent},
-      { path: 'edicion/:id', component:DetalleMatriculaInsertarComponent}
+      { path: 'edicion/:id', component:ExaInsertarComponent}
     ]
   },
 
