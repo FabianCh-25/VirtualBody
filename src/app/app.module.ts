@@ -65,6 +65,7 @@ import { MaterialAcademicoComponent } from './component/material-academico/mater
 import { MaterialAcademicoListarComponent } from './component/material-academico/material-academico-listar/material-academico-listar.component';
 import { MaterialAcademicoDialogoComponent } from './component/material-academico/material-academico-listar/material-academico-dialogo/material-academico-dialogo.component';
 import { MaterialAcademicoInsertarComponent } from './component/material-academico/material-academico-insertar/material-academico-insertar.component';
+import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 
 
 @NgModule({
@@ -120,6 +121,7 @@ import { MaterialAcademicoInsertarComponent } from './component/material-academi
     MaterialAcademicoListarComponent,
     MaterialAcademicoDialogoComponent,
     MaterialAcademicoInsertarComponent,
+    GrupoxestudianteDialogoComponent,
 
 
 

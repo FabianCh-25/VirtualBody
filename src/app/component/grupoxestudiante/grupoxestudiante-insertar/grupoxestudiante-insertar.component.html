@@ -18,7 +18,7 @@
 
       <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
-        <input matInput placeholder="Id" formControlName="idGrupoxEstudiante">
+        <input matInput placeholder="Id" formControlName="idGrupoxEstudiante" readonly="">
       </mat-form-field>
 
       <br>
@@ -31,19 +31,24 @@
 
       <br>
 
-
       <mat-form-field appearance="fill">
-        <mat-label>Número de est</mat-label>
-        <mat-select formControlName="estudiante" [(value)]="idEstudianteSeleccionado" required>
-          <mat-option *ngFor="let exg of lista" [value]="exg.idEstudiante">
-            {{exg.nombreEstudiante}}
+        <mat-label>Grupo</mat-label>
+        <mat-select formControlName="grupo" [(value)]="idGrupoSeleccionado" required>
+          <mat-option *ngFor="let g of listaGrupo" [value]="g.idGrupo">
+            {{g.nombreGrupo}}
         </mat-option>
         </mat-select>
       </mat-form-field>
+
       <br>
-
-
-
+      <mat-form-field appearance="fill">
+        <mat-label>Estudiante</mat-label>
+        <mat-select formControlName="estudiante" [(value)]="idEstudianteSeleccionado" required>
+          <mat-option *ngFor="let e of listaEstudiante" [value]="e.idEstudiante">
+            {{e.nombreEstudiante}}
+        </mat-option>
+        </mat-select>
+      </mat-form-field>
 
       <br>
       <div style="text-align: center;">

@@ -10,9 +10,9 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class GrupoxestudianteService {
-  private url = `${base_url}/grupoxestudiante`
+  private url = `${base_url}/gruposxestudiante`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
-
+  private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
   list() {
@@ -26,5 +26,21 @@ export class GrupoxestudianteService {
   }
   getLista() {
     return this.listaCambio.asObservable();
+  }
+  listId(id: number){
+    return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`);
+  }
+  update(gp: GrupoxEstudiante){
+    return this.http.put(this.url + '/' + gp.idGrupoxEstudiante, gp)
+  }
+  eliminar(id: number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

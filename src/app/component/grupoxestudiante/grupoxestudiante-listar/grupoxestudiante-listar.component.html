@@ -31,15 +31,23 @@
       </ng-container>
 
       <!-- Name Column -->
-      <ng-container matColumnDef="group">
+      <ng-container matColumnDef="grupo">
         <th mat-header-cell *matHeaderCellDef> Grupo </th>
         <td mat-cell *matCellDef="let element"> {{element.grupo.nombreGrupo}} </td>
       </ng-container>
 
       <!-- Name Column -->
-      <ng-container matColumnDef="student">
+      <ng-container matColumnDef="estudiante">
         <th mat-header-cell *matHeaderCellDef> Estudiante </th>
-        <td mat-cell *matCellDef="let element"> {{element.estudiante.NombreEstudiante}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.estudiante.nombreEstudiante}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+            [routerLink]="['edicion', element.idGrupoxEstudiante]">Actualizar</button>
+          <button mat-raised-button color="accent" (click)="confirmar(element.idGrupoxEstudiante)">Eliminar</button>
+        </td>
       </ng-container>
 
      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

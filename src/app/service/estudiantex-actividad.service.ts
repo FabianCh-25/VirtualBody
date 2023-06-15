@@ -31,8 +31,8 @@ private url = `${base_url}/ExAs`
   }
 
   update(ea: EstudianteXActividad) {
-    return this.http.put(this.url + '/' + ea.idExA, ea);
-    //return this.http.put(this.url, d)
+    //return this.http.put(this.url + '/' + ea.idExA, ea);
+    return this.http.put(this.url, ea)
   }
 
   eliminar(id: number) {

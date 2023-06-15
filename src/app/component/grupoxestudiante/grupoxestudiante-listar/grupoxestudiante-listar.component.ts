@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog'
 import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 
 @Component({
   selector: 'app-grupoxestudiante-listar',
@@ -17,8 +18,8 @@ export class GrupoxestudianteListarComponent implements OnInit {
 
   lista: GrupoxEstudiante[] = [];
   dataSource: MatTableDataSource<GrupoxEstudiante> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'group', 'student', 'fecha']
-
+  displayedColumns: string[] = ['id',  'fecha', 'grupo', 'estudiante', 'acciones']
+  private idMayor: number = 0;
 
   constructor(private gS: GrupoxestudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
@@ -39,10 +40,24 @@ export class GrupoxestudianteListarComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
+    this.gS.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
 
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
     }
+  }
+  confirmar(id: number) {
+    this.idMayor = id;
+    this.dialog.open(GrupoxestudianteDialogoComponent);
+  }
+  eliminar(id: number) {
+    this.gS.eliminar(id).subscribe(() => {
+      this.gS.list().subscribe(data => {
+        this.gS.setList(data);/* se ejecuta la línea 27 */
+      });
+    });
   }
   filtrar(e: any) {
     this.dataSource.filter = e.target.value.trim();

@@ -45,8 +45,8 @@
           [(value)]="idActividadSelecionado"
           required
         >
-          <mat-option *ngFor="let m of lista" [value]="m.idActividad">
-            {{ m.titulo }}
+          <mat-option *ngFor="let a of lista" [value]="a.idActividad">
+            {{ a.titulo }}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -60,8 +60,8 @@
           [(value)]="idEstudianteSelecionado"
           required
         >
-          <mat-option *ngFor="let e of listae" [value]="e.idEstudiante">
-            {{ e.nombreEstudiante }}
+          <mat-option *ngFor="let es of listae" [value]="es.idEstudiante">
+            {{ es.nombreEstudiante }}
           </mat-option>
         </mat-select>
       </mat-form-field>
