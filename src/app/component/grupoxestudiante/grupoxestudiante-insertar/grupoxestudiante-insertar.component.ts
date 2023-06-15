@@ -16,9 +16,10 @@ import { GrupoService } from 'src/app/service/grupo.service';
 
 export class GrupoxestudianteInsertarComponent implements OnInit {
   form: FormGroup = new FormGroup({});
-  grupoxestudiante: GrupoxEstudiante = new GrupoxEstudiante()
+  grupoxEstudiante: GrupoxEstudiante = new GrupoxEstudiante()
   mensaje: string = ""
   maxFecha: Date = moment().add(-1, 'days').toDate();
+
   listaEstudiante: Estudiante[] = [];
   listaGrupo: Grupo[] = [];
   idEstudianteSeleccionado: number = 0;
@@ -51,28 +52,30 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
   }
 
   aceptar(): void {
-    this.grupoxestudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
-    this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
-    this.grupoxestudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
-    this.grupoxestudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
+    this.grupoxEstudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
+    this.grupoxEstudiante.fechaacceso = this.form.value['fechaacceso'];
+    this.grupoxEstudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
+    this.grupoxEstudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
+
     if (this.idEstudianteSeleccionado>0) {
       let e = new Estudiante();
       e.idEstudiante = this.idEstudianteSeleccionado;
-      this.grupoxestudiante.estudiante=e;
+      this.grupoxEstudiante.estudiante=e;
 
       let g = new Grupo();
       g.idGrupo = this.idGrupoSeleccionado;
-      this.grupoxestudiante.grupo=g;
-      this.gxeS.insert(this.grupoxestudiante).subscribe(() => {
+      this.grupoxEstudiante.grupo=g;
+
+      this.gxeS.insert(this.grupoxEstudiante).subscribe(() => {
       this.gxeS.list().subscribe(data => {
             this.gxeS.setList(data);
           })
         })
 
-      this.router.navigate(['grupoxestudiante']);
+      this.router.navigate(['grupoxEstudiante']);
     }
     else if(this.edicion){
-      this.gxeS.update(this.grupoxestudiante).subscribe(() => {
+      this.gxeS.update(this.grupoxEstudiante).subscribe(() => {
         this.gxeS.list().subscribe((data) => {
           this.gxeS.setList(data);
         });
@@ -91,6 +94,8 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
         });
         this.idEstudianteSeleccionado=data.estudiante.idEstudiante;
         this.idGrupoSeleccionado=data.grupo.idGrupo;
+        console.log(data);
+
       })
     }
   }

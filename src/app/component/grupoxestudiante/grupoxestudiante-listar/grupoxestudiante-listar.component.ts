@@ -21,7 +21,7 @@ export class GrupoxestudianteListarComponent implements OnInit {
   displayedColumns: string[] = ['id',  'fecha', 'grupo', 'estudiante', 'acciones']
   private idMayor: number = 0;
 
-  constructor(private gS: GrupoxestudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private gxeS: GrupoxestudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -32,15 +32,15 @@ export class GrupoxestudianteListarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.gS.list().subscribe(data => {
+    this.gxeS.list().subscribe(data => {
       this.dataSource=new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     })
-    this.gS.getLista().subscribe(data => {
+    this.gxeS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
-    this.gS.getConfirmaEliminacion().subscribe(data => {
+    this.gxeS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
 
@@ -53,9 +53,9 @@ export class GrupoxestudianteListarComponent implements OnInit {
     this.dialog.open(GrupoxestudianteDialogoComponent);
   }
   eliminar(id: number) {
-    this.gS.eliminar(id).subscribe(() => {
-      this.gS.list().subscribe(data => {
-        this.gS.setList(data);/* se ejecuta la línea 27 */
+    this.gxeS.eliminar(id).subscribe(() => {
+      this.gxeS.list().subscribe(data => {
+        this.gxeS.setList(data);/* se ejecuta la línea 27 */
       });
     });
   }

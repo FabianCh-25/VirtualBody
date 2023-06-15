@@ -10,7 +10,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class GrupoxestudianteService {
-  private url = `${base_url}/gruposxestudiante`
+  private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

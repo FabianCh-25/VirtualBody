@@ -116,7 +116,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'grupoxestudiante', component: GrupoxestudianteComponent, children: [
+    path: 'grupoxEstudiante', component: GrupoxestudianteComponent, children: [
     { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
     { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
     ]

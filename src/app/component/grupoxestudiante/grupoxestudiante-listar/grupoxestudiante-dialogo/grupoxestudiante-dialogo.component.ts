@@ -8,12 +8,12 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./grupoxestudiante-dialogo.component.css']
 })
 export class GrupoxestudianteDialogoComponent implements OnInit{
-  constructor(private gS:GrupoxestudianteService, private dialogRef: MatDialogRef<GrupoxestudianteDialogoComponent>){}
+  constructor(private gxeS:GrupoxestudianteService, private dialogRef: MatDialogRef<GrupoxestudianteDialogoComponent>){}
   ngOnInit(): void {
 
   }
   confirmar(estado: boolean){
-    this.gS.setConfirmaEliminacion(estado);
+    this.gxeS.setConfirmaEliminacion(estado);
     this.dialogRef.close();
   }
 }
