@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div style="text-align: center;">
+        <h1>Registro de Docentes</h1>
+    </div>
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="ID" formControlName="id" readonly>
+        </mat-form-field>
+<br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Código</mat-label>
+            <input matInput placeholder="Código" formControlName="codeCurso">
+        </mat-form-field>
+<br>
+        <mat-form-field class="example-full-width">
+            <mat-label mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre del curso" formControlName="nameCurso" required>
+        </mat-form-field>
+<br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripción</mat-label>
+            <input matInput placeholder="Descripción" formControlName="descriptionCurso" required>
+        </mat-form-field>
+<br>
+      <div style="text-align: center;">
+        <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+        <button mat-raised-button color="warn" routerLink="/cursos">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+

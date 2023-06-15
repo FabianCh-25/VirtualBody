@@ -41,6 +41,7 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
     this.dS.list().subscribe(data => { this.lista = data });
     this.aS.list().subscribe(dataAula => { this.listaAula = dataAula});
     this.maS.list().subscribe(dataMatricula => {this.listaMatricula = dataMatricula});
+    this.cS.list().subscribe(dataCurso => { this.listaCurso = dataCurso });
 
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];

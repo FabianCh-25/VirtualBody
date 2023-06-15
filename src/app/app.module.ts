@@ -21,10 +21,8 @@ import { EstudianteDialogoComponent } from './component/estudiante/estudiante-li
 import { MatDialogModule } from '@angular/material/dialog';
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
-import { CrearCursosComponent } from './component/cursos/crear-cursos/crear-cursos.component';
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ListarCursosComponent } from './component/cursos/listar-cursos/listar-cursos.component';
 import { AulaEliminarComponent } from './component/aula/aula-eliminar/aula-eliminar.component';
 import { AulaDialogoComponent } from './component/aula/aula-listar/aula-dialogo/aula-dialogo.component';
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
@@ -34,7 +32,6 @@ import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.co
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { EditarCursosComponent } from './component/cursos/editar-cursos/editar-cursos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -61,6 +58,14 @@ import { MatriculaComponent } from './component/matricula/matricula.component';
 import { MatriculaListarComponent } from './component/matricula/matricula-listar/matricula-listar.component';
 import { MatriculaInsertarComponent } from './component/matricula/matricula-insertar/matricula-insertar.component';
 import { MatriculaDialogoComponent } from './component/matricula/matricula-listar/matricula-dialogo/matricula-dialogo.component';
+import { CursoComponent } from './component/curso/curso.component';
+import { CursoListarComponent } from './component/curso/curso-listar/curso-listar.component';
+import { CursoInsertarComponent } from './component/curso/curso-insertar/curso-insertar.component';
+import { CursoDialogoComponent } from './component/curso/curso-listar/curso-dialogo/curso-dialogo.component';
+import { MaterialAcademicoComponent } from './component/material-academico/material-academico.component';
+import { MaterialAcademicoListarComponent } from './component/material-academico/material-academico-listar/material-academico-listar.component';
+import { MaterialAcademicoDialogoComponent } from './component/material-academico/material-academico-listar/material-academico-dialogo/material-academico-dialogo.component';
+import { MaterialAcademicoInsertarComponent } from './component/material-academico/material-academico-insertar/material-academico-insertar.component';
 
 
 @NgModule({
@@ -72,8 +77,6 @@ import { MatriculaDialogoComponent } from './component/matricula/matricula-lista
     AulaListarComponent,
     AulaComponent,
     AulaInsertarComponent,
-    CrearCursosComponent,
-    ListarCursosComponent,
     DocenteComponent,
     DocenteListarComponent,
     DocenteInsertarComponent,
@@ -83,7 +86,6 @@ import { MatriculaDialogoComponent } from './component/matricula/matricula-lista
     EstudianteDialogoComponent,
     NavbarComponent,
     LandingPageComponent,
-    EditarCursosComponent,
     DocenteDialogoComponent,
     AulaEliminarComponent,
     AulaDialogoComponent,
@@ -112,6 +114,14 @@ import { MatriculaDialogoComponent } from './component/matricula/matricula-lista
     MatriculaListarComponent,
     MatriculaInsertarComponent,
     MatriculaDialogoComponent,
+    CursoComponent,
+    CursoListarComponent,
+    CursoInsertarComponent,
+    CursoDialogoComponent,
+    MaterialAcademicoComponent,
+    MaterialAcademicoListarComponent,
+    MaterialAcademicoDialogoComponent,
+    MaterialAcademicoInsertarComponent,
 
 
 

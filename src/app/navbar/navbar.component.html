@@ -26,8 +26,15 @@
   <!-- Menú 4 -->
   <button mat-button [matMenuTriggerFor]="menu4">Curso</button>
   <mat-menu #menu4="matMenu">
-    <button mat-menu-item routerLink="/crear-cursos">Crear Cursos</button>
-    <button mat-menu-item routerLink="/listar-cursos">Listar Cursos</button>
+    <button mat-menu-item routerLink="/cursos/nuevo">Insertar Cursos</button>
+    <button mat-menu-item routerLink="/cursos">Listar Cursos</button>
+  </mat-menu>
+
+  <!-- Menú 4 -->
+  <button mat-button [matMenuTriggerFor]="menu11">Material Academico</button>
+  <mat-menu #menu11="matMenu">
+    <button mat-menu-item routerLink="/materialAcademico/nuevo">Insertar Material</button>
+    <button mat-menu-item routerLink="/materialAcademico">Listar Material</button>
   </mat-menu>
 
   <!-- Menú 5 -->

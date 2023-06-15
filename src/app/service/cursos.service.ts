@@ -1,49 +1,46 @@
 import { Injectable } from '@angular/core';
-import { Curso } from '../model/curso.model';
 import { Subject } from 'rxjs'; // Importa Subject desde rxjs
 
 import { environment } from 'src/environments/environment'
 import { HttpClient } from '@angular/common/http';
-
+import { Curso } from '../model/curso';
+const base_url=environment.base
 @Injectable({
   providedIn: 'root'
 })
 export class CursosService {
-  private cursos: Curso[] = [];
-  private url = `${environment.base}/cursos`
-  private cursosActualizados = new Subject<Curso[]>(); // Crea un Subject para los cursos actualizados
+  private url = `${base_url}/cursos`
+  private listaCambio = new Subject<Curso[]>
+  private confirmaEliminacion = new Subject<Boolean>()
+  constructor(private http:HttpClient){}
 
-  constructor (private http:HttpClient) {}
-
-  agregarCurso(curso: Curso): void {
-    this.cursos.push(curso);
-    this.cursosActualizados.next([...this.cursos]); // Emite un evento cuando se agrega un curso
+  list(){
+    return this.http.get<Curso[]>(this.url)
   }
-
-  obtenerCursos(): Curso[] {
-    return [...this.cursos];
+  insert(curso: Curso){
+    return this.http.post(this.url, curso);
   }
-
-  obtenerCursosActualizadosListener() { // Retorna el observable para que otros componentes se puedan suscribir
-    return this.cursosActualizados.asObservable();
+  getList(){
+    return this.listaCambio.asObservable();
   }
-
-  eliminarCurso(codigoCurso: number): void {
-    this.cursos = this.cursos.filter(curso => curso.CodigoCurso !== codigoCurso);
-    this.cursosActualizados.next([...this.cursos]);
+  setList(listaNueva: Curso[]){
+    this.listaCambio.next(listaNueva);
   }
-
-  obtenerCursoPorCodigo(codigoCurso: number): Curso {
-    return this.cursos.find(curso => curso.CodigoCurso === codigoCurso) || new Curso(0, '', '');
+  listId(id: number){
+    return this.http.get<Curso>(`${this.url}/${id}`);
   }
-
-  editarCurso(cursoEditado: Curso): void {
-    const indice = this.cursos.findIndex(curso => curso.CodigoCurso === cursoEditado.CodigoCurso);
-    if (indice !== -1) {
-      this.cursos[indice] = cursoEditado;
-      this.cursosActualizados.next([...this.cursos]);
-    }
+  update(c: Curso){
+    //return this.http.put(this.url + '/' + c.idCurso, c);
+    return this.http.put(this.url, c)
   }
-
+  eliminar(id: number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmaEliminacion(){
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean){
+    this.confirmaEliminacion.next(estado);
+  }
 }
 
