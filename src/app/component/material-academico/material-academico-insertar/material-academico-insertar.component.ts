@@ -31,7 +31,7 @@ export class MaterialAcademicoInsertarComponent implements OnInit{
     });
 
     this.form = new FormGroup({
-      idMaterialacademico: new FormControl(),
+      id: new FormControl(),
       titulomaterial: new FormControl(),
       descripcion: new FormControl(),
       urlarchivo: new FormControl(),
@@ -40,7 +40,7 @@ export class MaterialAcademicoInsertarComponent implements OnInit{
   }
 
   aceptar(): void{
-    this.materialAcademico.idMaterialacademico = this.form.value['idMaterialacademico'];
+    this.materialAcademico.idmaterialacademico = this.form.value['idmaterialacademico'];
     this.materialAcademico.titulomaterial = this.form.value['titulomaterial'];
     this.materialAcademico.descripcion = this.form.value['descripcion'];
     this.materialAcademico.urlarchivo = this.form.value['urlarchivo'];
@@ -71,7 +71,7 @@ export class MaterialAcademicoInsertarComponent implements OnInit{
     if(this.edicion){
       this.mts.listId(this.id).subscribe((data:any) => {
         this.form = new FormGroup({
-          idMaterialacademico: new FormControl(data.idMaterialacademico),
+          idmaterialacademico: new FormControl(data.idmaterialacademico),
           titulomaterial: new FormControl(data.titulomaterial),
           descripcion: new FormControl(data.descripcion),
           urlarchivo: new FormControl(data.urlarchivo),

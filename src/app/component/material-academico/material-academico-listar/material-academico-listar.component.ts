@@ -13,13 +13,14 @@ import { MaterialAcademicoDialogoComponent } from './material-academico-dialogo/
 export class MaterialAcademicoListarComponent implements OnInit{
   lista: MaterialAcademico[] = [];
   dataSource: MatTableDataSource<MaterialAcademico> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'titulomaterial', 'descripcion', 'urlarchivo', 'curso', 'acciones']
+  displayedColumns: string[] = ['idmaterialacademico', 'titulomaterial', 'descripcion', 'urlarchivo', 'curso', 'acciones']
   private idMayor: number = 0;
 
   constructor(private mtS: MaterialAcademicoService, private dialog:MatDialog){}
   ngOnInit(): void {
     this.mtS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      console.log(data);
     })
     this.mtS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);

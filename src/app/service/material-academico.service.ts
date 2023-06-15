@@ -29,7 +29,7 @@ export class MaterialAcademicoService {
     return this.http.get<MaterialAcademico>(`${this.url}/${id}`);
   }
   update(mt: MaterialAcademico){
-    return this.http.put(this.url + '/' + mt.idMaterialacademico, mt);
+    return this.http.put(this.url + '/' + mt.idmaterialacademico, mt);
     //return this.http.put(this.url, mt);
   }
   eliminar(id: number){
