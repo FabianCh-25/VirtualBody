@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
 import { Grupo } from 'src/app/model/grupo';
 import { GrupoService } from 'src/app/service/grupo.service';
 import { GrupoDialogoComponent } from './grupo-dialogo/grupo-dialogo.component';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-grupo-listar',
@@ -15,23 +16,39 @@ import { GrupoDialogoComponent } from './grupo-dialogo/grupo-dialogo.component';
 
 
 export class GrupoListarComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   lista: Grupo[] = [];
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   private idMayor: number = 0;
 
-  constructor(private gS: GrupoService, private dialog: MatDialog) { }
+  constructor(private gS: GrupoService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
+    this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
+  }
+
+  ngAfterViewInit() {
+    if (this.paginator) {
+      this.dataSource.paginator = this.paginator;
+    }
+  }
   //eS = EstudianteService
   ngOnInit(): void {
     this.gS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
     });
     this.gS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
     });
     this.gS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
+
+    if (this.paginator) {
+      this.dataSource.paginator = this.paginator;
+    }
 
   }
   confirmar(id: number) {

@@ -13,9 +13,7 @@
     <div style=" text-align: center;">
       <h1>Lista de estudiantes por grupo</h1>
     </div>
-    <div style="text-align: right;" class="example-button-row">
-      <button mat-raised-button color="primary" routerLink="/grupoxestudiante/grupoxestudianteinsertar">Nuevo</button>
-    </div>
+
     <mat-form-field>
       <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
     </mat-form-field>
@@ -47,6 +45,10 @@
      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+
+    <mat-paginator #paginator [length]="100" [pageSizeOptions]="[5,10]" aria-label="Select page" showFirstLastButtons>
+
+    </mat-paginator>
 
   </div>
 </body>

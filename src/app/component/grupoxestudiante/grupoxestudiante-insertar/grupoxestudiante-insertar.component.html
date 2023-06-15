@@ -11,7 +11,9 @@
 <body>
   <div>
     <div class="container">
-      <h1>Estudiantes por grupo</h1>
+      <div style="text-align: center;">
+        <h1>Estudiantes por grupo</h1>
+      </div>
       <form [formGroup]="form" (submit)="aceptar()">
 
       <mat-form-field class="example-full-width">
@@ -44,9 +46,11 @@
 
 
       <br>
+      <div style="text-align: center;">
         <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
 
         <button mat-raised-button color="warn" routerLink="/grupoxestudiante">Cancelar</button>
+      </div>
       <p>{{mensaje}}</p>
       </form>
     </div>

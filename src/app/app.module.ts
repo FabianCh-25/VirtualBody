@@ -41,7 +41,6 @@ import { DetalleMatriculaInsertarComponent } from './component/detalle-matricula
 import { DetalleMatriculaDialogoComponent } from './component/detalle-matricula/detalle-matricula-listar/detalle-matricula-dialogo/detalle-matricula-dialogo.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConfirmDialogModule } from './componentes/confirm-dialog.module';
-import { FooterComponent } from './component/footer/footer.component';
 import { EstudianteXActividadComponent } from './component/estudiante-xactividad/estudiante-xactividad.component';
 import { EXAListarComponent } from './component/estudiante-xactividad/exalistar/exalistar.component';
 import { ExaInsertarComponent } from './component/estudiante-xactividad/exa-insertar/exa-insertar.component';
@@ -90,7 +89,6 @@ import { MaterialAcademicoInsertarComponent } from './component/material-academi
     AulaEliminarComponent,
     AulaDialogoComponent,
     ActividadComponent,
-    FooterComponent,
 
 
     DocenteDialogoComponent,
