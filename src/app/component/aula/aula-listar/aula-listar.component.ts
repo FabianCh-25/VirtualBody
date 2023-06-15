@@ -22,13 +22,22 @@ export class AulaListarComponent implements OnInit{
   constructor(private aS: AulaService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
+  ngAfterViewInit() {
+    if (this.paginator) {
+      this.dataSource.paginator = this.paginator;
+    }
+  }
 
   ngOnInit(): void {
     this.aS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
+
     });
     this.aS.getList().subscribe(data=>{
       this.dataSource= new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
+
     });
     this.aS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
