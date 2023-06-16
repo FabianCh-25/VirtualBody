@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 =======
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 >>>>>>> 1d22189 (algunos errores en mi rama)
@@ -113,6 +116,7 @@ import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dial
 import { MatFormFieldModule } from '@angular/material/form-field';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 <<<<<<< HEAD
 >>>>>>> 2fbcd79 (ultimos cambios)
@@ -123,6 +127,9 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 >>>>>>> f25a710 (algunos errores en mi rama)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+>>>>>>> 1d22189 (algunos errores en mi rama)
 
 
 @NgModule({
@@ -214,6 +221,7 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     GrupoxestudianteInsertarComponent,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     GrupoDialogoComponent
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
@@ -223,6 +231,10 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 =======
     GrupoDialogoComponent
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    GrupoDialogoComponent,
+    GrupoxestudianteDialogoComponent
+>>>>>>> 1d22189 (algunos errores en mi rama)
   ],
   imports: [
     BrowserModule,
@@ -264,8 +276,13 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     MatDialogModule,
     RouterOutlet,
     MatFormFieldModule,
+<<<<<<< HEAD
     BrowserModule
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    BrowserModule,
+    MatPaginatorModule
+>>>>>>> 1d22189 (algunos errores en mi rama)
 
 >>>>>>> b5c7d8e (ultimos cambios)
   ],

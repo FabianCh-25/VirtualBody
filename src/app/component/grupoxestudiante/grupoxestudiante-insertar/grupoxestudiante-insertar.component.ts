@@ -10,6 +10,7 @@ import { EstudianteService } from 'src/app/service/estudiante.service';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GrupoService } from 'src/app/service/grupo.service';
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -18,6 +19,9 @@ import { GrupoService } from 'src/app/service/grupo.service';
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+import { GrupoService } from 'src/app/service/grupo.service';
+>>>>>>> 1d22189 (algunos errores en mi rama)
 @Component({
   selector: 'app-grupoxestudiante-insertar',
   templateUrl: './grupoxestudiante-insertar.component.html',
@@ -26,6 +30,7 @@ import { GrupoService } from 'src/app/service/grupo.service';
 
 export class GrupoxestudianteInsertarComponent implements OnInit {
   form: FormGroup = new FormGroup({});
+<<<<<<< HEAD
 <<<<<<< HEAD
   grupoxEstudiante: GrupoxEstudiante = new GrupoxEstudiante()
   mensaje: string = ""
@@ -53,11 +58,22 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
   grupoxestudiante: GrupoxEstudiante = new GrupoxEstudiante()
+=======
+  grupoxEstudiante: GrupoxEstudiante = new GrupoxEstudiante()
+>>>>>>> 1d22189 (algunos errores en mi rama)
   mensaje: string = ""
   maxFecha: Date = moment().add(-1, 'days').toDate();
-  lista: Estudiante[] = [];
+
+  listaEstudiante: Estudiante[] = [];
+  listaGrupo: Grupo[] = [];
   idEstudianteSeleccionado: number = 0;
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+  idGrupoSeleccionado: number = 0;
+  id: number = 0;
+  edicion: boolean = false;
+>>>>>>> 1d22189 (algunos errores en mi rama)
 
 
   constructor(private gxeS: GrupoxestudianteService,
@@ -65,6 +81,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private route: ActivatedRoute, private eS:EstudianteService, private gS: GrupoService) {
   }
   ngOnInit(): void {
@@ -109,21 +126,35 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
     private route: ActivatedRoute, private eS:EstudianteService) {
+=======
+    private route: ActivatedRoute, private eS:EstudianteService, private gS: GrupoService) {
+>>>>>>> 1d22189 (algunos errores en mi rama)
   }
   ngOnInit(): void {
-    this.eS.list().subscribe(data => { this.lista = data });
+    this.eS.list().subscribe(dataEstudiante => { this.listaEstudiante = dataEstudiante });
+    this.gS.list().subscribe(dataGrupo => { this.listaGrupo = dataGrupo});
+
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.init();
+    });
 
     this.form = new FormGroup({
       idGrupoxEstudiante: new FormControl(),
-      grupo: new FormControl(),
-      estudiante: new FormControl(),
       fechaacceso: new FormControl(),
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+      grupo: new FormControl(),
+      estudiante: new FormControl()
+>>>>>>> 1d22189 (algunos errores en mi rama)
     });
 
   }
 
   aceptar(): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     this.grupoxestudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
@@ -164,6 +195,16 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     if (this.idEstudianteSeleccionado>0) {
       let e = new Estudiante();
       e.idEstudiante = this.idEstudianteSeleccionado;
+=======
+    this.grupoxEstudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
+    this.grupoxEstudiante.fechaacceso = this.form.value['fechaacceso'];
+    this.grupoxEstudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
+    this.grupoxEstudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
+
+    if (this.idEstudianteSeleccionado>0) {
+      let e = new Estudiante();
+      e.idEstudiante = this.idEstudianteSeleccionado;
+>>>>>>> 1d22189 (algunos errores en mi rama)
       this.grupoxEstudiante.estudiante=e;
 
       let g = new Grupo();
@@ -171,10 +212,13 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       this.grupoxEstudiante.grupo=g;
 
       this.gxeS.insert(this.grupoxEstudiante).subscribe(() => {
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
       this.gxeS.insert(this.grupoxestudiante).subscribe(() => {
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
       this.gxeS.list().subscribe(data => {
             this.gxeS.setList(data);
           })
@@ -183,15 +227,21 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.router.navigate(['/inicio/gruposxEstudiantes']);
     }
     else if(this.edicion){
       this.gxeS.update(this.grupoxestudiante).subscribe(() => {
 =======
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
       this.router.navigate(['grupoxEstudiante']);
     }
     else if(this.edicion){
       this.gxeS.update(this.grupoxEstudiante).subscribe(() => {
+<<<<<<< HEAD
+>>>>>>> 1d22189 (algunos errores en mi rama)
+=======
 >>>>>>> 1d22189 (algunos errores en mi rama)
         this.gxeS.list().subscribe((data) => {
           this.gxeS.setList(data);
@@ -199,6 +249,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       });
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   init(){
@@ -245,8 +296,28 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
       this.router.navigate(['grupoxestudiante']);
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
 
+  init(){
+    if(this.edicion){
+      this.gxeS.listId(this.id).subscribe((data:any) => {
+        this.form = new FormGroup({
+          idGrupoxEstudiante: new FormControl(data.idGrupoxEstudiante),
+          fechaacceso: new FormControl(data.fechaacceso),
+          grupo: new FormControl(data.grupo.nombreGrupo),
+          estudiante: new FormControl(data.estudiante.nombreEstudiante)
+        });
+        this.idEstudianteSeleccionado=data.estudiante.idEstudiante;
+        this.idGrupoSeleccionado=data.grupo.idGrupo;
+        console.log(data);
+
+      })
+    }
   }
 }
+<<<<<<< HEAD
 }
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)

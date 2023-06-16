@@ -23,6 +23,7 @@ export class GrupoxestudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
@@ -61,6 +62,11 @@ export class GrupoxestudianteService {
   private listaCambio = new Subject<GrupoxEstudiante[]>()
 
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+  private url = `${base_url}/gruposxEstudiantes`
+  private listaCambio = new Subject<GrupoxEstudiante[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
+>>>>>>> 1d22189 (algunos errores en mi rama)
 
   constructor(private http: HttpClient) { }
   list() {
@@ -79,6 +85,7 @@ export class GrupoxestudianteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +119,8 @@ export class GrupoxestudianteService {
 
     });
 =======
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
   listId(id: number){
     return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`);
   }
@@ -120,6 +129,9 @@ export class GrupoxestudianteService {
   }
   eliminar(id: number){
     return this.http.delete(`${this.url}/${id}`);
+<<<<<<< HEAD
+>>>>>>> 1d22189 (algunos errores en mi rama)
+=======
 >>>>>>> 1d22189 (algunos errores en mi rama)
   }
   getConfirmaEliminacion() {
@@ -130,10 +142,13 @@ export class GrupoxestudianteService {
     this.confirmaEliminacion.next(estado);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
 }

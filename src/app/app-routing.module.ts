@@ -215,6 +215,7 @@ const routes: Routes = [
     path: 'grupoxEstudiante', component: GrupoxestudianteComponent, children: [
     { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
     { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
+<<<<<<< HEAD
     ]
   }
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -228,6 +229,8 @@ const routes: Routes = [
   {
     path: 'grupoxestudiante', component: GrupoxestudianteComponent, children: [
     { path: 'grupoxestudianteinsertar', component: GrupoxestudianteInsertarComponent },
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
     ]
   }
 >>>>>>> b5c7d8e (ultimos cambios)
