@@ -1,3 +1,4 @@
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,6 +28,7 @@ import { GrupoxestudianteListarComponent } from './component/grupoxestudiante/gr
 import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
 import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     GrupoInsertarComponent,
     GrupoxestudianteListarComponent,
     GrupoxestudianteInsertarComponent,
-    GrupoDialogoComponent
+    GrupoDialogoComponent,
+    GrupoxestudianteDialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDialogModule,
     RouterOutlet,
     MatFormFieldModule,
-    BrowserModule
+    BrowserModule,
+    MatPaginatorModule
 
   ],
   providers: [],

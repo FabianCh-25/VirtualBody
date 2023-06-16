@@ -21,8 +21,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'grupoxestudiante', component: GrupoxestudianteComponent, children: [
-    { path: 'grupoxestudianteinsertar', component: GrupoxestudianteInsertarComponent },
+    path: 'grupoxEstudiante', component: GrupoxestudianteComponent, children: [
+    { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
+    { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
     ]
   }
 ];
