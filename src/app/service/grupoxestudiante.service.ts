@@ -16,6 +16,7 @@ const base_url = environment.base
 export class GrupoxestudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
@@ -41,8 +42,11 @@ export class GrupoxestudianteService {
 =======
   private url = `${base_url}/grupoxestudiante`
 >>>>>>> a227011 (falta aun grupoxest)
+=======
+  private url = `${base_url}/gruposxEstudiantes`
+>>>>>>> 1d22189 (algunos errores en mi rama)
   private listaCambio = new Subject<GrupoxEstudiante[]>()
-
+  private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
   list() {
@@ -58,6 +62,7 @@ export class GrupoxestudianteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   listId(id: number){
     let token = sessionStorage.getItem("token");
@@ -88,6 +93,16 @@ export class GrupoxestudianteService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
 
     });
+=======
+  listId(id: number){
+    return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`);
+  }
+  update(gp: GrupoxEstudiante){
+    return this.http.put(this.url + '/' + gp.idGrupoxEstudiante, gp)
+  }
+  eliminar(id: number){
+    return this.http.delete(`${this.url}/${id}`);
+>>>>>>> 1d22189 (algunos errores en mi rama)
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
@@ -96,6 +111,9 @@ export class GrupoxestudianteService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+<<<<<<< HEAD
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
 }

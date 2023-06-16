@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+=======
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgModule } from '@angular/core';
+>>>>>>> 1d22189 (algunos errores en mi rama)
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -103,8 +108,15 @@ import { GrupoxestudianteListarComponent } from './component/grupoxestudiante/gr
 import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/grupoxestudiante-insertar/grupoxestudiante-insertar.component';
 import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+<<<<<<< HEAD
 >>>>>>> 2fbcd79 (ultimos cambios)
+=======
+=======
+import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+>>>>>>> 1d22189 (algunos errores en mi rama)
+>>>>>>> f25a710 (algunos errores en mi rama)
 
 
 @NgModule({
@@ -191,8 +203,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     GrupoInsertarComponent,
     GrupoxestudianteListarComponent,
     GrupoxestudianteInsertarComponent,
+<<<<<<< HEAD
     GrupoDialogoComponent
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    GrupoDialogoComponent,
+    GrupoxestudianteDialogoComponent
+>>>>>>> 1d22189 (algunos errores en mi rama)
   ],
   imports: [
     BrowserModule,
@@ -227,7 +244,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDialogModule,
     RouterOutlet,
     MatFormFieldModule,
-    BrowserModule
+    BrowserModule,
+    MatPaginatorModule
 
 >>>>>>> b5c7d8e (ultimos cambios)
   ],

@@ -12,21 +12,31 @@
   <div>
     <div class="container">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div style="text-align: center;">
         <h1>Estudiantes por grupo</h1>
       </div>
 =======
       <h1>Estudiantes por grupo</h1>
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+      <div style="text-align: center;">
+        <h1>Estudiantes por grupo</h1>
+      </div>
+>>>>>>> 1d22189 (algunos errores en mi rama)
       <form [formGroup]="form" (submit)="aceptar()">
 
       <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <input matInput placeholder="Id" formControlName="idGrupoxEstudiante" readonly="">
 =======
         <input matInput placeholder="Id" formControlName="idGrupoxEstudiante">
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+        <input matInput placeholder="Id" formControlName="idGrupoxEstudiante" readonly="">
+>>>>>>> 1d22189 (algunos errores en mi rama)
       </mat-form-field>
 
       <br>
@@ -39,6 +49,7 @@
 
       <br>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <mat-form-field appearance="fill">
         <mat-label>Grupo</mat-label>
@@ -67,28 +78,42 @@
       </div>
 =======
 
+=======
+>>>>>>> 1d22189 (algunos errores en mi rama)
       <mat-form-field appearance="fill">
-        <mat-label>Número de est</mat-label>
-        <mat-select formControlName="estudiante" [(value)]="idEstudianteSeleccionado" required>
-          <mat-option *ngFor="let exg of lista" [value]="exg.idEstudiante">
-            {{exg.nombreEstudiante}}
+        <mat-label>Grupo</mat-label>
+        <mat-select formControlName="grupo" [(value)]="idGrupoSeleccionado" required>
+          <mat-option *ngFor="let g of listaGrupo" [value]="g.idGrupo">
+            {{g.nombreGrupo}}
         </mat-option>
         </mat-select>
       </mat-form-field>
-      <br>
-
-
-
 
       <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Estudiante</mat-label>
+        <mat-select formControlName="estudiante" [(value)]="idEstudianteSeleccionado" required>
+          <mat-option *ngFor="let e of listaEstudiante" [value]="e.idEstudiante">
+            {{e.nombreEstudiante}}
+        </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+      <div style="text-align: center;">
         <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <button mat-raised-button color="warn" routerLink="/pets">Cancelar</button>
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
         <button mat-raised-button color="warn" routerLink="/grupoxestudiante">Cancelar</button>
 >>>>>>> a227011 (falta aun grupoxest)
+=======
+        <button mat-raised-button color="warn" routerLink="/grupoxEstudiante">Cancelar</button>
+      </div>
+>>>>>>> 1d22189 (algunos errores en mi rama)
       <p>{{mensaje}}</p>
       </form>
     </div>
