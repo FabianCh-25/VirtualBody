@@ -44,19 +44,17 @@ export class ExaInsertarComponent implements OnInit {
 
     this.form = new FormGroup({
       idExA: new FormControl(),
+      calificacion: new FormControl(),
       act: new FormControl(),
       estudiante :new FormControl(),
-      calificacion: new FormControl(),
     });
 
   }
   aceptar(): void {
     this.estudianteXActividad.idExA = this.form.value['idEXA'];
     this.estudianteXActividad.calificacion= this.form.value['calificacion'];
-    this.estudianteXActividad.estudiante.nombreEstudiante=this.form.value['estudiante.nombreEstudiante'];
     this.estudianteXActividad.act.titulo=this.form.value['act.titulo'];
-
-
+    this.estudianteXActividad.estudiante.nombreEstudiante=this.form.value['estudiante.nombreEstudiante'];
 
     if (this.idEstudianteSelecionado>0) {
       let es = new Estudiante();
@@ -88,8 +86,8 @@ export class ExaInsertarComponent implements OnInit {
         this.form = new FormGroup({
           idEXA: new FormControl(data.IdEXA),
           calificacion: new FormControl(data.calificacion),
-          estudiante: new FormControl(data.estudiante.nombreEstudiante),
-          act: new FormControl(data.act.titulo)
+          act: new FormControl(data.act.titulo),
+          estudiante: new FormControl(data.estudiante.nombreEstudiante)
         });
         this.idActividadSelecionado=data.act.idActividad;
         this.idEstudianteSelecionado=data.estudiante.idEstudiante;
