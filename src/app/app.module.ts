@@ -1,7 +1,7 @@
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -66,6 +66,8 @@ import { MaterialAcademicoListarComponent } from './component/material-academico
 import { MaterialAcademicoDialogoComponent } from './component/material-academico/material-academico-listar/material-academico-dialogo/material-academico-dialogo.component';
 import { MaterialAcademicoInsertarComponent } from './component/material-academico/material-academico-insertar/material-academico-insertar.component';
 import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
 
 
 @NgModule({
@@ -122,6 +124,8 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     MaterialAcademicoDialogoComponent,
     MaterialAcademicoInsertarComponent,
     GrupoxestudianteDialogoComponent,
+    LoginComponent,
+    SignupComponent,
 
 
 
@@ -150,6 +154,7 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     MatSnackBarModule,
     ConfirmDialogModule
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

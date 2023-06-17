@@ -1,3 +1,4 @@
+import { LoginComponent } from './component/login/login.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
@@ -30,6 +31,7 @@ import { CursoComponent } from './component/curso/curso.component';
 import { CursoInsertarComponent } from './component/curso/curso-insertar/curso-insertar.component';
 import { MaterialAcademicoComponent } from './component/material-academico/material-academico.component';
 import { MaterialAcademicoInsertarComponent } from './component/material-academico/material-academico-insertar/material-academico-insertar.component';
+import { SignupComponent } from './component/signup/signup.component';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -120,7 +122,9 @@ const routes: Routes = [
     { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
     { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
     ]
-  }
+  },
+  {path:'signin',component:LoginComponent},
+  {path:'signup',component:SignupComponent}
 
 
 
