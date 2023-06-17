@@ -32,6 +32,7 @@ import { CursoInsertarComponent } from './component/curso/curso-insertar/curso-i
 import { MaterialAcademicoComponent } from './component/material-academico/material-academico.component';
 import { MaterialAcademicoInsertarComponent } from './component/material-academico/material-academico-insertar/material-academico-insertar.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { GuardService } from './service/guard.service';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -109,7 +110,7 @@ const routes: Routes = [
     path: 'estudiante', component: EstudianteComponent, children: [
       { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
       { path: 'edicion/:id', component: EstudianteInsertarComponent }
-    ]
+    ],canActivate:[GuardService]
   },
   {
     path: 'grupo', component: GrupoComponent, children: [

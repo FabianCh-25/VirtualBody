@@ -1,3 +1,4 @@
+import { LoginService } from './../../../service/login.service';
 import { EstudianteService } from './../../../service/estudiante.service';
 import { Estudiante } from './../../../model/estudiante';
 import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
@@ -17,12 +18,14 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 export class EstudianteListarComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  role:string="";
+
   lista: Estudiante[] = [];
   dataSource: MatTableDataSource<Estudiante> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'apellido', 'correo', 'telefono','clave','acciones'];
   private idMayor: number = 0;
 
-  constructor(private eS: EstudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private ls:LoginService,private eS: EstudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -34,6 +37,10 @@ export class EstudianteListarComponent implements OnInit {
 
   //eS = EstudianteService
   ngOnInit(): void {
+
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
     this.eS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
