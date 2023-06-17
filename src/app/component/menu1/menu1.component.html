@@ -1,8 +1,7 @@
-
 <button mat-button [matMenuTriggerFor]="menu1">Virtual Body</button>
 <mat-menu color="primary" #menu1="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="est">
-    <mat-icon>school</mat-icon >
+    <mat-icon>school</mat-icon>
     Estudiante
   </button>
 
@@ -56,6 +55,10 @@
     Unirse a Grupo
   </button>
 
+  <button mat-menu-item [matMenuTriggerFor]="" routerLink="/login" (click)="cerrar()">
+    <mat-icon >logout</mat-icon>
+    Cerrar Sesión
+   </button>
 
 
 
@@ -136,5 +139,3 @@
 </!--div>
 
 <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div> -->
-
-

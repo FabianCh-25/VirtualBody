@@ -52,7 +52,7 @@ const routes: Routes = [
     path: 'docentes', component: DocenteComponent, children: [
       { path: 'docentesinsertar', component: DocenteInsertarComponent },
       { path: 'edicion/:id', component: DocenteInsertarComponent }
-    ]
+    ],canActivate:[GuardService]
   },
   {
     path: 'aula', component: AulaComponent, children: [
@@ -125,7 +125,14 @@ const routes: Routes = [
     ]
   },
   {path:'signin',component:LoginComponent},
-  {path:'signup',component:SignupComponent}
+  {path:'signup',component:SignupComponent},
+  {
+    path: '',
+    redirectTo: 'login', pathMatch: 'full'
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
 
 
 

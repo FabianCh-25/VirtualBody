@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment'
@@ -14,11 +14,21 @@ export class DocenteService {
   constructor(private http:HttpClient) { }
 
   list() {
-    return this.http.get<Docente[]>(this.url)
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Docente[]>(this.url, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    })
   }
 
   insert(docente: Docente) {
-    return this.http.post(this.url, docente); // Insertar
+    let token = sessionStorage.getItem("token");
+
+    return this.http.post(this.url, docente,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    }); // Insertar
   }
 
   getList() {
@@ -30,17 +40,31 @@ export class DocenteService {
   }
 
   listId(id: number) {
-    return this.http.get<Docente>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Docente>(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    }
+    );
   }
 
   update(d: Docente) {
-    return this.http.put(this.url + '/' + d.idDocente, d);
+        let token = sessionStorage.getItem("token");
+
+    return this.http.put(this.url + '/' + d.idDocente, d,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
     //return this.http.put(this.url, d);
   }
 
   eliminar(id: number) {
+    let token = sessionStorage.getItem("token");
 
-    return this.http.delete(`${this.url}/${id}`);
+    return this.http.delete(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
 
   getConfirmaEliminacion() {
