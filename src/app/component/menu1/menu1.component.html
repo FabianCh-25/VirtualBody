@@ -1,0 +1,140 @@
+
+<button mat-button [matMenuTriggerFor]="menu1">Virtual Body</button>
+<mat-menu color="primary" #menu1="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="est">
+    <mat-icon>school</mat-icon >
+    Estudiante
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="doc">
+    <mat-icon>account_box</mat-icon>
+    Docente
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="aula">
+    <mat-icon>supervisor_account</mat-icon>
+    Aula
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="cur">
+    <mat-icon>book</mat-icon>
+    Curso
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="act">
+    <mat-icon>assessment</mat-icon>
+    Actividad
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="cal">
+    <mat-icon>assessment</mat-icon>
+    Calificaciones
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="mac">
+    <mat-icon>local_library</mat-icon>
+    Material Academico
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="matri">
+    <mat-icon>folder_copy</mat-icon>
+    Matricula
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="dma">
+    <mat-icon>info</mat-icon>
+    Detalle Matricula
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="grup">
+    <mat-icon>people_alt</mat-icon>
+    Grupos
+  </button>
+
+  <button mat-menu-item [matMenuTriggerFor]="uGrups">
+    <mat-icon>group_add</mat-icon>
+    Unirse a Grupo
+  </button>
+
+
+
+
+</mat-menu>
+
+
+
+
+<mat-menu #est="matMenu">
+  <button mat-menu-item routerLink="/estudiante-listar">Listar Estudiantes</button>
+  <button mat-menu-item routerLink="/estudiante-insertar">Ingresar estudiantes</button>
+</mat-menu>
+<mat-menu #doc="matMenu">
+  <button mat-menu-item routerLink="/docentes">Listar Docentes</button>
+  <button mat-menu-item routerLink="/docentes/docentesinsertar">Ingresar Docentes</button>
+</mat-menu>
+<mat-menu #aula="matMenu">
+  <button mat-menu-item routerLink="/aula-listar">Listar Aulas</button>
+  <button mat-menu-item routerLink="/aula-insertar">Ingresar Aulas</button>
+</mat-menu>
+<mat-menu #cur="matMenu">
+  <button mat-menu-item routerLink="/cursos">Listar cursos</button>
+  <button mat-menu-item routerLink="/cursos/nuevo">Ingresar curso</button>
+</mat-menu>
+<mat-menu #act="matMenu">
+  <button mat-menu-item routerLink="/actividades">Listar actividades</button>
+  <button mat-menu-item routerLink="/actividad-insertar">Ingresar actividades</button>
+</mat-menu>
+<mat-menu #cal="matMenu">
+  <button mat-menu-item routerLink="/ExAs">Listar calificaciones</button>
+  <button mat-menu-item routerLink="/ExAs/nuevo">Ingresar calificaciones</button>
+</mat-menu>
+<mat-menu #mac="matMenu">
+  <button mat-menu-item routerLink="/materialAcademico">Listar material</button>
+  <button mat-menu-item routerLink="/materialAcademico/nuevo"> Ingresar material</button>
+</mat-menu>
+<mat-menu #matri="matMenu">
+  <button mat-menu-item routerLink="/materialAcademico">Listar matriculas</button>
+  <button mat-menu-item routerLink="/materialAcademico">Ingresar matricula</button>
+</mat-menu>
+<mat-menu #dma="matMenu">
+  <button mat-menu-item routerLink="/materialAcademico">Listar Detalle matrícula</button>
+  <button mat-menu-item routerLink="/materialAcademico">Ingresar Detalle matrícula</button>
+</mat-menu>
+<mat-menu #grup="matMenu">
+  <button mat-menu-item routerLink="/materialAcademico">Listar Grupos</button>
+  <button mat-menu-item routerLink="/materialAcademico">Ingresar Grupos</button>
+</mat-menu>
+<mat-menu #uGrups="matMenu">
+  <button mat-menu-item routerLink="/materialAcademico">Listar Grupos-estudiantes</button>
+  <button mat-menu-item routerLink="/materialAcademico">Ingresar Grupos-estudiantes</button>
+</mat-menu>
+
+
+
+
+
+
+<!--div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name">Virtual Body</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</!--div>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div> -->
+
+

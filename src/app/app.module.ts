@@ -68,6 +68,7 @@ import { MaterialAcademicoInsertarComponent } from './component/material-academi
 import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { Menu1Component } from './component/menu1/menu1.component';
 
 
 @NgModule({
@@ -126,6 +127,7 @@ import { SignupComponent } from './component/signup/signup.component';
     GrupoxestudianteDialogoComponent,
     LoginComponent,
     SignupComponent,
+    Menu1Component,
 
 
 
