@@ -43,7 +43,7 @@
         <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
         <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
             [routerLink]="['edicion', element.idGrupo]">Actualizar</button>
-          <button mat-raised-button color="accent" (click)="confirmar(element.idGrupo)">Eliminar</button>
+          <button [hidden]="role=='USER'" mat-raised-button color="accent" (click)="confirmar(element.idGrupo)">Eliminar</button>
         </td>
       </ng-container>
 

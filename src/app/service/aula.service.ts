@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -17,10 +17,20 @@ export class AulaService {
   constructor(private http: HttpClient) {}
 
   list() {
-    return this.http.get<Aula[]>(this.url);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Aula[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   insert(aula: Aula) {
-    return this.http.post(this.url, aula);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.post(this.url, aula, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   getList() {
     return this.listaCambio.asObservable();
@@ -29,13 +39,28 @@ export class AulaService {
     this.listaCambio.next(listaNueva);
   }
   modificar(aula: Aula) {
-    return this.http.put(this.url + "/" + aula.idAula, aula);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.put(this.url + "/" + aula.idAula, aula,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   listarId(id: number) {
-    return this.http.get<Aula>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Aula>(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   eliminar(id: number) {
-    return this.http.delete(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.delete(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

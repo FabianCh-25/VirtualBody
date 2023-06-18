@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { GrupoxEstudiante } from '../model/grupoxestudiante';
 
 const base_url = environment.base
@@ -10,16 +10,26 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class GrupoxestudianteService {
-  private url = `${base_url}/gruposxestudiante`
+  private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
   list() {
-    return this.http.get<GrupoxEstudiante[]>(this.url);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<GrupoxEstudiante[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   insert(grupoxestudiante: GrupoxEstudiante) {
-    return this.http.post(this.url, grupoxestudiante);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.post(this.url, grupoxestudiante,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   setList(listaNueva: GrupoxEstudiante[]) {
     this.listaCambio.next(listaNueva);
@@ -28,13 +38,34 @@ export class GrupoxestudianteService {
     return this.listaCambio.asObservable();
   }
   listId(id: number){
-    return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   update(gp: GrupoxEstudiante){
-    return this.http.put(this.url + '/' + gp.idGrupoxEstudiante, gp)
+    let token = sessionStorage.getItem("token");
+    return this.http.put(this.url + '/' + gp.idGrupoxEstudiante, gp,{
+    headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
+
+   /*
+    return this.http.put(this.url, gp,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
+    */
   }
   eliminar(id: number){
-    return this.http.delete(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.delete(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

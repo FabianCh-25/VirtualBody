@@ -55,7 +55,8 @@ export class EstudianteService {
   eliminar(id: number) {
     let token = sessionStorage.getItem("token");
 
-    return this.http.delete(`${this.url}/${id}`,{      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    return this.http.delete(`${this.url}/${id}`,{
+       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
   });
   }
   getConfirmaEliminacion() {

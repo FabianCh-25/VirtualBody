@@ -5,6 +5,7 @@ import { AulaService } from 'src/app/service/aula.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AulaDialogoComponent } from './aula-dialogo/aula-dialogo.component';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-aula-listar',
@@ -13,13 +14,14 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 })
 export class AulaListarComponent implements OnInit{
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  role:string="";
 
   dataSource: MatTableDataSource<Aula> = new MatTableDataSource();
   lista: Aula[] = [];
   displayedColumns: string[] = ['Codigo', 'Seccion', 'Vacante','Acciones'];
   private idMayor: number = 0;
 
-  constructor(private aS: AulaService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private ls:LoginService, private aS: AulaService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -30,6 +32,9 @@ export class AulaListarComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
     this.aS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;

@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Matricula } from 'src/app/model/matricula';
 import { MatriculaService } from 'src/app/service/matricula.service';
 import { MatriculaDialogoComponent } from './matricula-dialogo/matricula-dialogo.component';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-matricula-listar',
@@ -13,13 +14,14 @@ import { MatriculaDialogoComponent } from './matricula-dialogo/matricula-dialogo
 })
 export class MatriculaListarComponent implements OnInit{
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  role:string="";
 
   dataSource: MatTableDataSource<Matricula> = new MatTableDataSource();
   lista: Matricula[] = []
   displayedColumns: string[] = ['id', 'estudiante', 'fechaPagoMatricula', 'costoMatricula', 'acciones']
   private idMayor: number = 0;
 
-  constructor(private maS:MatriculaService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef){
+  constructor(private ls:LoginService,private maS:MatriculaService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef){
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -30,6 +32,9 @@ export class MatriculaListarComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
     this.maS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;

@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild,ChangeDetectorRef  } from '@angular/core';
+import { LoginService } from './../../../service/login.service';
+import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { Actividad } from 'src/app/model/actividad';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActividadService } from 'src/app/service/actividad.service';
@@ -14,12 +15,14 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 export class ActividadListarComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  role: string = "";
+
   dataSource: MatTableDataSource<Actividad> = new MatTableDataSource();
-  lista: Actividad[]=[];
-  displayedColumns: string[] =['id','Titulo','Descripcion','FechaPublicacion','FechaEntrega','Acciones'];
+  lista: Actividad[] = [];
+  displayedColumns: string[] = ['id', 'Titulo', 'Descripcion', 'FechaPublicacion', 'FechaEntrega', 'Acciones'];
   private idMayor: number = 0;
 
-  constructor(private aS: ActividadService , private dialog: MatDialog , private changeDetectorRef: ChangeDetectorRef){
+  constructor(private ls: LoginService, private aS: ActividadService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
 
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
 
@@ -32,13 +35,16 @@ export class ActividadListarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.role = this.ls.showRole();
+    console.log(this.role);
+
     this.aS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
 
-    this.aS.getActividad().subscribe(data =>{
-      this.dataSource=new MatTableDataSource(data);
+    this.aS.getActividad().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
 
@@ -52,8 +58,8 @@ export class ActividadListarComponent implements OnInit {
 
   }
 
-  filtrar (e:any){
-    this.dataSource.filter=e.target.value.trim();
+  filtrar(e: any) {
+    this.dataSource.filter = e.target.value.trim();
   }
 
   confirmar(id: number) {

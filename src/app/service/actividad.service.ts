@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment'; // tienes q importar
-import { HttpClient } from '@angular/common/http'; // tienes q importar
+import { HttpClient, HttpHeaders } from '@angular/common/http'; // tienes q importar
 import { Actividad } from '../model/actividad'; // tienes q importar
 import { Subject } from 'rxjs';
 
@@ -16,11 +16,21 @@ export class ActividadService {
 
   constructor(private http:HttpClient) { }
   list(){
-    return this.http.get<Actividad[]>(this.url)
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Actividad[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    })
   }
 
   insert(actividad:Actividad){
-    return this.http.post(this.url,actividad);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.post(this.url,actividad,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
 
   getActividad() {
@@ -31,15 +41,29 @@ export class ActividadService {
   }
 
   listId(id: number){
-    return this.http.get<Actividad>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Actividad>(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   update(a:Actividad){
+    let token = sessionStorage.getItem("token");
+
     //return this.http.put(this.url+'/'+a.idActividad,a)
-    return this.http.put(this.url,a);
+    return this.http.put(this.url,a,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   eliminar(id: number) {
+    let token = sessionStorage.getItem("token");
 
-    return this.http.delete(`${this.url}/${id}`);
+    return this.http.delete(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

@@ -6,6 +6,7 @@ import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-grupoxestudiante-listar',
@@ -15,13 +16,14 @@ import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/gru
 
 export class GrupoxestudianteListarComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  role:string="";
 
   lista: GrupoxEstudiante[] = [];
   dataSource: MatTableDataSource<GrupoxEstudiante> = new MatTableDataSource();
   displayedColumns: string[] = ['id',  'fecha', 'grupo', 'estudiante', 'acciones']
   private idMayor: number = 0;
 
-  constructor(private gS: GrupoxestudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private ls:LoginService,private gS: GrupoxestudianteService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef) {
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -32,6 +34,10 @@ export class GrupoxestudianteListarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
+
     this.gS.list().subscribe(data => {
       this.dataSource=new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;

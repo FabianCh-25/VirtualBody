@@ -1,3 +1,4 @@
+import { LoginService } from './../../../service/login.service';
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
@@ -13,12 +14,13 @@ import { CursoDialogoComponent } from './curso-dialogo/curso-dialogo.component';
 })
 export class CursoListarComponent implements OnInit{
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  role:string="";
 
   dataSource: MatTableDataSource<Curso> = new MatTableDataSource();
   lista: Curso[] = []
   displayedColumns: string[] = ['id', 'codeCurso', 'nameCurso', 'description', 'acciones']
   private idMayor: number = 0;
-  constructor(private cS: CursosService, private dialog:MatDialog, private changeDetectorRef: ChangeDetectorRef){
+  constructor(private ls:LoginService, private cS: CursosService, private dialog:MatDialog, private changeDetectorRef: ChangeDetectorRef){
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -29,6 +31,9 @@ export class CursoListarComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
     this.cS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;

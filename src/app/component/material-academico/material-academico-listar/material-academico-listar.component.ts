@@ -5,6 +5,7 @@ import { MaterialAcademico } from 'src/app/model/materialAcademico';
 import { MaterialAcademicoService } from 'src/app/service/material-academico.service';
 import { MaterialAcademicoDialogoComponent } from './material-academico-dialogo/material-academico-dialogo.component';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-material-academico-listar',
@@ -13,13 +14,14 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 })
 export class MaterialAcademicoListarComponent implements OnInit{
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  role:string="";
 
   lista: MaterialAcademico[] = [];
   dataSource: MatTableDataSource<MaterialAcademico> = new MatTableDataSource();
   displayedColumns: string[] = ['idmaterialacademico', 'titulomaterial', 'descripcion', 'urlarchivo', 'curso', 'acciones']
   private idMayor: number = 0;
 
-  constructor(private mtS: MaterialAcademicoService, private dialog:MatDialog, private changeDetectorRef: ChangeDetectorRef){
+  constructor(private ls:LoginService,private mtS: MaterialAcademicoService, private dialog:MatDialog, private changeDetectorRef: ChangeDetectorRef){
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -30,6 +32,9 @@ export class MaterialAcademicoListarComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
     this.mtS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;

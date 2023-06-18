@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Matricula } from '../model/matricula';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const base_url = environment.base;
 @Injectable({
@@ -15,10 +15,20 @@ export class MatriculaService {
 
   constructor(private http: HttpClient) {  }
   list(){
-    return this.http.get<Matricula[]>(this.url);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Matricula[]>(this.url,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   insert(matricula: Matricula){
-    return this.http.post(this.url, matricula);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.post(this.url, matricula,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   setList(listaNueva: Matricula[]){
     this.listaCambio.next(listaNueva);
@@ -27,13 +37,29 @@ export class MatriculaService {
     return this.listaCambio.asObservable();
   }
   listId(id: number){
-    return this.http.get<Matricula>(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<Matricula>(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    }
+    );
   }
   update(m: Matricula){
-    return this.http.put(this.url + '/' + m.idMatricula, m);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.put(this.url + '/' + m.idMatricula, m,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   eliminar(id: number){
-    return this.http.delete(`${this.url}/${id}`);
+    let token = sessionStorage.getItem("token");
+
+    return this.http.delete(`${this.url}/${id}`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
   }
   getConfirmaEliminacion(){
     return this.confirmaEliminacion.asObservable();

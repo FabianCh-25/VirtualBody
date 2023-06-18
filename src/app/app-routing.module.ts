@@ -57,12 +57,14 @@ const routes: Routes = [
   {
     path: 'aula', component: AulaComponent, children: [
       { path: 'aulainsertar', component: AulaInsertarComponent },
-      { path: 'edicion/:id', component: AulaEliminarComponent }]
+      { path: 'edicion/:id', component: AulaEliminarComponent }
+    ],canActivate:[GuardService]
   },
   {
     path: 'actividades', component: ActividadComponent, children: [
       { path: 'actividad-insertar', component: ActividadInsertarComponent },
-      { path: 'edicion/:id', component: ActividadInsertarComponent }]
+      { path: 'edicion/:id', component: ActividadInsertarComponent }
+    ],canActivate:[GuardService]
   },
   {
     path: 'detalleMatricula',
@@ -70,7 +72,7 @@ const routes: Routes = [
     children: [
       { path: 'nuevo', component:DetalleMatriculaInsertarComponent},
       { path: 'edicionMatricula/:id', component:DetalleMatriculaInsertarComponent}
-    ]
+    ],canActivate:[GuardService]
   },
   {
     path: 'materialAcademico',
@@ -78,7 +80,7 @@ const routes: Routes = [
     children: [
       { path: 'nuevo', component: MaterialAcademicoInsertarComponent},
       { path: 'edicionMaterial/:id', component: MaterialAcademicoInsertarComponent}
-    ]
+    ],canActivate:[GuardService]
   },
   {
     path: 'cursos',
@@ -86,7 +88,7 @@ const routes: Routes = [
     children: [
       { path: 'nuevo', component: CursoInsertarComponent},
       { path: 'edicion/:id', component: CursoInsertarComponent}
-    ]
+    ],canActivate:[GuardService]
   },
   {
     path: 'matricula',
@@ -94,7 +96,7 @@ const routes: Routes = [
     children: [
       {path: 'nuevo', component:MatriculaInsertarComponent},
       {path: 'edicion/:id', component:MatriculaInsertarComponent}
-    ]
+    ],canActivate:[GuardService]
   },
   {
     path: 'ExAs',
@@ -102,7 +104,7 @@ const routes: Routes = [
     children: [
       { path: 'nuevo', component:ExaInsertarComponent},
       { path: 'edicion/:id', component:ExaInsertarComponent}
-    ]
+    ],canActivate:[GuardService]
   },
 
 
@@ -116,13 +118,13 @@ const routes: Routes = [
     path: 'grupo', component: GrupoComponent, children: [
       { path: 'grupoinsertar', component: GrupoInsertarComponent },
       { path: 'edicion/:id', component: GrupoInsertarComponent }
-    ]
+    ],canActivate:[GuardService]
   },
   {
-    path: 'grupoxestudiante', component: GrupoxestudianteComponent, children: [
+    path: 'gruposxEstudiantes', component: GrupoxestudianteComponent, children: [
     { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
     { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
-    ]
+    ],canActivate:[GuardService]
   },
   {path:'signin',component:LoginComponent},
   {path:'signup',component:SignupComponent},

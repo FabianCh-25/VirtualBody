@@ -40,7 +40,7 @@
     Matricula
   </button>
 
-  <button mat-menu-item [matMenuTriggerFor]="dma">
+  <button mat-menu-item [matMenuTriggerFor]="dma" >
     <mat-icon>info</mat-icon>
     Detalle Matricula
   </button>
@@ -96,20 +96,20 @@
   <button mat-menu-item routerLink="/materialAcademico/nuevo"> Ingresar material</button>
 </mat-menu>
 <mat-menu #matri="matMenu">
-  <button mat-menu-item routerLink="/materialAcademico">Listar matriculas</button>
-  <button mat-menu-item routerLink="/materialAcademico">Ingresar matricula</button>
+  <button mat-menu-item routerLink="/matricula">Listar matriculas</button>
+  <button mat-menu-item routerLink="/matricula/nuevo">Ingresar matricula</button>
 </mat-menu>
 <mat-menu #dma="matMenu">
-  <button mat-menu-item routerLink="/materialAcademico">Listar Detalle matrícula</button>
-  <button mat-menu-item routerLink="/materialAcademico">Ingresar Detalle matrícula</button>
+  <button mat-menu-item routerLink="/detalleMatricula">Listar Detalle matrícula</button>
+  <button mat-menu-item routerLink="/detalleMatricula/nuevo">Ingresar Detalle matrícula</button>
 </mat-menu>
 <mat-menu #grup="matMenu">
-  <button mat-menu-item routerLink="/materialAcademico">Listar Grupos</button>
-  <button mat-menu-item routerLink="/materialAcademico">Ingresar Grupos</button>
+  <button mat-menu-item routerLink="/grupo">Listar Grupos</button>
+  <button mat-menu-item routerLink="/grupo/grupoinsertar">Ingresar Grupos</button>
 </mat-menu>
 <mat-menu #uGrups="matMenu">
-  <button mat-menu-item routerLink="/materialAcademico">Listar Grupos-estudiantes</button>
-  <button mat-menu-item routerLink="/materialAcademico">Ingresar Grupos-estudiantes</button>
+  <button mat-menu-item routerLink="/gruposxEstudiantes">Listar Grupos-estudiantes</button>
+  <button mat-menu-item routerLink="/gruposxEstudiantes/nuevo">Ingresar Grupos-estudiantes</button>
 </mat-menu>
 
 

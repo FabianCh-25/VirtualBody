@@ -5,6 +5,7 @@ import {  MatTableDataSource } from '@angular/material/table'
 import { MatDialog } from '@angular/material/dialog'
 import { EstudiantexActividadService } from 'src/app/service/estudiantex-actividad.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { LoginService } from 'src/app/service/login.service';
 
 
 @Component({
@@ -14,13 +15,14 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 })
 export class EXAListarComponent implements OnInit{
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  role:string="";
 
   lista: EstudianteXActividad[] = [];
   dataSource: MatTableDataSource<EstudianteXActividad> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'act', 'estudiante', 'calificacion', 'acciones']
   private idMayor: number = 0;
 
-  constructor(private eS: EstudiantexActividadService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef){
+  constructor(private ls:LoginService,private eS: EstudiantexActividadService, private dialog: MatDialog, private changeDetectorRef: ChangeDetectorRef){
     this.paginator = new MatPaginator(new MatPaginatorIntl(), this.changeDetectorRef);
   }
 
@@ -31,6 +33,9 @@ export class EXAListarComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
+    console.log(this.role);
+
     this.eS.list().subscribe(data => {
     this.dataSource = new MatTableDataSource(data);
     this.dataSource.paginator = this.paginator;
