@@ -68,7 +68,7 @@ export class EstudianteInsertarComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['estudiante']);
+      this.router.navigate(['/inicio/estudiante']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

@@ -56,7 +56,7 @@ export class MaterialAcademicoInsertarComponent implements OnInit{
           this.mts.setList(data);
         })
       })
-      this.router.navigate(['materialAcademico']);
+      this.router.navigate(['/inicio/materialAcademico']);
     }
     else if(this.edicion){
       this.mts.update(this.materialAcademico).subscribe(() => {

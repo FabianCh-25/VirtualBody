@@ -32,7 +32,7 @@ export class AulaInsertarComponent implements OnInit{
           this.aS.setList(data);
         });
       });
-      this.router.navigate(['aula']);
+      this.router.navigate(['/inicio/aula']);
     } else {
       this.mensaje = 'Ingrese la seccion correcta';
     }

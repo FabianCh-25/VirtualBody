@@ -89,7 +89,7 @@ export class DetalleMatriculaInsertarComponent implements OnInit{
             this.mS.setList(data);
           })
         })
-      this.router.navigate(['detalleMatricula']);
+      this.router.navigate(['/inicio/detalleMatricula']);
     }
     else if(this.edicion){
       this.mS.update(this.detalleMatricula).subscribe(()=>{

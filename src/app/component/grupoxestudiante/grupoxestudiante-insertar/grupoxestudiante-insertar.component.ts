@@ -69,7 +69,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
           })
         })
 
-      this.router.navigate(['gruposxEstudiantes']);
+      this.router.navigate(['/inicio/gruposxEstudiantes']);
     }
     else if(this.edicion){
       this.gxeS.update(this.grupoxestudiante).subscribe(() => {

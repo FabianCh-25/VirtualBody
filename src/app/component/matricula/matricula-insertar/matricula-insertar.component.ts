@@ -55,7 +55,7 @@ export class MatriculaInsertarComponent implements OnInit{
           this.maS.setList(data);
         })
       })
-      this.router.navigate(['matricula']);
+      this.router.navigate(['/inicio/matricula']);
     }
     else if(this.edicion){
       this.maS.update(this.matricula).subscribe(() => {

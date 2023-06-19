@@ -69,6 +69,16 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { Menu1Component } from './component/menu1/menu1.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+import { SidenavsComponent } from './component/sidenavs/sidenavs.component';
+import { SidebarComponent } from './component/sidenavs/sidebar/sidebar.component';
+import { SidenavbarsComponent } from './component/sidenavs/sidenavbars/sidenavbars.component';
+import { MainsidenavComponent } from './component/sidenavs/mainsidenav/mainsidenav.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -128,6 +138,11 @@ import { Menu1Component } from './component/menu1/menu1.component';
     LoginComponent,
     SignupComponent,
     Menu1Component,
+    SidenavsComponent,
+    SidebarComponent,
+    SidenavbarsComponent,
+    MainsidenavComponent,
+    
 
 
 
@@ -154,7 +169,13 @@ import { Menu1Component } from './component/menu1/menu1.component';
     MatMenuModule,
     MatToolbarModule,
     MatSnackBarModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatTooltipModule,
+    LayoutModule,
+    MatListModule //ACUERDATE DE ESTA LINEA ANIMAL!!
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

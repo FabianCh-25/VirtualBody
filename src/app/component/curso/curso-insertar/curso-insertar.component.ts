@@ -52,7 +52,7 @@ export class CursoInsertarComponent implements OnInit{
           });
         });
       }
-      this.router.navigate(['cursos']);
+      this.router.navigate(['/inicio/cursos']);
     }
   }
 

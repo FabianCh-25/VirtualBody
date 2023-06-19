@@ -79,7 +79,7 @@ export class ActividadInsertarComponent implements OnInit {
 
 
       this.mensaje = 'INgreso los campos de verda';
-      this.router.navigate(['actividades']);
+      this.router.navigate(['/inicio/actividades']);
 
     }
     else {

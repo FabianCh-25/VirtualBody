@@ -64,7 +64,7 @@ export class GrupoInsertarComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['grupo']);
+      this.router.navigate(['/inicio/grupo']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

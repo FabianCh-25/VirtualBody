@@ -69,7 +69,7 @@ export class ExaInsertarComponent implements OnInit {
             this.exS.setList(data);
           })
         })
-      this.router.navigate(['ExAs']);
+      this.router.navigate(['/inicio/ExAs']);
     }
     else if(this.edicion){
       this.exS.update(this.estudianteXActividad).subscribe(()=>{

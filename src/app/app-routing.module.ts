@@ -33,6 +33,7 @@ import { MaterialAcademicoComponent } from './component/material-academico/mater
 import { MaterialAcademicoInsertarComponent } from './component/material-academico/material-academico-insertar/material-academico-insertar.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { GuardService } from './service/guard.service';
+import { MainsidenavComponent } from './component/sidenavs/mainsidenav/mainsidenav.component';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -49,83 +50,90 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent }, // Ruta para la landing pag
 
   {
-    path: 'docentes', component: DocenteComponent, children: [
-      { path: 'docentesinsertar', component: DocenteInsertarComponent },
-      { path: 'edicion/:id', component: DocenteInsertarComponent }
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'aula', component: AulaComponent, children: [
-      { path: 'aulainsertar', component: AulaInsertarComponent },
-      { path: 'edicion/:id', component: AulaEliminarComponent }
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'actividades', component: ActividadComponent, children: [
-      { path: 'actividad-insertar', component: ActividadInsertarComponent },
-      { path: 'edicion/:id', component: ActividadInsertarComponent }
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'detalleMatricula',
-    component: DetalleMatriculaComponent,
-    children: [
-      { path: 'nuevo', component:DetalleMatriculaInsertarComponent},
-      { path: 'edicionMatricula/:id', component:DetalleMatriculaInsertarComponent}
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'materialAcademico',
-    component: MaterialAcademicoComponent,
-    children: [
-      { path: 'nuevo', component: MaterialAcademicoInsertarComponent},
-      { path: 'edicionMaterial/:id', component: MaterialAcademicoInsertarComponent}
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'cursos',
-    component: CursoComponent,
-    children: [
-      { path: 'nuevo', component: CursoInsertarComponent},
-      { path: 'edicion/:id', component: CursoInsertarComponent}
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'matricula',
-    component: MatriculaComponent,
-    children: [
-      {path: 'nuevo', component:MatriculaInsertarComponent},
-      {path: 'edicion/:id', component:MatriculaInsertarComponent}
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'ExAs',
-    component: EstudianteXActividadComponent,
-    children: [
-      { path: 'nuevo', component:ExaInsertarComponent},
-      { path: 'edicion/:id', component:ExaInsertarComponent}
-    ],canActivate:[GuardService]
-  },
+    path: 'inicio',
+    component: MainsidenavComponent,
+    children:[
+      {
+        path: 'docentes', component: DocenteComponent, children: [
+          { path: 'docentesinsertar', component: DocenteInsertarComponent },
+          { path: 'edicion/:id', component: DocenteInsertarComponent }
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'aula', component: AulaComponent, children: [
+          { path: 'aulainsertar', component: AulaInsertarComponent },
+          { path: 'edicion/:id', component: AulaEliminarComponent }
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'actividades', component: ActividadComponent, children: [
+          { path: 'actividad-insertar', component: ActividadInsertarComponent },
+          { path: 'edicion/:id', component: ActividadInsertarComponent }
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'detalleMatricula',
+        component: DetalleMatriculaComponent,
+        children: [
+          { path: 'nuevo', component:DetalleMatriculaInsertarComponent},
+          { path: 'edicionMatricula/:id', component:DetalleMatriculaInsertarComponent}
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'materialAcademico',
+        component: MaterialAcademicoComponent,
+        children: [
+          { path: 'nuevo', component: MaterialAcademicoInsertarComponent},
+          { path: 'edicionMaterial/:id', component: MaterialAcademicoInsertarComponent}
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'cursos',
+        component: CursoComponent,
+        children: [
+          { path: 'nuevo', component: CursoInsertarComponent},
+          { path: 'edicion/:id', component: CursoInsertarComponent}
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'matricula',
+        component: MatriculaComponent,
+        children: [
+          {path: 'nuevo', component:MatriculaInsertarComponent},
+          {path: 'edicion/:id', component:MatriculaInsertarComponent}
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'ExAs',
+        component: EstudianteXActividadComponent,
+        children: [
+          { path: 'nuevo', component:ExaInsertarComponent},
+          { path: 'edicion/:id', component:ExaInsertarComponent}
+        ],canActivate:[GuardService]
+      },
 
 
-  {
-    path: 'estudiante', component: EstudianteComponent, children: [
-      { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
-      { path: 'edicion/:id', component: EstudianteInsertarComponent }
-    ],canActivate:[GuardService]
+      {
+        path: 'estudiante', component: EstudianteComponent, children: [
+          { path: 'estudianteinsertar', component: EstudianteInsertarComponent },
+          { path: 'edicion/:id', component: EstudianteInsertarComponent }
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'grupo', component: GrupoComponent, children: [
+          { path: 'grupoinsertar', component: GrupoInsertarComponent },
+          { path: 'edicion/:id', component: GrupoInsertarComponent }
+        ],canActivate:[GuardService]
+      },
+      {
+        path: 'gruposxEstudiantes', component: GrupoxestudianteComponent, children: [
+        { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
+        { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
+        ],canActivate:[GuardService]
+      },
+    ]
   },
-  {
-    path: 'grupo', component: GrupoComponent, children: [
-      { path: 'grupoinsertar', component: GrupoInsertarComponent },
-      { path: 'edicion/:id', component: GrupoInsertarComponent }
-    ],canActivate:[GuardService]
-  },
-  {
-    path: 'gruposxEstudiantes', component: GrupoxestudianteComponent, children: [
-    { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
-    { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
-    ],canActivate:[GuardService]
-  },
+
   {path:'signin',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {
