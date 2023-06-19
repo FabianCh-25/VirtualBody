@@ -32,8 +32,8 @@
       </ng-container>
 
       <ng-container matColumnDef="Acciones">
-        <th mat-header-cell [hidden]="role=='USER'" *matHeaderCellDef> Acciones </th>
-        <td mat-cell [hidden]="role=='USER'" *matCellDef="let element">
+        <th mat-header-cell [hidden]="role=='USER'"[hidden]="role=='DOC'" *matHeaderCellDef> Acciones </th>
+        <td mat-cell [hidden]="role=='USER'"[hidden]="role=='DOC'" *matCellDef="let element">
           <button mat-icon-button color="primary" [routerLink]="['edicion', element.idAula]">
             <mat-icon aria-label="Actualizar">edit</mat-icon>
           </button>

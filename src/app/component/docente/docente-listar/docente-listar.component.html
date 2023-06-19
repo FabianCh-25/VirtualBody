@@ -48,8 +48,10 @@
       </ng-container>
 
       <ng-container matColumnDef="clave">
-        <th mat-header-cell [hidden]="role=='USER'" *matHeaderCellDef> Clave Docente </th>
-        <td mat-cell  [hidden]="role=='USER'" *matCellDef="let element"> {{element.claveDocente}} </td>
+        <th mat-header-cell [hidden]="role=='USER'" [hidden]="role=='DOC'" *matHeaderCellDef> Clave Docente </th>
+        <td mat-cell  [hidden]="role=='USER'" [hidden]="role=='DOC'" *matCellDef="let element">
+          <input  type="password" value=" {{element.claveDocente}} ">
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="telefono">
@@ -58,8 +60,8 @@
       </ng-container>
 
       <ng-container matColumnDef="acciones">
-        <th mat-header-cell [hidden]="role=='USER'" *matHeaderCellDef>Acciones</th>
-        <td mat-cell [hidden]="role=='USER'" *matCellDef="let element">
+        <th mat-header-cell [hidden]="role=='USER'"[hidden]="role=='DOC'" *matHeaderCellDef>Acciones</th>
+        <td mat-cell [hidden]="role=='USER'"[hidden]="role=='DOC'" *matCellDef="let element">
           <button mat-icon-button color="primary" [routerLink]="['edicion',element.idDocente]">
             <mat-icon aria-label="Editar">edit</mat-icon>
           </button>
