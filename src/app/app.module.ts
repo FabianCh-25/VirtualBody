@@ -31,7 +31,7 @@ import { EstudianteInsertarComponent } from './component/estudiante/estudiante-i
 import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.component';
 import { AulaComponent } from './component/aula/aula.component';
 import { AulaInsertarComponent } from './component/aula/aula-insertar/aula-insertar.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { DocenteDialogoComponent } from './component/docente/docente-listar/docente-dialogo/docente-dialogo.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -98,7 +98,6 @@ import { MatListModule } from '@angular/material/list';
     EstudianteInsertarComponent,
     EstudianteDialogoComponent,
     NavbarComponent,
-    LandingPageComponent,
     DocenteDialogoComponent,
     AulaEliminarComponent,
     AulaDialogoComponent,
@@ -142,7 +141,7 @@ import { MatListModule } from '@angular/material/list';
     SidebarComponent,
     SidenavbarsComponent,
     MainsidenavComponent,
-    
+
 
 
 
