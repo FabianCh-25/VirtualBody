@@ -54,15 +54,15 @@
       </ng-container>
 
       <ng-container matColumnDef="clave">
-        <th mat-header-cell [hidden]="role=='USER'" [hidden]="role=='DOC'" *matHeaderCellDef> CONTRASEÑA </th>
-        <td mat-cell [hidden]="role=='USER'"  [hidden]="role=='DOC'" *matCellDef="let element">
+        <th mat-header-cell [hidden]="role==='DOC' || role==='USER'" *matHeaderCellDef> CONTRASEÑA </th>
+        <td mat-cell [hidden]="role==='DOC' || role==='USER'" *matCellDef="let element">
           <input type="password" value="{{element.claveEstudiante}}" readonly>
          </td>
       </ng-container>
 
       <ng-container matColumnDef="acciones">
-        <th mat-header-cell [hidden]="role=='USER'" [hidden]="role=='DOC'" *matHeaderCellDef> ACCIONES </th>
-        <td mat-cell [hidden]="role=='USER'" [hidden]="role=='DOC'" *matCellDef="let element"> <button mat-raised-button color="primary"
+        <th mat-header-cell [hidden]="role==='DOC' || role==='USER'" *matHeaderCellDef> ACCIONES </th>
+        <td mat-cell [hidden]="role==='DOC' || role==='USER'" *matCellDef="let element"> <button mat-raised-button color="primary"
             [routerLink]="['edicion', element.idEstudiante]">Actualizar</button>
           <button mat-raised-button color="accent" (click)="confirmar(element.idEstudiante)">Eliminar</button>
         </td>
