@@ -8,7 +8,7 @@ import { AulaListarComponent } from './component/aula/aula-listar/aula-listar.co
 import { DocenteInsertarComponent } from './component/docente/docente-insertar/docente-insertar.component';
 import { DocenteListarComponent } from './component/docente/docente-listar/docente-listar.component';
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+
 import { DocenteComponent } from './component/docente/docente.component';
 
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: 'estudiante-insertar', component: EstudianteInsertarComponent },
   { path: 'estudiante-listar', component: EstudianteListarComponent },
   { path: 'estudiante/edicion/:id', component: EstudianteInsertarComponent },
-  { path: '', component: LandingPageComponent }, // Ruta para la landing pag
+  
 
   {
     path: 'inicio',
