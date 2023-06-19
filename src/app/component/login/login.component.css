@@ -75,7 +75,7 @@ body.my-login-page {
 }
 .logo{
 
-  background-image: url("src/app/img/logo2 (1).png");
+  background-image: url("src/app/component/login/logo2.png");
   background-size: contain;
   width:100px;
   height: 50px;
