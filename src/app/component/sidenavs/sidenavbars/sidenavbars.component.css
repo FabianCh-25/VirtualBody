@@ -58,7 +58,7 @@
 }
 
 .nave-list .is-active {
-  border-left: 8px solid #00d9ff !important;
+  border-left: 8px solid #951fdab9 !important;
 }
 
 .nave-list .is-active .items-menu span {
@@ -83,7 +83,7 @@
 
 .logo {
   background-color: white;
-  /*background-image: url("src/app/images/logo1.png");*/
+  background-image: url("src/app/img/logo2 (1).png");
   background-size: 50px;
   border-radius: 10px;
   width: 60px;

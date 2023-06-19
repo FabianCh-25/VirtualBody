@@ -69,6 +69,24 @@
 
     <!--script src="menu.js"></!--script-->
 
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../img/logo2 (1).png" alt="Logo">
+      </div>
+      <div class="links">
+        <a href="#"><i class="material-icons">home</i> Inicio</a>
+        <a href="#"><i class="material-icons">explore</i> Explorar</a>
+        <a href="#"><i class="material-icons">notifications</i> Notificaciones</a>
+        <a href="#"><i class="material-icons">message</i> Mensajes</a>
+        <a href="#"><i class="material-icons">account_circle</i> Perfil</a>
+      </div>
+      <div class="actions">
+        <button class="btn" routerLink="/signin">Iniciar sesión</button>
+        <button class="btn" routerLink="/signup">Registrarse</button>
+      </div>
+    </nav>
+
+
     <section class="home" id="home">
         <div class="banner-text container">
             <h1>Aprende con <br><br><br><br><br>Virtual Body</h1>
@@ -78,8 +96,8 @@
                 posible!
             </p>
 
-            <a class="btn-a" href="https://virtualbodyapp.web.app/#/">Ingrese</a> <br>
-            <a class="btn-a" href="https://virtualbodyapp.web.app/#/">Soy nuevo</a>    <!----- ES AQUIIIII-->
+            <a class="btn-a" routerLink="/signin">Ingrese</a> <br>
+            <a class="btn-a" routerLink="/signup">Soy nuevo</a>    <!----- ES AQUIIIII-->
         </div>
     </section>
     <section class="descargar" id="descargar">

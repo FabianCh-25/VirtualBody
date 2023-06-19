@@ -80,8 +80,8 @@
 
 .logo{
   background-color: white;
-  /*background-image: url("src/app/images/logo1.png");*/
-  background-size: 50px;
+  background-image: url("src/app/img/logo2 (1).png");
+  background-size: contain;
   border-radius: 10px;
   width:60px;
   height: 60px;
