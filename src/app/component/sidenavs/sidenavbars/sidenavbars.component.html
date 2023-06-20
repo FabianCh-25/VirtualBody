@@ -1,5 +1,7 @@
 <mat-nav-list class="nave-list">
-  <h3 style="text-align: center; margin-top: 5px; font-weight: bold;">Items</h3>
+  <div style="text-align: center; padding: 15px;">
+    <img src="logo2.png" alt="logo" class="logo">
+  </div>
   <mat-divider style="border: 2px solid"></mat-divider>
   <br>
   <mat-list-item routerLink="/inicio/docentes" class="items-menu" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
@@ -18,7 +20,7 @@
     <span>Actividades</span>
   </mat-list-item>
 
-  <mat-list-item routerLink="/inicio/detalleMatricula" class="items-menu"routerLinkActive="is-active">
+  <mat-list-item [hidden]="role==='DOC' || role==='USER'" routerLink="/inicio/detalleMatricula" class="items-menu"routerLinkActive="is-active">
     <mat-icon> info </mat-icon>
     <span>Detalle Matricula </span>
   </mat-list-item>
