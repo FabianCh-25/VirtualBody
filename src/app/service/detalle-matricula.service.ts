@@ -71,4 +71,11 @@ export class DetalleMatriculaService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+
+  buscarPorFechas(fechaInicio: Date, fechaFin: Date){
+    let token = sessionStorage.getItem("token");
+    return this.http.get<DetalleMatricula[]>(`${this.url}/${fechaInicio}/${fechaFin}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
+  }
 }

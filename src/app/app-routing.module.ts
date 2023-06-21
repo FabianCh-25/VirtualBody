@@ -36,6 +36,7 @@ import { GuardService } from './service/guard.service';
 import { MainsidenavComponent } from './component/sidenavs/mainsidenav/mainsidenav.component';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -135,7 +136,8 @@ const routes: Routes = [
       },
       {
         path: 'reportes', component: ReportesComponent, children: [
-          {path: 'student-count-Course', component: Reporte01Component},
+          {path: 'reporte01', component: Reporte01Component},
+          {path: 'reporte02', component: Reporte02Component},
         ]
       }
     ]

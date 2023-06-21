@@ -81,6 +81,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
+import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
 
 
 @NgModule({
@@ -145,6 +146,7 @@ import { Reporte01Component } from './component/reportes/reporte01/reporte01.com
     MainsidenavComponent,
     ReportesComponent,
     Reporte01Component,
+    Reporte02Component,
 
 
 

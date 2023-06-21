@@ -5,37 +5,23 @@
 
   <span style="font-size: 40px;">VirtualBody</span>
   <span class="toolbar-item-spacer"></span>
-  <button mat-icon-button matTooltip="Like">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button matTooltip="Share">
-    <mat-icon>share</mat-icon>
-  </button>
-  <button mat-icon-button matTooltip="Notifications">
-    <mat-icon>notifications</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    matTooltip="My Account"
-    [matMenuTriggerFor]="userAccountMenu"
-  >
-    <mat-icon>account_circle</mat-icon>
-  </button>
-  <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
-    <button mat-menu-item routerLink="#">
-      <mat-icon>person</mat-icon><span>Mi cuenta</span>
+
+  <span [matMenuTriggerFor]="menu">
+    <button mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
     </button>
-    <button mat-menu-item routerLink="#">
-      <mat-icon>settings</mat-icon><span>Settings</span>
+    <span style="font-size: 20px; cursor:pointer">{{role}}</span>
+  </span>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>person</mat-icon>Mi perfil
     </button>
-    <button mat-menu-item routerLink="#">
-      <mat-icon>help</mat-icon><span>Ayuda</span>
-    </button>
-    <mat-divider></mat-divider>
     <button mat-menu-item routerLink="/login" (click)="cerrar()">
       <mat-icon>exit_to_app</mat-icon>Cerrar sesion
     </button>
   </mat-menu>
+
 </mat-toolbar>
 
 <mat-sidenav-container class="app-container">
@@ -45,8 +31,7 @@
     [opened]="true"
     [class.mat-elevation-z4]="true"
     class="app-sidenav"
-
-  ><!-- cambiar color del cuadrito -->
+  ><!-- cambiar color del cuadrito ->  style="background: #ec250d; background: linear-gradient(0deg, #ec250d 0, #fd5d93 100%); box-shadow: 0 0 45px 0 rgba(0,0,0.6);" -->
    <app-sidenavbars></app-sidenavbars>
   </mat-sidenav>
   <mat-sidenav-content>
