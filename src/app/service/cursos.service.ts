@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs'; // Importa Subject desde rxjs
+import { Observable, Subject } from 'rxjs'; // Importa Subject desde rxjs
 
 import { environment } from 'src/environments/environment'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Curso } from '../model/curso';
+import { StudentCourseDTO } from '../model/studentCourseDTO';
 const base_url=environment.base
 @Injectable({
   providedIn: 'root'
@@ -66,6 +67,12 @@ export class CursosService {
   }
   setConfirmaEliminacion(estado: Boolean){
     this.confirmaEliminacion.next(estado);
+  }
+  getStudentsByCourse(): Observable<StudentCourseDTO[]>{
+    let token = sessionStorage.getItem("token");
+    return this.http.get<StudentCourseDTO[]>(`${this.url}/courses-count`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    }); //Aquí
   }
 }
 

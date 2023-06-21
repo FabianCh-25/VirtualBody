@@ -34,6 +34,8 @@ import { MaterialAcademicoInsertarComponent } from './component/material-academi
 import { SignupComponent } from './component/signup/signup.component';
 import { GuardService } from './service/guard.service';
 import { MainsidenavComponent } from './component/sidenavs/mainsidenav/mainsidenav.component';
+import { ReportesComponent } from './component/reportes/reportes.component';
+import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -47,7 +49,7 @@ const routes: Routes = [
   { path: 'estudiante-insertar', component: EstudianteInsertarComponent },
   { path: 'estudiante-listar', component: EstudianteListarComponent },
   { path: 'estudiante/edicion/:id', component: EstudianteInsertarComponent },
-  
+
 
   {
     path: 'inicio',
@@ -131,6 +133,11 @@ const routes: Routes = [
         { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
         ],canActivate:[GuardService]
       },
+      {
+        path: 'reportes', component: ReportesComponent, children: [
+          {path: 'student-count-Course', component: Reporte01Component},
+        ]
+      }
     ]
   },
 

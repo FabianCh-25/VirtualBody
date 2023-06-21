@@ -79,6 +79,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
+import { ReportesComponent } from './component/reportes/reportes.component';
+import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 
 
 @NgModule({
@@ -141,6 +143,8 @@ import { MatListModule } from '@angular/material/list';
     SidebarComponent,
     SidenavbarsComponent,
     MainsidenavComponent,
+    ReportesComponent,
+    Reporte01Component,
 
 
 

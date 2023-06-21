@@ -20,7 +20,7 @@
     <span>Actividades</span>
   </mat-list-item>
 
-  <mat-list-item [hidden]="role==='DOC' || role==='USER'" routerLink="/inicio/detalleMatricula" class="items-menu"routerLinkActive="is-active">
+  <mat-list-item  routerLink="/inicio/detalleMatricula" class="items-menu"routerLinkActive="is-active">
     <mat-icon> info </mat-icon>
     <span>Detalle Matricula </span>
   </mat-list-item>
@@ -58,6 +58,11 @@
   <mat-list-item routerLink="/inicio/gruposxEstudiantes" class="items-menu"routerLinkActive="is-active">
     <mat-icon> group_add </mat-icon>
     <span>Unirse a Grupo</span>
+  </mat-list-item>
+
+  <mat-list-item routerLink="/inicio/reportes" class="items-menu"routerLinkActive="is-active">
+    <mat-icon> description </mat-icon>
+    <span>Reporte01</span>
   </mat-list-item>
 
 </mat-nav-list>
