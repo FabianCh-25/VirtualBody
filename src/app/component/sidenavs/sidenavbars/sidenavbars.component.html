@@ -60,4 +60,20 @@
     <span>Unirse a Grupo</span>
   </mat-list-item>
 
+  <mat-expansion-panel [class.mat-elevation-z0]="true">
+    <mat-expansion-panel-header class="expansion-men">
+        <mat-icon >description</mat-icon><span>Estadisticas</span>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="nave-list2">
+
+      <mat-list-item routerLink="/inicio/reportes/reporte01"class="items-menu" routerLinkActive="is-active2">
+        <mat-icon>storage</mat-icon><span>Reporte 01</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/inicio/reportes/reporte02"class="items-menu" routerLinkActive="is-active2">
+        <mat-icon>storage</mat-icon><span>Reporte 02</span>
+      </mat-list-item>
+
+    </mat-nav-list>
+  </mat-expansion-panel>
+
 </mat-nav-list>
