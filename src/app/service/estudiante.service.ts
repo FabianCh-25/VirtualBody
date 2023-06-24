@@ -65,4 +65,7 @@ export class EstudianteService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+  listbyuser(username:String){
+    return this.http.get<Estudiante>(`${this.url}/listbyUser/${username}`)
+  }
 }

@@ -82,6 +82,9 @@ import { MatListModule } from '@angular/material/list';
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
+import { LogindocenteComponent } from './component/login/logindocente/logindocente.component';
+import { LoginestudianteComponent } from './component/login/loginestudiante/loginestudiante.component';
+
 
 
 @NgModule({
@@ -147,6 +150,9 @@ import { Reporte02Component } from './component/reportes/reporte02/reporte02.com
     ReportesComponent,
     Reporte01Component,
     Reporte02Component,
+    LogindocenteComponent,
+    LoginestudianteComponent,
+
 
 
 

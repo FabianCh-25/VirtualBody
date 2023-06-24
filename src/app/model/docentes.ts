@@ -1,3 +1,5 @@
+import { Users } from "./users"
+
 export class Docente{
   idDocente:number=0
   nombre:string=""
@@ -5,4 +7,6 @@ export class Docente{
   correoDocente:string=""
   claveDocente:string=""
   telefonoDocente:number=0
+  users: Users=new Users();
+
 }
