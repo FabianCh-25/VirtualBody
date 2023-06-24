@@ -43,9 +43,9 @@
 
       <ng-container matColumnDef="acciones">
         <th mat-header-cell [hidden]="role=='USER'" *matHeaderCellDef> Acciones </th>
-        <td mat-cell [hidden]="role=='USER'" *matCellDef="let element"> <button mat-raised-button color="primary"
-            [routerLink]="['edicion', element.idMatricula]">Actualizar</button>
-          <button mat-raised-button color="accent" (click)="confirmar(element.idMatricula)">Eliminar</button>
+        <td mat-cell [hidden]="role=='USER'" *matCellDef="let element"> <button mat-icon-button color="primary"
+            [routerLink]="['edicion', element.idMatricula]"><mat-icon aria-label="Editar">edit</mat-icon></button>
+          <button mat-icon-button color="accent" (click)="confirmar(element.idMatricula)"><mat-icon aria-label="Eliminar">delete</mat-icon></button>
         </td>
       </ng-container>
       <!-- Weight Column -->
