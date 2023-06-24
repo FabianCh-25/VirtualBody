@@ -1,7 +1,42 @@
-table {
-  width: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
-.container{
-  height: 100%;
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #163d74;
+  height: 50px;
+  padding-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 5px #999;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
 }

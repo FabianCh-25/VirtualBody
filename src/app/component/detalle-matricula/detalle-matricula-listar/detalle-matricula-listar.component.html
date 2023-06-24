@@ -21,42 +21,42 @@
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> NO. </th>
+        <th mat-header-cell *matHeaderCellDef> No. </th>
         <td mat-cell *matCellDef="let element"> {{element.idDetalleMatricula}} </td>
       </ng-container>
 
       <!-- Weight Column -->
       <ng-container matColumnDef="fechaInscripcion">
-        <th mat-header-cell [hidden]="role=='DOC'"*matHeaderCellDef> FECHA DE INSCRIPCIÓN </th>
+        <th mat-header-cell [hidden]="role=='DOC'"*matHeaderCellDef> Fecha de Inscripción </th>
         <td mat-cell [hidden]="role=='DOC'"*matCellDef="let element"> {{element.fechaInscripcion|date:'dd/MM/yyyy'}} </td>
       </ng-container>
 
       <ng-container matColumnDef="docente">
-        <th mat-header-cell *matHeaderCellDef> DOCENTE </th>
+        <th mat-header-cell *matHeaderCellDef> Docente </th>
         <td mat-cell *matCellDef="let element"> {{element.docente.nombre}} </td>
       </ng-container>
 
       <ng-container matColumnDef="aula">
-        <th mat-header-cell *matHeaderCellDef> AULA </th>
+        <th mat-header-cell *matHeaderCellDef> Aula </th>
         <td mat-cell *matCellDef="let element"> {{element.aula.seccionAula}} </td>
       </ng-container>
 
       <ng-container matColumnDef="curso">
-        <th mat-header-cell *matHeaderCellDef> CURSO </th>
+        <th mat-header-cell *matHeaderCellDef> Curso </th>
         <td mat-cell *matCellDef="let element"> {{element.curso.codeCurso}} </td>
       </ng-container>
 
       <ng-container matColumnDef="matricula">
-        <th mat-header-cell *matHeaderCellDef [hidden]="role==='DOC' || role==='USER'">PENSION</th>
+        <th mat-header-cell *matHeaderCellDef [hidden]="role==='DOC' || role==='USER'">Pensión</th>
         <td mat-cell *matCellDef="let element" [hidden]="role==='DOC' || role==='USER'">{{element.matricula.costoMatricula}}</td>
       </ng-container>
 
 
       <ng-container matColumnDef="acciones">
-        <th mat-header-cell [hidden]="role=='DOC'"*matHeaderCellDef> ACCIONES </th>
-        <td mat-cell [hidden]="role=='DOC'" *matCellDef="let element"> <button mat-raised-button color="primary"
-            [routerLink]="['edicionMatricula', element.idDetalleMatricula]">Actualizar</button>
-          <button mat-raised-button color="accent" (click)="confirmar(element.idDetalleMatricula)">Eliminar</button>
+        <th mat-header-cell [hidden]="role=='DOC'"*matHeaderCellDef> Acciones </th>
+        <td mat-cell [hidden]="role=='DOC'" *matCellDef="let element"> <button mat-icon-button color="primary"
+            [routerLink]="['edicionMatricula', element.idDetalleMatricula]"><mat-icon aria-label="Editar">edit</mat-icon></button>
+          <button mat-icon-button color="accent" (click)="confirmar(element.idDetalleMatricula)"><mat-icon aria-label="Eliminar">delete</mat-icon></button>
         </td>
       </ng-container>
       <!-- Weight Column -->
