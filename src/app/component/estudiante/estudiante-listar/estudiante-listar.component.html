@@ -19,7 +19,6 @@
   <div class="container">
     <div style="text-align: center;">
       <h1>Lista de Estudiantes</h1>
-      <button mat-raised-button color="warn" routerLink="/inicio/estudiante/estudianteinsertar" style="background-color: #951fdab9;">Nuevo</button>
     </div>
 
     <mat-form-field>
@@ -62,9 +61,9 @@
 
       <ng-container matColumnDef="acciones">
         <th mat-header-cell [hidden]="role==='DOC' || role==='USER'" *matHeaderCellDef> Acciones </th>
-        <td mat-cell [hidden]="role==='DOC' || role==='USER'" *matCellDef="let element"> <button mat-raised-button color="primary"
-            [routerLink]="['edicion', element.idEstudiante]">Actualizar</button>
-          <button mat-raised-button color="accent" (click)="confirmar(element.idEstudiante)">Eliminar</button>
+        <td mat-cell [hidden]="role==='DOC' || role==='USER'" *matCellDef="let element"> <button mat-icon-button color="primary"
+            [routerLink]="['edicion', element.idEstudiante]"><mat-icon aria-label="Editar">edit</mat-icon></button>
+          <button mat-icon-button color="accent" (click)="confirmar(element.idEstudiante)"><mat-icon aria-label="Eliminar">delete</mat-icon></button>
         </td>
       </ng-container>
 
