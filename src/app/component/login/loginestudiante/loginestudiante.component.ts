@@ -5,6 +5,7 @@ import { LoginService } from 'src/app/service/login.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { JwtRequest } from 'src/app/model/jwtRequest';
 import { EstudianteService } from 'src/app/service/estudiante.service';
+import { Estudiante } from 'src/app/model/estudiante';
 
 
 @Component({
@@ -12,62 +13,71 @@ import { EstudianteService } from 'src/app/service/estudiante.service';
   templateUrl: './loginestudiante.component.html',
   styleUrls: ['./loginestudiante.component.css']
 })
+
 export class LoginestudianteComponent implements OnInit{
-  idestudiante:number=0;
+//   iddest:number=0;
 
-  form:FormGroup=new FormGroup({});
+//   form:FormGroup=new FormGroup({});
 
-  username: string = ""
-  password: string = ""
-  mensaje: string = ""
+//   username: string = ""
+//   password: string = ""
+//   mensaje: string = ""
 
+//   constructor(private dS: EstudianteService,private snackBar: MatSnackBar,private loginService: LoginService,private router:Router,private route:ActivatedRoute){}
+//   ngOnInit(): void {
+//       this.form=new FormGroup({
+//         idest:new FormControl(),
+//         username:new FormControl(),
+//         password:new FormControl(),
+//       })
+//   }
+//   aceptar():void{
+//     let request = new JwtRequest();
+//     request.username = this.username;
+//     request.password = this.password;
+//     this.loginService.login(request).subscribe((data: any) => {
+//       sessionStorage.setItem("token", data.jwttoken);
 
-  constructor(private snackBar: MatSnackBar,private router:Router,private loginService: LoginService,private route:ActivatedRoute, private student:EstudianteService){}
-
-  ngOnInit(): void {
-      this.form=new FormGroup({
-        idestudiante:new FormControl(),
-        username:new FormControl(),
-        password:new FormControl(),
-      })
-  }
-  aceptar():void{
-
-
-    let request = new JwtRequest();
-    request.username = this.username;
-    request.password = this.password;
-    this.loginService.login(request).subscribe((data: any) => {
-      sessionStorage.setItem("token", data.jwttoken);
-
-
-      this.username=this.form.value['username'];
+//       this.dS.listbyuser(this.username).subscribe((data) => {
+//         this.iddest=data.idEstudiante;
 
 
-      this.student.listbyuser(this.username).subscribe((data) => {
-        this.idestudiante=data.idEstudiante;
+//         console.log('ID del estudiante:', this.iddest);
+
+//         //this.router.navigate(['/inicio/docentes', this.iddoc])
+//         this.router.navigate(['/inicio/docentes'])
+
+//       });
 
 
-        console.log('ID del estudiante:', this.idestudiante);
+//     }, error => {
+//       this.mensaje = "Credenciales incorrectas!!!"
+//       this.snackBar.open(this.mensaje, "Aviso",{duration:2000});
+//     });
+//   }
+// }
+constructor(
+  private loginService: LoginService,
+  private router: Router,
+  private snackBar: MatSnackBar
+) {}
 
-        this.router.navigate(['/inicio/docentes', this.idestudiante])
+username: string = '';
+password: string = '';
+mensaje: string = '';
 
-      });
+ngOnInit(): void {}
 
-
-
-
-
-    }, error => {
-      this.mensaje = "Credenciales incorrectas!!!"
-      this.snackBar.open(this.mensaje, "Aviso",{duration:2000});
-    });
-
-
-
-  }
-
-  cerrar() {
-    sessionStorage.clear();
-  }
+login() {
+  let request = new JwtRequest();
+  request.username = this.username;
+  request.password = this.password;
+  this.loginService.login(request).subscribe((data: any) => {
+    sessionStorage.setItem("token", data.jwttoken);
+    this.router.navigate(['/inicio/docentes']);
+  }, error => {
+    this.mensaje = "Credenciales incorrectas!!!"
+    this.snackBar.open(this.mensaje, "Aviso",{duration:2000});
+  });
+}
 }

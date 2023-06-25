@@ -22,7 +22,10 @@ export class DocenteService {
 
     })
   }
+  insertnuevo(docente: Docente) {
 
+    return this.http.post(this.url, docente);
+  }
   insert(docente: Docente) {
     let token = sessionStorage.getItem("token");
 
@@ -81,5 +84,9 @@ export class DocenteService {
     return this.http.get<ClassroomTeacherDTO[]>(`${this.url}/teacher-count`, {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
+  }
+  listbyuser(username:String){
+
+    return this.http.get<Docente>(`${this.url}/listbyUser/${username}`)
   }
 }

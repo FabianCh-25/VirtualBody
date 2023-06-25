@@ -22,6 +22,14 @@ private url = `${base_url}/ExAs`
 
     });
   }
+  listAp() {
+    let token = sessionStorage.getItem("token");
+
+    return this.http.get<EstudianteXActividad[]>(`${this.url}/aprobados`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+
+    });
+  }
   insert(estudianteXActividad: EstudianteXActividad) {
     let token = sessionStorage.getItem("token");
 

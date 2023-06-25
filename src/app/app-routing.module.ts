@@ -1,3 +1,4 @@
+//import { LoginestudianteComponent } from './component/loginestudiante/loginestudiante.component';
 import { LoginComponent } from './component/login/login.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -37,6 +38,12 @@ import { MainsidenavComponent } from './component/sidenavs/mainsidenav/mainsiden
 import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
+import { LoginestudianteComponent } from './component/login/loginestudiante/loginestudiante.component';
+import { LogindocenteComponent } from './component/login/logindocente/logindocente.component';
+import { RegistroestudianteComponent } from './component/registro/registroestudiante/registroestudiante.component';
+import { RegistrodocenteComponent } from './component/registro/registrodocente/registrodocente.component';
+import { Reporte05fComponent } from './component/reportes/reporte05f/reporte05f.component';
+import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.component';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -138,6 +145,8 @@ const routes: Routes = [
         path: 'reportes', component: ReportesComponent, children: [
           {path: 'reporte01', component: Reporte01Component},
           {path: 'reporte02', component: Reporte02Component},
+          {path: 'reporte05', component: Reporte05fComponent},
+          {path: 'reporte06', component: Reporte06fComponent}
         ]
       }
     ]
@@ -152,6 +161,19 @@ const routes: Routes = [
   {
     path: 'login', component: LoginComponent
   },
+  {
+    path: 'loginE', component:LoginestudianteComponent
+  },
+  {
+    path: 'RegistroE',component:RegistroestudianteComponent
+  },
+  {
+    path: 'loginD', component:LogindocenteComponent
+  },
+  {
+    path: 'RegistroD',component:RegistrodocenteComponent
+  }
+
 
 
 

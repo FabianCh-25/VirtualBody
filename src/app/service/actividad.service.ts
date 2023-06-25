@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment'; // tienes q importar
 import { HttpClient, HttpHeaders } from '@angular/common/http'; // tienes q importar
 import { Actividad } from '../model/actividad'; // tienes q importar
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { ActivityStudentDTO } from '../model/activityStudentDTO';
 
 const base_url=environment.base
 @Injectable({
@@ -71,4 +72,11 @@ export class ActividadService {
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
   }
+  getStudentbyActivity(): Observable<ActivityStudentDTO[]>{
+    let token = sessionStorage.getItem("token");
+    return this.http.get<ActivityStudentDTO[]>(`${this.url}/report5`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
+  }
+
 }

@@ -21,6 +21,10 @@ export class EstudianteService {
 
     })
   }
+  insertnuevo(estudiante: Estudiante) {
+
+    return this.http.post(this.url, estudiante);
+  }
   insert(estudiante: Estudiante) {
     let token = sessionStorage.getItem("token");
 

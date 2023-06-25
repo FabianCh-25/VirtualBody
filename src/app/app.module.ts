@@ -84,6 +84,11 @@ import { Reporte01Component } from './component/reportes/reporte01/reporte01.com
 import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
 import { LogindocenteComponent } from './component/login/logindocente/logindocente.component';
 import { LoginestudianteComponent } from './component/login/loginestudiante/loginestudiante.component';
+import { RegistroComponent } from './component/registro/registro.component';
+import { RegistrodocenteComponent } from './component/registro/registrodocente/registrodocente.component';
+import { RegistroestudianteComponent } from './component/registro/registroestudiante/registroestudiante.component';
+import { Reporte05fComponent } from './component/reportes/reporte05f/reporte05f.component';
+import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.component';
 
 
 
@@ -152,6 +157,11 @@ import { LoginestudianteComponent } from './component/login/loginestudiante/logi
     Reporte02Component,
     LogindocenteComponent,
     LoginestudianteComponent,
+    RegistroComponent,
+    RegistrodocenteComponent,
+    RegistroestudianteComponent,
+    Reporte05fComponent,
+    Reporte06fComponent,
 
 
 
