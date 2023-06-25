@@ -37,12 +37,15 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
       id: new FormControl(),
+<<<<<<< HEAD
 =======
       idEstudiante: new FormControl(),
 >>>>>>> 1909452 (corregi estudiante)
 =======
       id: new FormControl(),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
       nombreEstudiante: new FormControl(),
       apellidoEstudiante: new FormControl(),
       correoEstudiante: new FormControl(),
@@ -57,13 +60,17 @@ export class EstudianteInsertarComponent implements OnInit {
     this.estudiante.idEstudiante = this.form.value['id'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1909452 (corregi estudiante)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     this.estudiante.nombreEstudiante = this.form.value['nombreEstudiante'];
     this.estudiante.apellidoEstudiante = this.form.value['apellidoEstudiante'];
     this.estudiante.correoEstudiante = this.form.value['correoEstudiante'];
     this.estudiante.telefonoEstudiante = this.form.value['telefonoEstudiante'];
     this.estudiante.claveEstudiante = this.form.value['claveEstudiante'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     this.estudiante.NombreEstudiante = this.form.value['NombreEstudiante'];
@@ -74,6 +81,8 @@ export class EstudianteInsertarComponent implements OnInit {
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1909452 (corregi estudiante)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 
 
     if (this.form.value['nombreEstudiante'].length > 0 && this.form.value['apellidoEstudiante'].length > 0) {
@@ -104,6 +113,7 @@ export class EstudianteInsertarComponent implements OnInit {
         this.form = new FormGroup({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           id: new FormControl(data.idEstudiante),
 <<<<<<< HEAD
 =======
@@ -112,11 +122,15 @@ export class EstudianteInsertarComponent implements OnInit {
 =======
           id: new FormControl(data.idEstudiante),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+          id: new FormControl(data.idEstudiante),
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
           nombreEstudiante: new FormControl(data.nombreEstudiante),
           apellidoEstudiante: new FormControl(data.apellidoEstudiante),
           correoEstudiante: new FormControl(data.correoEstudiante),
           telefonoEstudiante: new FormControl(data.telefonoEstudiante),
           claveEstudiante: new FormControl(data.claveEstudiante),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           NombreEstudiante: new FormControl(data.NombreEstudiante),
@@ -127,6 +141,8 @@ export class EstudianteInsertarComponent implements OnInit {
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1909452 (corregi estudiante)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
         });
         console.log(data);
       });

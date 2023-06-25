@@ -21,6 +21,10 @@ export class GrupoDialogoComponent {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab

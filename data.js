@@ -172,6 +172,20 @@ module.exports = function () {
 
       }
     ],
+<<<<<<< HEAD
+=======
+    estudiantejs: [
+      {
+        id:1,
+        NombreEstudiante: "Tobby",
+        ApellidoEstudiante: "Gaaaaaaa",
+        CorreoEstudiante:"carl@gmail.com",
+        ClaveEstudiante:"321",
+        TelefonoEstudiante:"963258741",
+
+      }
+    ],
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     grupojs: [
       {
         idGrupo:1,
@@ -197,7 +211,10 @@ module.exports = function () {
         fechaacceso:"2022-03-03"
       }
     ],
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   }
   return data
 }

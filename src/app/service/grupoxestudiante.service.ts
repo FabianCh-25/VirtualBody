@@ -2,10 +2,14 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 =======
 import { HttpClient } from '@angular/common/http';
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+import { HttpClient } from '@angular/common/http';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 import { GrupoxEstudiante } from '../model/grupoxestudiante';
 
 const base_url = environment.base
@@ -17,12 +21,16 @@ export class GrupoxestudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
   list() {
+<<<<<<< HEAD
     let token = sessionStorage.getItem("token");
 
     return this.http.get<GrupoxEstudiante[]>(this.url,{
@@ -50,11 +58,16 @@ export class GrupoxestudianteService {
 
   constructor(private http: HttpClient) { }
   list() {
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     return this.http.get<GrupoxEstudiante[]>(this.url);
   }
   insert(grupoxestudiante: GrupoxEstudiante) {
     return this.http.post(this.url, grupoxestudiante);
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   }
   setList(listaNueva: GrupoxEstudiante[]) {
     this.listaCambio.next(listaNueva);
@@ -62,6 +75,7 @@ export class GrupoxestudianteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   listId(id: number){
@@ -94,6 +108,8 @@ export class GrupoxestudianteService {
 
     });
 =======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   listId(id: number){
     return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`);
   }
@@ -102,7 +118,10 @@ export class GrupoxestudianteService {
   }
   eliminar(id: number){
     return this.http.delete(`${this.url}/${id}`);
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
@@ -112,8 +131,11 @@ export class GrupoxestudianteService {
     this.confirmaEliminacion.next(estado);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 }

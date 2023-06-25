@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
 =======
 import { Component, OnInit } from '@angular/core';
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
@@ -10,10 +14,13 @@ import { Grupo } from 'src/app/model/grupo';
 import { GrupoService } from 'src/app/service/grupo.service';
 import { GrupoDialogoComponent } from './grupo-dialogo/grupo-dialogo.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { LoginService } from 'src/app/service/login.service';
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 
 @Component({
   selector: 'app-grupo-listar',
@@ -24,6 +31,7 @@ import { LoginService } from 'src/app/service/login.service';
 
 
 export class GrupoListarComponent implements OnInit {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -59,6 +67,8 @@ export class GrupoListarComponent implements OnInit {
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
 =======
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   lista: Grupo[] = [];
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
@@ -72,12 +82,16 @@ export class GrupoListarComponent implements OnInit {
     });
     this.gS.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     });
     this.gS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
@@ -85,6 +99,8 @@ export class GrupoListarComponent implements OnInit {
 
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   }
   confirmar(id: number) {
     this.idMayor = id;

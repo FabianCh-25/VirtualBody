@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 =======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 >>>>>>> 1d22189 (algunos errores en mi rama)
@@ -24,6 +27,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { EstudianteDialogoComponent } from './component/estudiante/estudiante-listar/estudiante-dialogo/estudiante-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ActividadInsertarComponent } from './component/actividad/actividad-insertar/actividad-insertar.component';
 import { ActividadDialogoComponent } from './component/actividad/actividad-listar/actividad-dialogo/actividad-dialogo.component';
@@ -89,6 +93,8 @@ import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
 =======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 import { GrupoComponent } from './component/grupo/grupo.component';
 import { RouterOutlet } from '@angular/router';
 import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
@@ -99,10 +105,14 @@ import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/
 import { GrupoDialogoComponent } from './component/grupo/grupo-listar/grupo-dialogo/grupo-dialogo.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
 
 
 @NgModule({
@@ -121,6 +131,7 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     EstudianteListarComponent,
     EstudianteInsertarComponent,
     EstudianteDialogoComponent,
+<<<<<<< HEAD
 <<<<<<< HEAD
     NavbarComponent,
     DocenteDialogoComponent,
@@ -175,6 +186,8 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 
 
 =======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     GrupoComponent,
     GrupoxestudianteComponent,
     GrupoListarComponent,
@@ -182,12 +195,17 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     GrupoxestudianteListarComponent,
     GrupoxestudianteInsertarComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
     GrupoDialogoComponent
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
     GrupoDialogoComponent,
     GrupoxestudianteDialogoComponent
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+    GrupoDialogoComponent,
+    GrupoxestudianteDialogoComponent
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   ],
   imports: [
     BrowserModule,
@@ -197,6 +215,7 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     FormsModule,
     MatToolbarModule,
     MatButtonModule,
+<<<<<<< HEAD
 <<<<<<< HEAD
     MatNativeDateModule,
     MatDatepickerModule,
@@ -219,6 +238,8 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     LayoutModule,
     MatListModule //ACUERDATE DE ESTA LINEA ANIMAL!!
 =======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     MatDialogModule,
     RouterOutlet,
     MatFormFieldModule,

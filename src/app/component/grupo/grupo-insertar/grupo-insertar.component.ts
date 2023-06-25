@@ -22,10 +22,14 @@ export class GrupoInsertarComponent implements OnInit {
 
   constructor(
 <<<<<<< HEAD
+<<<<<<< HEAD
     private gS:GrupoService,
 =======
     private gS: GrupoService,
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    private gS: GrupoService,
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -69,10 +73,14 @@ export class GrupoInsertarComponent implements OnInit {
         })
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.router.navigate(['/inicio/grupo']);
 =======
       this.router.navigate(['grupo']);
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+      this.router.navigate(['grupo']);
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
     } else {
       this.mensaje = "Complete los valores requeridos";
     }

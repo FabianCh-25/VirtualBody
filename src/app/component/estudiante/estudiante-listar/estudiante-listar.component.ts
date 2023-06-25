@@ -16,6 +16,10 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 })
 
 export class EstudianteListarComponent implements OnInit {
+<<<<<<< HEAD
+=======
+  lista: Estudiante[] = [];
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
   dataSource: MatTableDataSource<Estudiante> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'apellido', 'correo', 'telefono','clave','acciones'];
   private idMayor: number = 0;
