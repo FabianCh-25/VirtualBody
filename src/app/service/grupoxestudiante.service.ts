@@ -9,7 +9,11 @@ import { HttpClient } from '@angular/common/http';
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { GrupoxEstudiante } from '../model/grupoxestudiante';
 
 const base_url = environment.base
@@ -24,12 +28,18 @@ export class GrupoxestudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   private url = `${base_url}/gruposxEstudiantes`
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
   constructor(private http: HttpClient) { }
   list() {
+<<<<<<< HEAD
     let token = sessionStorage.getItem("token");
 
     return this.http.get<GrupoxEstudiante[]>(this.url,{
@@ -54,6 +64,7 @@ export class GrupoxestudianteService {
 >>>>>>> 1d22189 (algunos errores en mi rama)
   private listaCambio = new Subject<GrupoxEstudiante[]>()
   private confirmaEliminacion = new Subject<Boolean>()
+<<<<<<< HEAD
 =======
   private url = `${base_url}/grupoxestudiantejs`
 =======
@@ -70,6 +81,13 @@ export class GrupoxestudianteService {
 
   constructor(private http: HttpClient) { }
   list() {
+=======
+
+  constructor(private http: HttpClient) { }
+  list() {
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     return this.http.get<GrupoxEstudiante[]>(this.url);
   }
   insert(grupoxestudiante: GrupoxEstudiante) {
@@ -77,7 +95,11 @@ export class GrupoxestudianteService {
 <<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   setList(listaNueva: GrupoxEstudiante[]) {
     this.listaCambio.next(listaNueva);
@@ -89,6 +111,9 @@ export class GrupoxestudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   listId(id: number){
     let token = sessionStorage.getItem("token");
 
@@ -120,7 +145,11 @@ export class GrupoxestudianteService {
     });
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   listId(id: number){
     return this.http.get<GrupoxEstudiante>(`${this.url}/${id}`);
   }
@@ -132,7 +161,11 @@ export class GrupoxestudianteService {
 <<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();
@@ -148,7 +181,11 @@ export class GrupoxestudianteService {
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 }

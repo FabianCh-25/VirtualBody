@@ -7,6 +7,26 @@ import { Subject } from 'rxjs';
 import { Grupo } from '../model/grupo';
 const base_url = environment.base
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
+import { HttpClient } from '@angular/common/http';
+import { Subject } from 'rxjs';
+import { Grupo } from '../model/grupo';
+const base_url = environment.base
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
+
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> c86e85a (estudiante y grupo solucionado)
+=======
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { Grupo } from '../model/grupo';
@@ -17,15 +37,8 @@ const base_url = environment.base
 =======
 >>>>>>> c86e85a (estudiante y grupo solucionado)
 =======
-import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
-import { Grupo } from '../model/grupo';
-const base_url = environment.base
-<<<<<<< HEAD
-
->>>>>>> b5c7d8e (ultimos cambios)
-=======
->>>>>>> c86e85a (estudiante y grupo solucionado)
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 @Injectable({
   providedIn: 'root'
 })
@@ -35,6 +48,9 @@ export class GrupoService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   private url = `${base_url}/grupo`;
 =======
   private url = `${base_url}/grupojs`;
@@ -43,11 +59,16 @@ export class GrupoService {
   private url = `${base_url}/grupo`;
 >>>>>>> c86e85a (estudiante y grupo solucionado)
 =======
+<<<<<<< HEAD
   private url = `${base_url}/grupojs`;
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
   private url = `${base_url}/grupo`;
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+=======
+  private url = `${base_url}/grupo`;
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   private listaCambio = new Subject<Grupo[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -71,7 +92,11 @@ export class GrupoService {
     });
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     return this.http.get<Grupo[]>(this.url)
   }
   insert(grupo: Grupo) {
@@ -80,6 +105,9 @@ export class GrupoService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   getList() {
     return this.listaCambio.asObservable();
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -87,12 +115,16 @@ export class GrupoService {
 =======
 >>>>>>> c86e85a (estudiante y grupo solucionado)
 =======
+<<<<<<< HEAD
   getList() {
     return this.listaCambio.asObservable();
   }
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   setList(listaNueva: Grupo[]) {
     this.listaCambio.next(listaNueva);
   }
@@ -104,6 +136,9 @@ export class GrupoService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     let token = sessionStorage.getItem("token");
 
     //return this.http.put(this.url + "/" + grupo.idGrupo, grupo);
@@ -134,12 +169,20 @@ export class GrupoService {
     //return this.http.put(this.url + "/" + grupo.idGrupo, grupo);
     return this.http.put(this.url, grupo);
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+<<<<<<< HEAD
+=======
+=======
+    //return this.http.put(this.url + "/" + grupo.idGrupo, grupo);
+    return this.http.put(this.url, grupo);
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   listarId(id: number) {
     return this.http.get<Grupo>(`${this.url}/${id}`);
   }
   eliminar(id: number) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     return this.http.delete(`${this.url}/${idGrupo}`);
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -158,12 +201,20 @@ export class GrupoService {
   }
   eliminar(id: number) {
 
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 <<<<<<< HEAD
     return this.http.delete(`${this.url}/${idGrupo}`);
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
     return this.http.delete(`${this.url}/${id}`);
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+<<<<<<< HEAD
+=======
+=======
+    return this.http.delete(`${this.url}/${id}`);
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   getConfirmaEliminacion() {
     return this.confirmaEliminacion.asObservable();

@@ -11,6 +11,9 @@ import { EstudianteService } from 'src/app/service/estudiante.service';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { GrupoService } from 'src/app/service/grupo.service';
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -18,10 +21,15 @@ import { GrupoService } from 'src/app/service/grupo.service';
 import { GrupoService } from 'src/app/service/grupo.service';
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { GrupoService } from 'src/app/service/grupo.service';
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+import { GrupoService } from 'src/app/service/grupo.service';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 @Component({
   selector: 'app-grupoxestudiante-insertar',
   templateUrl: './grupoxestudiante-insertar.component.html',
@@ -32,11 +40,18 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
   form: FormGroup = new FormGroup({});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   grupoxEstudiante: GrupoxEstudiante = new GrupoxEstudiante()
   mensaje: string = ""
   maxFecha: Date = moment().add(-1, 'days').toDate();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   listaEstudiante: Estudiante[] = [];
   listaGrupo: Grupo[] = [];
   idEstudianteSeleccionado: number = 0;
@@ -48,6 +63,11 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
   idEstudianteSeleccionado: number = 0;
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
   listaEstudiante: Estudiante[] = [];
   listaGrupo: Grupo[] = [];
@@ -55,6 +75,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
   idGrupoSeleccionado: number = 0;
   id: number = 0;
   edicion: boolean = false;
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
   grupoxestudiante: GrupoxEstudiante = new GrupoxEstudiante()
@@ -74,6 +95,12 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
   id: number = 0;
   edicion: boolean = false;
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+<<<<<<< HEAD
+>>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
 
   constructor(private gxeS: GrupoxestudianteService,
@@ -82,6 +109,11 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     private route: ActivatedRoute, private eS:EstudianteService, private gS: GrupoService) {
   }
   ngOnInit(): void {
@@ -99,6 +131,10 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       fechaacceso: new FormControl(),
       grupo: new FormControl(),
       estudiante: new FormControl()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 =======
     private route: ActivatedRoute, private eS:EstudianteService) {
 =======
@@ -125,6 +161,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       estudiante: new FormControl()
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
     private route: ActivatedRoute, private eS:EstudianteService) {
 =======
     private route: ActivatedRoute, private eS:EstudianteService, private gS: GrupoService) {
@@ -149,6 +186,9 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       grupo: new FormControl(),
       estudiante: new FormControl()
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     });
 
   }
@@ -157,6 +197,9 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     this.grupoxestudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
 <<<<<<< HEAD
     this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
@@ -167,18 +210,24 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     this.grupoxestudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
     this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
 >>>>>>> b5c7d8e (ultimos cambios)
+<<<<<<< HEAD
 =======
     this.grupoxestudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
     this.grupoxestudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
     this.grupoxestudiante.estudiante.nombreEstudiante = this.form.value['estudiante.nombreEstudiante'];
     this.grupoxestudiante.fechaacceso = this.form.value['fechaacceso'];
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     if (this.idEstudianteSeleccionado>0) {
       let e = new Estudiante();
       e.idEstudiante = this.idEstudianteSeleccionado;
       this.grupoxestudiante.estudiante=e;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
       let g = new Grupo();
       g.idGrupo = this.idGrupoSeleccionado;
@@ -187,6 +236,11 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 >>>>>>> b5c7d8e (ultimos cambios)
       this.gxeS.insert(this.grupoxestudiante).subscribe(() => {
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     this.grupoxEstudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
     this.grupoxEstudiante.fechaacceso = this.form.value['fechaacceso'];
     this.grupoxEstudiante.grupo.nombreGrupo = this.form.value['grupo.nombreGrupo'];
@@ -195,6 +249,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     if (this.idEstudianteSeleccionado>0) {
       let e = new Estudiante();
       e.idEstudiante = this.idEstudianteSeleccionado;
+<<<<<<< HEAD
 =======
     this.grupoxEstudiante.idGrupoxEstudiante = this.form.value['idGrupoxEstudiante'];
     this.grupoxEstudiante.fechaacceso = this.form.value['fechaacceso'];
@@ -205,6 +260,8 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       let e = new Estudiante();
       e.idEstudiante = this.idEstudianteSeleccionado;
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
       this.grupoxEstudiante.estudiante=e;
 
       let g = new Grupo();
@@ -215,10 +272,14 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
       this.gxeS.insert(this.grupoxestudiante).subscribe(() => {
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
       this.gxeS.list().subscribe(data => {
             this.gxeS.setList(data);
           })
@@ -228,13 +289,20 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
       this.router.navigate(['/inicio/gruposxEstudiantes']);
     }
     else if(this.edicion){
       this.gxeS.update(this.grupoxestudiante).subscribe(() => {
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
       this.router.navigate(['grupoxEstudiante']);
     }
     else if(this.edicion){
@@ -242,7 +310,11 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
         this.gxeS.list().subscribe((data) => {
           this.gxeS.setList(data);
         });
@@ -271,6 +343,11 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
       this.router.navigate(['grupoxestudiante']);
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
   init(){
     if(this.edicion){
@@ -289,6 +366,7 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> b5c7d8e (ultimos cambios)
@@ -316,8 +394,15 @@ export class GrupoxestudianteInsertarComponent implements OnInit {
     }
   }
 }
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 <<<<<<< HEAD
 }
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170

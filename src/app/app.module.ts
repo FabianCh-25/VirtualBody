@@ -6,7 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 >>>>>>> 1d22189 (algunos errores en mi rama)
@@ -93,6 +97,7 @@ import { ReportesComponent } from './component/reportes/reportes.component';
 import { Reporte01Component } from './component/reportes/reporte01/reporte01.component';
 import { Reporte02Component } from './component/reportes/reporte02/reporte02.component';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LogindocenteComponent } from './component/login/logindocente/logindocente.component';
 import { LoginestudianteComponent } from './component/login/loginestudiante/loginestudiante.component';
 import { RegistroComponent } from './component/registro/registro.component';
@@ -105,6 +110,11 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
 =======
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { GrupoComponent } from './component/grupo/grupo.component';
 import { RouterOutlet } from '@angular/router';
 import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
@@ -117,6 +127,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 <<<<<<< HEAD
 >>>>>>> 2fbcd79 (ultimos cambios)
@@ -126,10 +137,18 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 >>>>>>> 1d22189 (algunos errores en mi rama)
 >>>>>>> f25a710 (algunos errores en mi rama)
 =======
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 >>>>>>> 1d22189 (algunos errores en mi rama)
+<<<<<<< HEAD
+=======
+=======
+import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/grupoxestudiante-listar/grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
 
 @NgModule({
@@ -209,10 +228,16 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 
 
 
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     GrupoComponent,
     GrupoxestudianteComponent,
     GrupoListarComponent,
@@ -222,6 +247,9 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     GrupoDialogoComponent
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
@@ -229,12 +257,18 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     GrupoxestudianteDialogoComponent
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
     GrupoDialogoComponent
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
     GrupoDialogoComponent,
     GrupoxestudianteDialogoComponent
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+    GrupoDialogoComponent,
+    GrupoxestudianteDialogoComponent
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   ],
   imports: [
     BrowserModule,
@@ -267,11 +301,17 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     LayoutModule,
     MatListModule //ACUERDATE DE ESTA LINEA ANIMAL!!
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     MatDialogModule,
     RouterOutlet,
     MatFormFieldModule,
     BrowserModule,
     MatPaginatorModule
+<<<<<<< HEAD
 =======
     MatDialogModule,
     RouterOutlet,
@@ -283,6 +323,8 @@ import { GrupoxestudianteDialogoComponent } from './component/grupoxestudiante/g
     BrowserModule,
     MatPaginatorModule
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
 >>>>>>> b5c7d8e (ultimos cambios)
   ],

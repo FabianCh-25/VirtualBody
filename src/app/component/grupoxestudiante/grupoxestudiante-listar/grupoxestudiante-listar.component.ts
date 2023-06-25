@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
 =======
 import { Component, OnInit } from '@angular/core';
@@ -10,11 +13,16 @@ import { Component, OnInit } from '@angular/core';
 import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+import { Component, OnInit, ViewChild, ChangeDetectorRef  } from '@angular/core';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
@@ -23,11 +31,17 @@ import { GrupoxEstudiante } from 'src/app/model/grupoxestudiante';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { LoginService } from 'src/app/service/login.service';
 =======
 import { GrupoService } from 'src/app/service/grupo.service';
@@ -38,6 +52,7 @@ import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.servic
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
 =======
+<<<<<<< HEAD
 import { GrupoService } from 'src/app/service/grupo.service';
 =======
 >>>>>>> a227011 (falta aun grupoxest)
@@ -45,6 +60,12 @@ import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.servic
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+import { GrupoxestudianteService } from 'src/app/service/grupoxestudiante.service';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { GrupoxestudianteDialogoComponent } from './grupoxestudiante-dialogo/grupoxestudiante-dialogo.component';
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
 @Component({
   selector: 'app-grupoxestudiante-listar',
@@ -57,6 +78,9 @@ export class GrupoxestudianteListarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   @ViewChild(MatPaginator) paginator: MatPaginator;
   role:string="";
 
@@ -111,6 +135,13 @@ export class GrupoxestudianteListarComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
 >>>>>>> 1d22189 (algunos errores en mi rama)
+<<<<<<< HEAD
+=======
+=======
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   lista: GrupoxEstudiante[] = [];
   dataSource: MatTableDataSource<GrupoxEstudiante> = new MatTableDataSource();
   displayedColumns: string[] = ['id',  'fecha', 'grupo', 'estudiante', 'acciones']
@@ -139,6 +170,7 @@ export class GrupoxestudianteListarComponent implements OnInit {
       data == true ? this.eliminar(this.idMayor) : false;
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
@@ -193,6 +225,13 @@ export class GrupoxestudianteListarComponent implements OnInit {
 <<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
     }
@@ -207,7 +246,14 @@ export class GrupoxestudianteListarComponent implements OnInit {
         this.gxeS.setList(data);/* se ejecuta la línea 27 */
       });
     });
+<<<<<<< HEAD
 >>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+<<<<<<< HEAD
+>>>>>>> 1d22189 (algunos errores en mi rama)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   filtrar(e: any) {
     this.dataSource.filter = e.target.value.trim();

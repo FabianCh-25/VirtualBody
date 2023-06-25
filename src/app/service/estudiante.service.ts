@@ -12,6 +12,9 @@ export class EstudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   private url = `${base_url}/estudiante`;
 =======
   private url = `${base_url}/estudiantes`;
@@ -20,11 +23,16 @@ export class EstudianteService {
   private url = `${base_url}/estudiante`;
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
 =======
+<<<<<<< HEAD
   private url = `${base_url}/estudiantes`;
 >>>>>>> 1909452 (corregi estudiante)
 =======
   private url = `${base_url}/estudiante`;
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+  private url = `${base_url}/estudiante`;
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   private listaCambio = new Subject<Estudiante[]>();
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -51,7 +59,14 @@ export class EstudianteService {
     });
 =======
     return this.http.post(this.url, estudiante);
+<<<<<<< HEAD
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+<<<<<<< HEAD
+>>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
 =======
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
@@ -68,6 +83,9 @@ export class EstudianteService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     let token = sessionStorage.getItem("token");
 
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
@@ -90,6 +108,7 @@ export class EstudianteService {
 =======
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
     return this.http.put(this.url, estudiante);
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
     return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
@@ -99,6 +118,9 @@ export class EstudianteService {
     //return this.http.put(this.url + "/" + estudiante.idEstudiante, estudiante);
     return this.http.put(this.url, estudiante);
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
   }
   listarId(id: number) {

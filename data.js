@@ -185,7 +185,11 @@ module.exports = function () {
 
       }
     ],
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     grupojs: [
       {
         idGrupo:1,
@@ -214,7 +218,11 @@ module.exports = function () {
 <<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   return data
 }

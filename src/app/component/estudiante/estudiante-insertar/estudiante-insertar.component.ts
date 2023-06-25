@@ -38,7 +38,12 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: new FormControl(),
+=======
+      id: new FormControl(),
+<<<<<<< HEAD
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 =======
       idEstudiante: new FormControl(),
 >>>>>>> 1909452 (corregi estudiante)
@@ -46,11 +51,15 @@ export class EstudianteInsertarComponent implements OnInit {
       id: new FormControl(),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
 =======
+<<<<<<< HEAD
       idEstudiante: new FormControl(),
 >>>>>>> 1909452 (corregi estudiante)
 =======
       id: new FormControl(),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
       nombreEstudiante: new FormControl(),
       apellidoEstudiante: new FormControl(),
       correoEstudiante: new FormControl(),
@@ -67,10 +76,17 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1909452 (corregi estudiante)
 =======
 >>>>>>> 1909452 (corregi estudiante)
+=======
+=======
+>>>>>>> 1909452 (corregi estudiante)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     this.estudiante.nombreEstudiante = this.form.value['nombreEstudiante'];
     this.estudiante.apellidoEstudiante = this.form.value['apellidoEstudiante'];
     this.estudiante.correoEstudiante = this.form.value['correoEstudiante'];
@@ -79,8 +95,11 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     this.estudiante.NombreEstudiante = this.form.value['NombreEstudiante'];
     this.estudiante.ApellidoEstudiante = this.form.value['ApellidoEstudiante'];
     this.estudiante.CorreoEstudiante = this.form.value['CorreoEstudiante'];
@@ -90,7 +109,11 @@ export class EstudianteInsertarComponent implements OnInit {
 =======
 >>>>>>> 1909452 (corregi estudiante)
 =======
+<<<<<<< HEAD
 >>>>>>> 1909452 (corregi estudiante)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
 
     if (this.form.value['nombreEstudiante'].length > 0 && this.form.value['apellidoEstudiante'].length > 0) {
@@ -124,6 +147,9 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
           id: new FormControl(data.idEstudiante),
 <<<<<<< HEAD
 =======
@@ -133,11 +159,16 @@ export class EstudianteInsertarComponent implements OnInit {
           id: new FormControl(data.idEstudiante),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
 =======
+<<<<<<< HEAD
           idEstudiante: new FormControl(data.idEstudiante),
 >>>>>>> 1909452 (corregi estudiante)
 =======
           id: new FormControl(data.idEstudiante),
 >>>>>>> 51dc56a (actualizar solucionado e integra con swagger)
+=======
+          id: new FormControl(data.idEstudiante),
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
           nombreEstudiante: new FormControl(data.nombreEstudiante),
           apellidoEstudiante: new FormControl(data.apellidoEstudiante),
           correoEstudiante: new FormControl(data.correoEstudiante),
@@ -146,9 +177,12 @@ export class EstudianteInsertarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
           id: new FormControl(data.idEstudiante),
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
           NombreEstudiante: new FormControl(data.NombreEstudiante),
           ApellidoEstudiante: new FormControl(data.ApellidoEstudiante),
           CorreoEstudiante: new FormControl(data.CorreoEstudiante),
@@ -158,7 +192,11 @@ export class EstudianteInsertarComponent implements OnInit {
 =======
 >>>>>>> 1909452 (corregi estudiante)
 =======
+<<<<<<< HEAD
 >>>>>>> 1909452 (corregi estudiante)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
         });
         console.log(data);
       });

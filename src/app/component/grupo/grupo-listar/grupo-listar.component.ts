@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 import { MatTableDataSource } from '@angular/material/table';
 
 import { MatDialog } from '@angular/material/dialog'
@@ -20,7 +24,11 @@ import { LoginService } from 'src/app/service/login.service';
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 
 @Component({
   selector: 'app-grupo-listar',
@@ -35,6 +43,9 @@ export class GrupoListarComponent implements OnInit {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   @ViewChild(MatPaginator) paginator: MatPaginator;
   role:string="";
 
@@ -68,6 +79,7 @@ export class GrupoListarComponent implements OnInit {
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
 =======
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+<<<<<<< HEAD
   lista: Grupo[] = [];
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
 =======
@@ -78,6 +90,12 @@ export class GrupoListarComponent implements OnInit {
   lista: Grupo[] = [];
   dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
 >>>>>>> c86e85a (estudiante y grupo solucionado)
+=======
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+  lista: Grupo[] = [];
+  dataSource: MatTableDataSource<Grupo> = new MatTableDataSource();
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   displayedColumns: string[] = ['id', 'nombre', 'descripcion','acciones'];
   private idMayor: number = 0;
 
@@ -87,6 +105,7 @@ export class GrupoListarComponent implements OnInit {
     this.gS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     this.gS.getLista().subscribe(data => {
@@ -99,6 +118,14 @@ export class GrupoListarComponent implements OnInit {
 >>>>>>> c86e85a (estudiante y grupo solucionado)
       this.dataSource = new MatTableDataSource(data);
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    this.gS.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+<<<<<<< HEAD
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
     });
     this.gS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
@@ -113,7 +140,11 @@ export class GrupoListarComponent implements OnInit {
 =======
 >>>>>>> b5c7d8e (ultimos cambios)
 =======
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
   }
   confirmar(id: number) {
     this.idMayor = id;

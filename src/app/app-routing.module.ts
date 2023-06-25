@@ -178,7 +178,10 @@ const routes: Routes = [
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 =======
 import { EstudianteComponent } from './component/estudiante/estudiante.component';
 import { EstudianteInsertarComponent } from './component/estudiante/estudiante-insertar/estudiante-insertar.component';
@@ -195,7 +198,11 @@ import { GrupoxestudianteInsertarComponent } from './component/grupoxestudiante/
 import { GrupoxestudianteComponent } from './component/grupoxestudiante/grupoxestudiante.component';
 import { GrupoComponent } from './component/grupo/grupo.component';
 
+<<<<<<< HEAD
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 const routes: Routes = [
   {
     path: 'estudiante', component: EstudianteComponent, children: [
@@ -208,6 +215,9 @@ const routes: Routes = [
       { path: 'grupoinsertar', component: GrupoInsertarComponent },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
       { path: 'edicion/:id', component: GrupoInsertarComponent }
     ]
   },
@@ -215,6 +225,7 @@ const routes: Routes = [
     path: 'grupoxEstudiante', component: GrupoxestudianteComponent, children: [
     { path: 'nuevo', component: GrupoxestudianteInsertarComponent },
     { path: 'edicion/:id', component: GrupoxestudianteInsertarComponent}
+<<<<<<< HEAD
 <<<<<<< HEAD
     ]
   }
@@ -234,6 +245,14 @@ const routes: Routes = [
     ]
   }
 >>>>>>> b5c7d8e (ultimos cambios)
+=======
+    ]
+  }
+<<<<<<< HEAD
+>>>>>>> b5c7d8e (ultimos cambios)
+=======
+>>>>>>> 1d22189b09e92d3ecda9a0b45f50fa3afc9cf7ab
+>>>>>>> 3a229d48ade690476599023d1587e67a1a0ec170
 ];
 
 @NgModule({
