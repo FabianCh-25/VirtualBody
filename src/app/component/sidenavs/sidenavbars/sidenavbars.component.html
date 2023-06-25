@@ -20,7 +20,7 @@
     <span>Actividades</span>
   </mat-list-item>
 
-  <mat-list-item  routerLink="/inicio/detalleMatricula" class="items-menu"routerLinkActive="is-active">
+  <mat-list-item [hidden]="role==='DOC' || role==='USER'" routerLink="/inicio/detalleMatricula" class="items-menu"routerLinkActive="is-active">
     <mat-icon> info </mat-icon>
     <span>Detalle Matricula </span>
   </mat-list-item>
@@ -35,7 +35,7 @@
     <span>Cursos</span>
   </mat-list-item>
 
-  <mat-list-item routerLink="/inicio/matricula" class="items-menu"routerLinkActive="is-active">
+  <mat-list-item [hidden]="role==='DOC' || role==='USER'" routerLink="/inicio/matricula" class="items-menu"routerLinkActive="is-active">
     <mat-icon> folder_copy </mat-icon>
     <span>Matricula</span>
   </mat-list-item>
@@ -55,13 +55,13 @@
     <span>Grupos</span>
   </mat-list-item>
 
-  <mat-list-item routerLink="/inicio/gruposxEstudiantes" class="items-menu"routerLinkActive="is-active">
+  <mat-list-item [hidden]="role==='DOC'"routerLink="/inicio/gruposxEstudiantes" class="items-menu"routerLinkActive="is-active">
     <mat-icon> group_add </mat-icon>
     <span>Unirse a Grupo</span>
   </mat-list-item>
 
   <mat-expansion-panel [class.mat-elevation-z0]="true">
-    <mat-expansion-panel-header class="expansion-men">
+    <mat-expansion-panel-header class="expansion-men" [hidden]="role==='DOC' || role==='USER'">
         <mat-icon >description</mat-icon><span>Estadisticas</span>
     </mat-expansion-panel-header>
     <mat-nav-list class="nave-list2">

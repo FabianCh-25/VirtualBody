@@ -57,7 +57,7 @@ export class AulaEliminarComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['aula']);
+      this.router.navigate(['/inicio/aula']);
     } else {
       this.mensaje = "Complete los valores requeridos";
     }
