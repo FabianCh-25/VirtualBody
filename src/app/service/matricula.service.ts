@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Matricula } from '../model/matricula';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { GroupStudentDTO } from '../model/groupStudentDTO';
+import { CostDTO } from '../model/costDTO';
 
 const base_url = environment.base;
 @Injectable({
@@ -67,4 +69,12 @@ export class MatriculaService {
   setConfirmaEliminacion(estado: Boolean){
     this.confirmaEliminacion.next(estado);
   }
+
+  getCostbyCount(): Observable<CostDTO[]>{
+    let token = sessionStorage.getItem("token");
+    return this.http.get<CostDTO[]>(`${this.url}/cost-count`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    }); //Aquí
+  }
+
 }

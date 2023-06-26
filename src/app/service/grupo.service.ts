@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Grupo } from '../model/grupo';
+import { GroupStudentDTO } from '../model/groupStudentDTO';
 const base_url = environment.base
 @Injectable({
   providedIn: 'root'
@@ -67,5 +68,11 @@ export class GrupoService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmaEliminacion.next(estado);
+  }
+  getStudentCountByGroup(): Observable<GroupStudentDTO[]>{
+    let token = sessionStorage.getItem("token");
+    return this.http.get<GroupStudentDTO[]>(`${this.url}/group-count`,{
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    }); //Aquí
   }
 }

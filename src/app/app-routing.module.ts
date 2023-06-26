@@ -44,6 +44,8 @@ import { RegistroestudianteComponent } from './component/registro/registroestudi
 import { RegistrodocenteComponent } from './component/registro/registrodocente/registrodocente.component';
 import { Reporte05fComponent } from './component/reportes/reporte05f/reporte05f.component';
 import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.component';
+import { Reporte03gComponent } from './component/reportes/reporte03g/reporte03g.component';
+import { Reporte04gComponent } from './component/reportes/reporte04g/reporte04g.component';
 
 const routes: Routes = [
   { path: 'actividad-insertar', component: ActividadInsertarComponent },
@@ -145,6 +147,9 @@ const routes: Routes = [
         path: 'reportes', component: ReportesComponent, children: [
           {path: 'reporte01', component: Reporte01Component},
           {path: 'reporte02', component: Reporte02Component},
+          {path: 'reporte03', component: Reporte03gComponent},
+          {path: 'reporte04', component: Reporte04gComponent},
+
           {path: 'reporte05', component: Reporte05fComponent},
           {path: 'reporte06', component: Reporte06fComponent}
         ]

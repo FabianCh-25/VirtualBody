@@ -1,7 +1,7 @@
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -89,6 +89,8 @@ import { RegistrodocenteComponent } from './component/registro/registrodocente/r
 import { RegistroestudianteComponent } from './component/registro/registroestudiante/registroestudiante.component';
 import { Reporte05fComponent } from './component/reportes/reporte05f/reporte05f.component';
 import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.component';
+import { Reporte03gComponent } from './component/reportes/reporte03g/reporte03g.component';
+import { Reporte04gComponent } from './component/reportes/reporte04g/reporte04g.component';
 
 
 
@@ -162,6 +164,8 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
     RegistroestudianteComponent,
     Reporte05fComponent,
     Reporte06fComponent,
+    Reporte03gComponent,
+    Reporte04gComponent,
 
 
 
@@ -200,6 +204,6 @@ import { Reporte06fComponent } from './component/reportes/reporte06f/reporte06f.
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
